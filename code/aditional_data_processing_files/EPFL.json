@@ -1,0 +1,298 @@
+[
+    {
+        "name": "Diepflingen",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.446478,
+            "lon": 7.8377491
+        }
+    },
+    {
+        "name": "Ecublens",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5222286,
+            "lon": 6.5638271
+        }
+    },
+    {
+        "name": "SDIS EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.520271,
+            "lon": 6.5710476
+        }
+    },
+    {
+        "name": "EPFL / T-L",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5205065,
+            "lon": 6.565783
+        }
+    },
+    {
+        "name": "Ecublens VD, EPFL Piccard",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5201865,
+            "lon": 6.5684109
+        }
+    },
+    {
+        "name": "Ecublens VD, EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5220529,
+            "lon": 6.566353
+        }
+    },
+    {
+        "name": "Ecublens (VD) EPFL / Parking de l\u00b4Esplanade",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.52001,
+            "lon": 6.56609
+        }
+    },
+    {
+        "name": "Ecublens (VD) EPFL / Parking Rivier",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.521509,
+            "lon": 6.5645481
+        }
+    },
+    {
+        "name": "Ecublens (VD) EPFL / Parking Argand",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.51999,
+            "lon": 6.57086
+        }
+    },
+    {
+        "name": "Ecublens (VD) EPFL / Parking Barrage",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5218,
+            "lon": 6.56572
+        }
+    },
+    {
+        "name": "Unil Sorge, EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.518272,
+            "lon": 6.5722286
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5188776,
+            "lon": 6.5631626
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5203439,
+            "lon": 6.5684678
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5206822,
+            "lon": 6.5683126
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5199903,
+            "lon": 6.5650786
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5204092,
+            "lon": 6.5654482
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5205044,
+            "lon": 6.5661578
+        }
+    },
+    {
+        "name": "UNIL - EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5177519,
+            "lon": 6.5861971
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5183232,
+            "lon": 6.5669508
+        }
+    },
+    {
+        "name": "AGNES-Station EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5214731,
+            "lon": 6.5679358
+        }
+    },
+    {
+        "name": "Ecublens VD, EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5220313,
+            "lon": 6.5669936
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5220039,
+            "lon": 6.5669019
+        }
+    },
+    {
+        "name": "Biblioth\u00e8que de l'EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5184121,
+            "lon": 6.5684654
+        }
+    },
+    {
+        "name": "Ecublens (VD) EPFL / Quartier de l\u00b4Innovation",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5169177,
+            "lon": 6.5612517
+        }
+    },
+    {
+        "name": "Quartier de l'innovation",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5172426,
+            "lon": 6.561216
+        }
+    },
+    {
+        "name": "Centre M\u00e9dical Arcades EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5235488,
+            "lon": 6.5653497
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5221982,
+            "lon": 6.566154
+        }
+    },
+    {
+        "name": "March\u00e9 de l'EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5203409,
+            "lon": 6.5658833
+        }
+    },
+    {
+        "name": "Centre Sportif UNIL EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5197859,
+            "lon": 6.5796606
+        }
+    },
+    {
+        "name": "EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5183736,
+            "lon": 6.5618339
+        }
+    },
+    {
+        "name": "Sport UNIL-EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5210594,
+            "lon": 6.586
+        }
+    },
+    {
+        "name": "Ecublens (VD) EPFL / Parking BS",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5199563,
+            "lon": 6.5713665
+        }
+    },
+    {
+        "name": "Sport UNIL-EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5209968,
+            "lon": 6.5859704
+        }
+    },
+    {
+        "name": "Gene Predicts (Centre de D\u00e9pistage EPFL)",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5179196,
+            "lon": 6.5635331
+        }
+    },
+    {
+        "name": "GOFAST EPFL",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5185249,
+            "lon": 6.5650971
+        }
+    },
+    {
+        "name": "Taxi Services - EPFL Nord",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5237467,
+            "lon": 6.5649227
+        }
+    },
+    {
+        "name": "EPFL/Colladon",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 46.5180511,
+            "lon": 6.5638598
+        }
+    }
+]

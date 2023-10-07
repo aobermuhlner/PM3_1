@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Mensa Universit\u00e4t Basel",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.5599753,
+            "lon": 7.5819948
+        }
+    },
+    {
+        "name": "Zentrum f\u00fcr Mikroskopie Uni Basel (ZMB)",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.5635396,
+            "lon": 7.5802508
+        }
+    },
+    {
+        "name": "Uni Basel Departement Chemie",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.5643781,
+            "lon": 7.579172
+        }
+    },
+    {
+        "name": "Uni Basel Departement Chemie",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.5654062,
+            "lon": 7.5797423
+        }
+    },
+    {
+        "name": "Uni Basel Departement Physik",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.5649023,
+            "lon": 7.5787836
+        }
+    },
+    {
+        "name": "Europainstitut der Universit\u00e4t Basel",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.5647323,
+            "lon": 7.606072
+        }
+    }
+]

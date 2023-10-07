@@ -1,0 +1,42 @@
+[
+    {
+        "name": "HSG Skriptekommission",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4315304,
+            "lon": 9.3732668
+        }
+    },
+    {
+        "name": "HSG Cafeteria A",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4317199,
+            "lon": 9.3745076
+        }
+    },
+    {
+        "name": "HSG Cafeteria B",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.432265,
+            "lon": 9.374793
+        }
+    },
+    {
+        "name": "HSG Mensa",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4312445,
+            "lon": 9.3740872
+        }
+    },
+    {
+        "name": "HSG Alumni",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4322116,
+            "lon": 9.3740362
+        }
+    }
+]

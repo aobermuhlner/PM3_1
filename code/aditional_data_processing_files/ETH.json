@@ -1,0 +1,358 @@
+[
+    {
+        "name": "Polyterrasse ETH",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3768321,
+            "lon": 8.5463207
+        }
+    },
+    {
+        "name": "R\u00f6thenbach",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.2053791,
+            "lon": 7.6814195
+        }
+    },
+    {
+        "name": "Rietheim",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.6008113,
+            "lon": 8.2778878
+        }
+    },
+    {
+        "name": "R\u00fcthi (Rheintal)",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.2955927,
+            "lon": 9.537187
+        }
+    },
+    {
+        "name": "St. Margrethen",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4510277,
+            "lon": 9.6410249
+        }
+    },
+    {
+        "name": "ETH/Universit\u00e4tsspital",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.377863,
+            "lon": 8.5481709
+        }
+    },
+    {
+        "name": "Coop",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4083614,
+            "lon": 8.5079214
+        }
+    },
+    {
+        "name": "Z\u00fcrich UNI / ETH",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3748552,
+            "lon": 8.5488914
+        }
+    },
+    {
+        "name": "Z\u00fcrich ETH H\u00f6nggerberg / Einsteinstrasse",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.40879,
+            "lon": 8.50453
+        }
+    },
+    {
+        "name": "Unknown Amenity",
+        "address": "Clausiusstrasse, 8092, Z\u00fcrich",
+        "coordinates": {
+            "lat": 47.3805066,
+            "lon": 8.5451059
+        },
+        "quarter": "Oberstrass",
+        "city": "Z\u00fcrich"
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4086351,
+            "lon": 8.50797
+        }
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4084185,
+            "lon": 8.5074334
+        }
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4089603,
+            "lon": 8.508218
+        }
+    },
+    {
+        "name": "ETH Store",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4084878,
+            "lon": 8.5080082
+        }
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4089176,
+            "lon": 8.5077072
+        }
+    },
+    {
+        "name": "ETH Zentrum",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3762126,
+            "lon": 8.5469228
+        }
+    },
+    {
+        "name": "Postagentur 8093 Z\u00fcrich ETH-H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4086747,
+            "lon": 8.5075425
+        }
+    },
+    {
+        "name": "ETH-Bibliothek HDB",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4110044,
+            "lon": 8.5089106
+        }
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4083933,
+            "lon": 8.5074743
+        }
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4085598,
+            "lon": 8.5075971
+        }
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4085765,
+            "lon": 8.5075367
+        }
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4086604,
+            "lon": 8.5078991
+        }
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4088853,
+            "lon": 8.5078179
+        }
+    },
+    {
+        "name": "ETH H\u00f6nggerberg",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4089824,
+            "lon": 8.5081283
+        }
+    },
+    {
+        "name": "ETH Z\u00fcrich Leonhardstrasse",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.376298,
+            "lon": 8.5469852
+        }
+    },
+    {
+        "name": "ETH Z\u00fcrich Parkhaus",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3767768,
+            "lon": 8.5480294
+        }
+    },
+    {
+        "name": "ETH/Universit\u00e4tsspital",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3766545,
+            "lon": 8.548694
+        }
+    },
+    {
+        "name": "ETH/Universit\u00e4tsspital",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3771783,
+            "lon": 8.5475055
+        }
+    },
+    {
+        "name": "ETH-Bibliothek",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3764545,
+            "lon": 8.5481666
+        }
+    },
+    {
+        "name": "Unknown Amenity",
+        "address": "Stampfenbachstrasse, 8006, Z\u00fcrich",
+        "coordinates": {
+            "lat": 47.3804392,
+            "lon": 8.5429165
+        },
+        "quarter": "Unterstrass",
+        "city": "Z\u00fcrich"
+    },
+    {
+        "name": "ETH Merchandise Store",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3773269,
+            "lon": 8.5475089
+        }
+    },
+    {
+        "name": "ETH Entrepreneur Club Coworking Space",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.379534,
+            "lon": 8.5440366
+        }
+    },
+    {
+        "name": "architektura - Fachverein der Architekturstudierenden an der ETH Z\u00fcrich",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4090543,
+            "lon": 8.5067286
+        }
+    },
+    {
+        "name": "ETH Zentrum",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3762232,
+            "lon": 8.5470041
+        }
+    },
+    {
+        "name": "ETH/Universit\u00e4tsspital",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3757542,
+            "lon": 8.548643
+        }
+    },
+    {
+        "name": "Coop to go",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4077887,
+            "lon": 8.5077158
+        }
+    },
+    {
+        "name": "ETH Point of interest",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.4081237,
+            "lon": 8.507589
+        }
+    },
+    {
+        "name": "ETH Z\u00fcrich",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.413218,
+            "lon": 8.5374914
+        }
+    },
+    {
+        "name": "ETH/Universit\u00e4tsspital",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3766672,
+            "lon": 8.5487011
+        }
+    },
+    {
+        "name": "ETH/Universit\u00e4tsspital",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3778309,
+            "lon": 8.5481643
+        }
+    },
+    {
+        "name": "ETHZ W\u00e4rmepumpe Walche",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3785644,
+            "lon": 8.5432612
+        }
+    },
+    {
+        "name": "PubliBike ETH/Zentrum",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3779191,
+            "lon": 8.5460865
+        }
+    },
+    {
+        "name": "ETH Store",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3761684,
+            "lon": 8.5468403
+        }
+    },
+    {
+        "name": "ETH/Universit\u00e4tsspital",
+        "address": "Unknown",
+        "coordinates": {
+            "lat": 47.3771666,
+            "lon": 8.54751
+        }
+    }
+]
