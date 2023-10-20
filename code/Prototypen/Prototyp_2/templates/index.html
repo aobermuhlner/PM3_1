@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map Search</title>
+    <!-- Include Leaflet CSS and JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #map { height: 400px; }
+    </style>
+</head>
+<body>
+
+<!-- Form for filtering by zoom level -->
+<form id="searchZoomForm">
+    <input type="text" name="zoomlevel" placeholder="Enter zoom level" required>
+    <button type="submit">Search by Zoom Level</button>
+</form>
+
+<!-- Form for filtering by schoolshort -->
+<form id="searchSchoolshortForm">
+    <input type="text" name="schoolshort" placeholder="Enter schoolshort" required>
+    <button type="submit">Search by Schoolshort</button>
+</form>
+
+<div id="map"></div>
+
+<script>
+    // Initialize the map
+    var map = L.map('map').setView([47.3769, 8.5417], 12);  // Zurich as the starting point
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Function to add markers to the map
+    function addMarkers(coordinates) {
+        coordinates.forEach(function (coord) {
+            L.marker([coord.lat, coord.lon]).addTo(map);  // Add markers for each coordinate
+        });
+    }
+
+    // Function to handle form submission
+    function handleFormSubmit(e, url) {
+        e.preventDefault();  // Prevent page reload
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: $(e.target).serialize(),  // Send form data
+            success: function (coordinates) {
+                // Clear existing markers
+                map.eachLayer(function (layer) {
+                    if (layer instanceof L.Marker) {
+                        map.removeLayer(layer);
+                    }
+                });
+
+                // Add markers for the filtered coordinates
+                addMarkers(coordinates);
+            },
+            error: function (error) {
+                console.error("An error occurred:", error);
+                alert("An error occurred while fetching the coordinates. Please check the console for more details.");
+            }
+        });
+    }
+
+    // When the zoom level form is submitted
+    $('#searchZoomForm').submit(function (e) {
+        handleFormSubmit(e, '/filter_by_zoomlevel');
+    });
+
+    // When the schoolshort form is submitted
+    $('#searchSchoolshortForm').submit(function (e) {
+        handleFormSubmit(e, '/filter_by_schoolshort');
+    });
+</script>
+
+</body>
+</html>
+
