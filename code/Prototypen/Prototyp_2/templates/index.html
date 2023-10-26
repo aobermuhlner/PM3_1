@@ -6,26 +6,192 @@
     <!-- Include Leaflet CSS and JavaScript -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <style>
-        #map { height: 400px; }
+        #map { height: 800px; }
     </style>
 </head>
 <body>
 
-<!-- Form for filtering by zoom level -->
-<form id="searchZoomForm">
-    <input type="text" name="zoomlevel" placeholder="Enter zoom level" required>
-    <button type="submit">Search by Zoom Level</button>
-</form>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 text-center my-3">
+            <h1>University Life Quality Evaluator</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form id="collegeSelectForm" class="row">
+                <label for="collegeSelectDropdown" class="col-sm-1 col-form-label">Select a College:</label>
+                <div class="col-sm-11">
+                    <select class="form-control" id="collegeSelectDropdown" name="college">
+                        {% for college in college_names %}
+                            <option value="{{ college }}">{{ college }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </form>
+        </div>
 
-<!-- Form for filtering by schoolshort -->
-<form id="searchSchoolshortForm">
-    <input type="text" name="schoolshort" placeholder="Enter schoolshort" required>
-    <button type="submit">Search by Schoolshort</button>
-</form>
+    </div>
+    <div class="row my-4">
+        <div class="col-2 border">
+                <!-- Type of University -->
+                <h4>Colleges</h4>
+                <h5>College Type</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="university">
+                    <label class="form-check-label" for="university">University</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="college">
+                    <label class="form-check-label" for="college">College</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="pedagogical_college">
+                    <label class="form-check-label" for="pedagogical_college">Pedagogical College</label>
+                </div>
 
-<div id="map"></div>
+                <!-- Language of state -->
+                <h5>Language of state</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="german">
+                    <label class="form-check-label" for="german">German</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="french">
+                    <label class="form-check-label" for="french">French</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="italian">
+                    <label class="form-check-label" for="italian">Italian</label>
+                </div>
+
+        </div>
+        <div class="col-8">
+            <div class="col-12 border">
+                <div id="map" class="my-3"></div>
+            </div>
+        </div>
+        <div class="col-2">
+
+            <div class="col-12 border">
+                <h4>Amenities</h4>
+                <h5>Settings</h5>
+                <div class="form-group">
+                    <label for="customRange1">Distance to College (in kilometers):</label>
+                    <input type="range" class="form-control-range" id="distanceSlider" min="1" max="10" value="5">
+                    <span id="distanceValue">5 km</span>
+                </div>
+
+                <script>
+                    // Update the displayed distance value when the slider changes
+                    document.getElementById('distanceSlider').addEventListener('input', function() {
+                        document.getElementById('distanceValue').textContent = this.value + " km";
+                    });
+                </script>
+
+
+                <!-- Food & Drink -->
+                <h5>Food & Drink</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bar" id="bar">
+                    <label class="form-check-label" for="bar">Bar</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bar" id="biergarten">
+                    <label class="form-check-label" for="biergarten">Biergarten</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bar" id="cafe">
+                    <label class="form-check-label" for="cafe">Cafe</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bar" id="fast_food">
+                    <label class="form-check-label" for="fast_food">Fast Food</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bar" id="food_court">
+                    <label class="form-check-label" for="food_court">Food Court</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bar" id="ice_cream">
+                    <label class="form-check-label" for="ice_cream">Ice Cream</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bar" id="restaurant">
+                    <label class="form-check-label" for="restaurant">Restaurant</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bar" id="pub">
+                    <label class="form-check-label" for="pub">Pub</label>
+                </div>
+
+                <!-- Entertainment & Culture -->
+                <h5>Entertainment & Culture</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="arts_centre" id="arts_centre">
+                    <label class="form-check-label" for="arts_centre">Arts Centre</label>
+                </div>
+                <!-- ... add other checkboxes for this category similarly ... -->
+
+                <!-- Community & Education -->
+                <h5>Community & Education</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="community_centre" id="community_centre">
+                    <label class="form-check-label" for="community_centre">Community Centre</label>
+                </div>
+                <!-- ... add other checkboxes for this category similarly ... -->
+
+                <!-- Financial Services -->
+                <h5>Financial Services</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="atm" id="atm">
+                    <label class="form-check-label" for="atm">ATM</label>
+                </div>
+                <!-- ... add other checkboxes for this category similarly ... -->
+
+                <!-- Transportation -->
+                <h5>Transportation</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bus_station" id="bus_station">
+                    <label class="form-check-label" for="bus_station">Bus Station</label>
+                </div>
+                <!-- ... add other checkboxes for this category similarly ... -->
+
+                <!-- Health & Safety -->
+                <h5>Health & Safety</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="clinic" id="clinic">
+                    <label class="form-check-label" for="clinic">Clinic</label>
+                </div>
+                <!-- ... add other checkboxes for this category similarly ... -->
+
+                <!-- Postal & Communication -->
+                <h5>Postal & Communication</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="post_box" id="post_box">
+                    <label class="form-check-label" for="post_box">Post Box</label>
+                </div>
+                <!-- ... add other checkboxes for this category similarly ... -->
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-qg6cVe3+gkjqB3vvW7rj5ieRYt5BWo4F2F1RzL7v6Jp4pzl4vKpGIPKa2C3TfKhr" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4Ck4SOF4y4Ck4C2DgHfViXydVeLm+JDM" crossorigin="anonymous"></script>
 
 <script>
     // Initialize the map
@@ -66,16 +232,64 @@
             }
         });
     }
-
-    // When the zoom level form is submitted
-    $('#searchZoomForm').submit(function (e) {
-        handleFormSubmit(e, '/filter_by_zoomlevel');
+    function onCollegeSelected(collegeName) {
+            fetch('/colleges/nearby_amenities', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    college_name: collegeName
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Clear previous markers from the Leaflet map
+                // Add new markers to the map for each amenity
+            })
+            .catch(error => {
+                console.error("Error fetching nearby amenities:", error);
+            });
+    }
+    document.getElementById('collegeSelectDropdown').addEventListener('change', function() {
+        var selectedCollegeName = this.value;
+        onCollegeSelected(selectedCollegeName);
     });
+
 
     // When the schoolshort form is submitted
     $('#searchSchoolshortForm').submit(function (e) {
         handleFormSubmit(e, '/filter_by_schoolshort');
     });
+
+    function onCollegeSelected(collegeName) {
+    fetch('/colleges/nearby_amenities', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            college_name: collegeName
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Assuming data is a list of amenities, each with 'lat' and 'lon' attributes.
+
+        // Clear previous markers from the Leaflet map.
+        // If you have a layer group for markers, you can use: markersGroup.clearLayers();
+
+        data.forEach(amenity => {
+            // Create a marker for each amenity and add it to the map.
+            L.marker([amenity.lat, amenity.lon]).addTo(map)
+              .bindPopup(amenity.name); // Assuming each amenity has a 'name' attribute.
+        });
+    })
+    .catch(error => {
+        console.error("Error fetching nearby amenities:", error);
+    });
+    }
+
 </script>
 
 </body>
