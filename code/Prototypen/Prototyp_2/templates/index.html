@@ -6,12 +6,18 @@
     <!-- Include Leaflet CSS and JavaScript -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <style>
         #map { height: 800px; }
+
+        #universityTableBody {
+            max-height: 500px;  /* Adjust the height as needed */
+            overflow-y: auto;
+            display: block; /* Necessary to make tbody scrollable */
+        }
+
     </style>
 </head>
 <body>
@@ -38,7 +44,7 @@
 
     </div>
     <div class="row my-4">
-        <div class="col-2 border">
+        <div class="col-3 border">
                 <!-- Type of University -->
                 <h4>Colleges</h4>
                 <h5>College Type</h5>
@@ -69,9 +75,37 @@
                     <input class="form-check-input" type="checkbox" value="1" id="italian">
                     <label class="form-check-label" for="italian">Italian</label>
                 </div>
+                <button type="submit" class="btn btn-primary mt-3">Filter Colleges</button>
+
+            <div class="mt-5">
+                <h3>Filtered Universities</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">University Name</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="universityTableBody">
+                        <!-- Rows will be dynamically populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const tableBody = document.getElementById('universityTableBody');
+                    tableBody.addEventListener('click', function(e) {
+                        if (e.target && e.target.classList.contains('delete-row')) {
+                            // Remove the corresponding row
+                            e.target.closest('tr').remove();
+                        }
+                    });
+                });
+            </script>
 
         </div>
-        <div class="col-8">
+        <div class="col-7">
             <div class="col-12 border">
                 <div id="map" class="my-3"></div>
             </div>
@@ -97,38 +131,39 @@
 
                 <!-- Food & Drink -->
                 <h5>Food & Drink</h5>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="bar" id="bar">
-                    <label class="form-check-label" for="bar">Bar</label>
+                <div class="form-group">
+                    <label for="bar">Bar</label>
+                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="bar" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="bar" id="biergarten">
-                    <label class="form-check-label" for="biergarten">Biergarten</label>
+                <div class="form-group">
+                    <label for="biergarten">Biergarten</label>
+                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="biergarten" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="bar" id="cafe">
-                    <label class="form-check-label" for="cafe">Cafe</label>
+                <div class="form-group">
+                    <label for="cafe">Cafe</label>
+                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="cafe" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="bar" id="fast_food">
-                    <label class="form-check-label" for="fast_food">Fast Food</label>
+                <div class="form-group">
+                    <label for="fast_food">Fast Food</label>
+                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="fast_food" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="bar" id="food_court">
-                    <label class="form-check-label" for="food_court">Food Court</label>
+                <div class="form-group">
+                    <label for="food_court">Food Court</label>
+                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="food_court" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="bar" id="ice_cream">
-                    <label class="form-check-label" for="ice_cream">Ice Cream</label>
+                <div class="form-group">
+                    <label for="ice_cream">Ice Cream</label>
+                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="ice_cream" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="bar" id="restaurant">
-                    <label class="form-check-label" for="restaurant">Restaurant</label>
+                <div class="form-group">
+                    <label for="restaurant">Restaurant</label>
+                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="restaurant" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="bar" id="pub">
-                    <label class="form-check-label" for="pub">Pub</label>
+                <div class="form-group">
+                    <label for="pub">Pub</label>
+                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="pub" value="3">
                 </div>
+
 
                 <!-- Entertainment & Culture -->
                 <h5>Entertainment & Culture</h5>
@@ -186,111 +221,112 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- Bootstrap JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-qg6cVe3+gkjqB3vvW7rj5ieRYt5BWo4F2F1RzL7v6Jp4pzl4vKpGIPKa2C3TfKhr" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4Ck4SOF4y4Ck4C2DgHfViXydVeLm+JDM" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
-    // Initialize the map
-    var map = L.map('map').setView([47.3769, 8.5417], 12);  // Zurich as the starting point
+    // Initialize the Leaflet map with Zurich as the starting point
+    var map = L.map('map').setView([47.3769, 8.5417], 12);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Function to add markers to the map
+    // Add markers to the map for each coordinate
     function addMarkers(coordinates) {
-        coordinates.forEach(function (coord) {
-            L.marker([coord.lat, coord.lon]).addTo(map);  // Add markers for each coordinate
-        });
+        coordinates.forEach(coord => L.marker([coord.lat, coord.lon]).addTo(map));
     }
 
-    // Function to handle form submission
-    function handleFormSubmit(e, url) {
-        e.preventDefault();  // Prevent page reload
-        $.ajax({
-            type: 'POST',
-            url: url,
-            data: $(e.target).serialize(),  // Send form data
-            success: function (coordinates) {
-                // Clear existing markers
-                map.eachLayer(function (layer) {
-                    if (layer instanceof L.Marker) {
-                        map.removeLayer(layer);
-                    }
-                });
-
-                // Add markers for the filtered coordinates
-                addMarkers(coordinates);
-            },
-            error: function (error) {
-                console.error("An error occurred:", error);
-                alert("An error occurred while fetching the coordinates. Please check the console for more details.");
-            }
-        });
-    }
+    // Fetch amenities based on college name and display markers on map
     function onCollegeSelected(collegeName) {
-            fetch('/colleges/nearby_amenities', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    college_name: collegeName
-                })
+        fetch('/colleges/nearby_amenities', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ college_name: collegeName })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Clear previous markers from the Leaflet map
+            map.eachLayer(layer => {
+                if (layer instanceof L.Marker) {
+                    map.removeLayer(layer);
+                }
+            });
+
+            // Add new markers for each amenity
+            data.forEach(amenity => {
+                L.marker([amenity.lat, amenity.lon]).addTo(map)
+                  .bindPopup(amenity.name);  // Assuming each amenity has a 'name' attribute
+            });
+        })
+        .catch(error => {
+            console.error("Error fetching nearby amenities:", error);
+        });
+    }
+
+    // Event listener for dropdown change
+    document.getElementById('collegeSelectDropdown').addEventListener('change', function() {
+        onCollegeSelected(this.value);
+    });
+
+    // jQuery initialization
+    function fetchAllUniqueColleges() {
+        fetch('/colleges/get_all_unique_colleges', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
             })
-            .then(response => response.json())
             .then(data => {
-                // Clear previous markers from the Leaflet map
-                // Add new markers to the map for each amenity
+                let tableBody = document.getElementById('universityTableBody');
+                while (tableBody.firstChild) {
+                    tableBody.removeChild(tableBody.firstChild); // Clear previous entries
+                }
+
+                data.forEach((college, index) => {
+                    let row = tableBody.insertRow();
+
+                    let cellName = row.insertCell(0);
+                    let cellDelete = row.insertCell(1);
+
+                    cellName.textContent = college;
+
+                    let deleteButton = document.createElement('button');
+                    deleteButton.className = 'btn btn-danger delete-row';
+                    deleteButton.setAttribute('data-id', college._id);
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.addEventListener('click', function() {
+                        row.remove();
+                    });
+
+                    cellDelete.appendChild(deleteButton);
+                });
             })
             .catch(error => {
-                console.error("Error fetching nearby amenities:", error);
+                console.error("Error fetching unique colleges:", error);
+                alert('Error fetching data. Please try again.');
             });
     }
-    document.getElementById('collegeSelectDropdown').addEventListener('change', function() {
-        var selectedCollegeName = this.value;
-        onCollegeSelected(selectedCollegeName);
-    });
 
-
-    // When the schoolshort form is submitted
-    $('#searchSchoolshortForm').submit(function (e) {
-        handleFormSubmit(e, '/filter_by_schoolshort');
-    });
-
-    function onCollegeSelected(collegeName) {
-    fetch('/colleges/nearby_amenities', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            college_name: collegeName
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Assuming data is a list of amenities, each with 'lat' and 'lon' attributes.
-
-        // Clear previous markers from the Leaflet map.
-        // If you have a layer group for markers, you can use: markersGroup.clearLayers();
-
-        data.forEach(amenity => {
-            // Create a marker for each amenity and add it to the map.
-            L.marker([amenity.lat, amenity.lon]).addTo(map)
-              .bindPopup(amenity.name); // Assuming each amenity has a 'name' attribute.
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fetch unique college names on button click
+        let fetchButton = document.querySelector('.btn-primary');
+        fetchButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            fetchAllUniqueColleges();
         });
-    })
-    .catch(error => {
-        console.error("Error fetching nearby amenities:", error);
     });
-    }
 
 </script>
+
 
 </body>
 </html>

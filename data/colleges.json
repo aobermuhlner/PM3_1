@@ -9,7 +9,14 @@
         "quarter": "Jonction",
         "city": "Genève",
         "address": "Boulevard du Pont-d'Arve, 1200, Genève",
-        "zipcode": "1200"
+        "zipcode": "1200",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.140400409698486,
+                46.194271087646484
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Ancienne École de Médecine</b> (GE) - Genève",
@@ -21,7 +28,14 @@
         "quarter": "Jonction",
         "city": "Genève",
         "address": "Rue de l'Ecole-de-Médecine, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.136425971984863,
+                46.19590759277344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève, Valais Campus Sion</b> (VS) - Sion",
@@ -33,7 +47,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin du Bosquet, 1950, ",
-        "zipcode": "1950"
+        "zipcode": "1950",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.398563861846924,
+                46.22985076904297
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Sciences</b> (GE) - Genève",
@@ -45,7 +66,14 @@
         "quarter": "Jonction",
         "city": "Genève",
         "address": "Boulevard D'Yvoy, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.133457183837891,
+                46.19778823852539
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Saint-Ours</b> (GE) - Genève",
@@ -57,7 +85,14 @@
         "quarter": "Cité",
         "city": "Genève",
         "address": "Square de la Comédie, , Genève",
-        "zipcode": "Unknown Zipcode"
+        "zipcode": "Unknown Zipcode",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.1443352699279785,
+                46.1978759765625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Observatoire</b> (GE) - Versoix",
@@ -69,7 +104,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin Pegasi, 1290, ",
-        "zipcode": "1290"
+        "zipcode": "1290",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.133902072906494,
+                46.30844497680664
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Maraîchers</b> (GE) - Genève",
@@ -81,7 +123,14 @@
         "quarter": "Jonction",
         "city": "Genève",
         "address": "Rue des Maraîchers, 1200, Genève",
-        "zipcode": "1200"
+        "zipcode": "1200",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.136384010314941,
+                46.19906997680664
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Ecogia</b> (GE) - Versoix",
@@ -93,7 +142,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin d'Ecogia, 1290, ",
-        "zipcode": "1290"
+        "zipcode": "1290",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.149912357330322,
+                46.291168212890625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE</b> (GE) - Genève",
@@ -105,7 +161,14 @@
         "quarter": "Pâquis",
         "city": "Genève",
         "address": "Chemin des Mines, 1202, Genève",
-        "zipcode": "1202"
+        "zipcode": "1202",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.147281169891357,
+                46.22184371948242
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Landolt/Mirabeau</b> (GE) - Genève",
@@ -117,7 +180,14 @@
         "quarter": "Cité",
         "city": "Genève",
         "address": "Rue De-Candolle, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.143355846405029,
+                46.199031829833984
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Comédie</b> (GE) - Genève",
@@ -129,7 +199,14 @@
         "quarter": "Cité",
         "city": "Genève",
         "address": "Boulevard des Philosophes, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.144376277923584,
+                46.19702911376953
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Battelle</b> (GE) - Carouge (GE)",
@@ -141,7 +218,14 @@
         "quarter": "La Praille",
         "city": "Unknown City",
         "address": "Route de Drize, 1234, ",
-        "zipcode": "1234"
+        "zipcode": "1234",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.139766693115234,
+                46.17578125
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Dufour</b> (GE) - Genève",
@@ -153,7 +237,14 @@
         "quarter": "Cité",
         "city": "Genève",
         "address": "Square Horace-Bénédict-de-Saussure, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.142203330993652,
+                46.19963455200195
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Philosophes</b> (GE) - Genève",
@@ -165,7 +256,14 @@
         "quarter": "Cité",
         "city": "Genève",
         "address": "Boulevard des Philosophes, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.1472487449646,
+                46.196205139160156
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, Carl Vogt</b> (GE) - Genève",
@@ -177,7 +275,14 @@
         "quarter": "Jonction",
         "city": "Genève",
         "address": "Boulevard Carl-Vogt, 1200, Genève",
-        "zipcode": "1200"
+        "zipcode": "1200",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.136660575866699,
+                46.19731140136719
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Genève UNIGE, S.I.P.</b> (GE) - Genève",
@@ -189,7 +294,14 @@
         "quarter": "Jonction",
         "city": "Genève",
         "address": "Rue Gourgas, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.138139724731445,
+                46.19923400878906
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Rue Pierre-Aeby</b> (FR) - Fribourg",
@@ -201,7 +313,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Rue Pierre-Aeby, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.1600847244262695,
+                46.80723190307617
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Route des Bonnesfontaines</b> (FR) - Fribourg",
@@ -213,7 +332,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route des Bonnesfontaines, 1763, ",
-        "zipcode": "1763"
+        "zipcode": "1763",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.1461310386657715,
+                46.812294006347656
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Rue St-Pierre-Canisius</b> (FR) - Fribourg",
@@ -225,7 +351,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Rue Saint-Pierre-Canisius, 1702, ",
-        "zipcode": "1702"
+        "zipcode": "1702",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.158041000366211,
+                46.805992126464844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Site Beauregard</b> (FR) - Fribourg",
@@ -237,7 +370,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Avenue Beauregard, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.146145820617676,
+                46.80237579345703
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Site Pérolles</b> (FR) - Fribourg",
@@ -249,7 +389,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "180, 1705, ",
-        "zipcode": "1705"
+        "zipcode": "1705",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.155187606811523,
+                46.79270553588867
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Site Régina Mundi</b> (FR) - Fribourg",
@@ -261,7 +408,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Rue Petermann-Aymon-de-Faucigny, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.1565327644348145,
+                46.796260833740234
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Rue du Criblet</b> (FR) - Fribourg",
@@ -273,7 +427,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Passage 23, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.154306411743164,
+                46.805023193359375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Site Beauregard</b> (FR) - Fribourg",
@@ -285,7 +446,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Avenue Beauregard, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.1490678787231445,
+                46.80247116088867
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Site Miséricorde</b> (FR) - Fribourg",
@@ -297,7 +465,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Rue de Rome, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.153051376342773,
+                46.80753707885742
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Site Arsenaux</b> (FR) - Fribourg",
@@ -309,7 +484,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Route des Arsenaux, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.152294158935547,
+                46.7962532043457
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Rue de Morat</b> (FR) - Fribourg",
@@ -321,7 +503,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Rue de Morat / Murtengasse, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.1590352058410645,
+                46.80936813354492
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Fribourg UNIFR, Site Pérolles</b> (FR) - Fribourg",
@@ -333,7 +522,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Boulevard de Pérolles, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.159756183624268,
+                46.793785095214844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Faculté des sciences sociales et politiques</b> (VD) - Lausanne",
@@ -345,7 +541,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Avenue de la Gare, 1003, Lausanne",
-        "zipcode": "1003"
+        "zipcode": "1003",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.637124538421631,
+                46.516544342041016
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne, site de Sion</b> (VS) - Sion",
@@ -357,7 +560,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin du Bosquet, 1950, ",
-        "zipcode": "1950"
+        "zipcode": "1950",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.398563861846924,
+                46.22985076904297
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Site Epalinges</b> (VD) - Epalinges",
@@ -369,7 +579,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de la Corniche, 1066, ",
-        "zipcode": "1066"
+        "zipcode": "1066",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.6608171463012695,
+                46.54258346557617
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Site Bugnon CHUV</b> (VD) - Lausanne",
@@ -381,7 +598,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue du Bugnon, 1011, Lausanne",
-        "zipcode": "1011"
+        "zipcode": "1011",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.639979362487793,
+                46.52516555786133
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Hôpital ophtalmique Jules-Gonin</b> (VD) - Lausanne",
@@ -393,7 +617,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Avenue de France, 1004, Lausanne",
-        "zipcode": "1004"
+        "zipcode": "1004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.622732639312744,
+                46.52456283569336
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Site Bugnon CHUV</b> (VD) - Lausanne",
@@ -405,7 +636,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue du Bugnon, 1011, Lausanne",
-        "zipcode": "1011"
+        "zipcode": "1011",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.643126010894775,
+                46.5252571105957
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Clinique psychiatrique</b> (VD) - Prilly",
@@ -417,7 +655,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de Cery, 1008, ",
-        "zipcode": "1008"
+        "zipcode": "1008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.607577323913574,
+                46.547019958496094
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Site Bugnon CHUV</b> (VD) - Lausanne",
@@ -429,7 +674,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Chemin des Falaises, 1011, Lausanne",
-        "zipcode": "1011"
+        "zipcode": "1011",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.641106128692627,
+                46.52738571166992
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Site Dorigny</b> (VD) - Chavannes-près-Renens",
@@ -441,7 +693,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de Praz-Véguey, 1022, ",
-        "zipcode": "1022"
+        "zipcode": "1022",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.579483985900879,
+                46.526493072509766
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Site Bugnon CHUV</b> (VD) - Lausanne",
@@ -453,7 +712,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue du Bugnon, 1011, Lausanne",
-        "zipcode": "1011"
+        "zipcode": "1011",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.64322566986084,
+                46.527225494384766
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Site Bugnon CHUV</b> (VD) - Lausanne",
@@ -465,7 +731,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue du Bugnon, 1011, Lausanne",
-        "zipcode": "1011"
+        "zipcode": "1011",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.638319969177246,
+                46.524375915527344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Lausanne UNIL, Site Epalinges</b> (VD) - Lausanne,Epalinges",
@@ -477,7 +750,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Route de la Corniche, 1010, Lausanne",
-        "zipcode": "1010"
+        "zipcode": "1010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.658852577209473,
+                46.54163360595703
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Universität</b> (BS) - Basel",
@@ -489,7 +769,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.583456039428711,
+                47.558231353759766
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Mattenstrasse</b> (BS) - Basel",
@@ -501,7 +788,14 @@
         "quarter": "Rosental",
         "city": "Basel",
         "address": "Mattenstrasse, 4058, Basel",
-        "zipcode": "4058"
+        "zipcode": "4058",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.601956367492676,
+                47.56634521484375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Bernoullistrasse</b> (BS) - Basel",
@@ -513,7 +807,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.581943035125732,
+                47.56000900268555
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Hirschgässlein</b> (BS) - Basel",
@@ -525,7 +826,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Hirschgässlein, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.592851161956787,
+                47.55070877075195
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Holbeinstrasse</b> (BS) - Basel",
@@ -537,7 +845,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Holbeinstrasse, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.583991527557373,
+                47.554603576660156
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Spalenring</b> (BS) - Basel",
@@ -549,7 +864,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Spalenring, 4055, Basel",
-        "zipcode": "4055"
+        "zipcode": "4055",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.576392650604248,
+                47.55495834350586
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Steinengraben</b> (BS) - Basel",
@@ -561,7 +883,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Steinengraben, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.585071086883545,
+                47.55427551269531
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort St.Johanns-Vorstadt</b> (BS) - Basel",
@@ -573,7 +902,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "St. Johanns-Vorstadt, 4031, Basel",
-        "zipcode": "4031"
+        "zipcode": "4031",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.585416793823242,
+                47.56266784667969
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Bernoullistrasse</b> (BS) - Basel",
@@ -585,7 +921,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.580715179443359,
+                47.560585021972656
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Gellertstrasse</b> (BS) - Basel",
@@ -597,7 +940,14 @@
         "quarter": "St. Alban",
         "city": "Basel",
         "address": "Gellertstrasse, 4052, Basel",
-        "zipcode": "4052"
+        "zipcode": "4052",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.612016677856445,
+                47.551605224609375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Bernoullistrasse</b> (BS) - Basel",
@@ -609,7 +959,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.5811567306518555,
+                47.56023025512695
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Schönbeinstrasse</b> (BS) - Basel",
@@ -621,7 +978,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Schönbeinstrasse, 4031, Basel",
-        "zipcode": "4031"
+        "zipcode": "4031",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.581602096557617,
+                47.56061935424805
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Rheinsprung</b> (BS) - Basel",
@@ -633,7 +997,14 @@
         "quarter": "Altstadt Grossbasel",
         "city": "Basel",
         "address": "Rheinsprung, 4000, Basel",
-        "zipcode": "4000"
+        "zipcode": "4000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.589489459991455,
+                47.55882263183594
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Peter Merian-Weg</b> (BS) - Basel",
@@ -645,7 +1016,14 @@
         "quarter": "St. Alban",
         "city": "Basel",
         "address": "Peter Merian-Weg, 4053, Basel",
-        "zipcode": "4053"
+        "zipcode": "4053",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.59752893447876,
+                47.54524230957031
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort St.Alban-Graben</b> (BS) - Basel",
@@ -657,7 +1035,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "St. Alban-Graben, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.593663215637207,
+                47.55388641357422
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Klingelbergstrasse</b> (BS) - Basel",
@@ -669,7 +1054,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Klingelbergstrasse, 4056, Basel",
-        "zipcode": "4056"
+        "zipcode": "4056",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.580340385437012,
+                47.56162643432617
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Petersplatz</b> (BS) - Basel",
@@ -681,7 +1073,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.582340240478516,
+                47.558692932128906
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Petersgraben</b> (BS) - Basel",
@@ -693,7 +1092,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Spitalstrasse, 4031, Basel",
-        "zipcode": "4031"
+        "zipcode": "4031",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.5846686363220215,
+                47.56101989746094
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Petersgraben</b> (BS) - Basel",
@@ -705,7 +1111,14 @@
         "quarter": "Altstadt Grossbasel",
         "city": "Basel",
         "address": "Peterskirchplatz, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.584677696228027,
+                47.55906677246094
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Steinengraben</b> (BS) - Basel",
@@ -717,7 +1130,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Steinengraben, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.5850324630737305,
+                47.55562210083008
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Mittlere Strasse</b> (BS) - Basel",
@@ -729,7 +1149,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Mittlere Strasse, 4031, Basel",
-        "zipcode": "4031"
+        "zipcode": "4031",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.576293468475342,
+                47.56243133544922
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Heuberg</b> (BS) - Basel",
@@ -741,7 +1168,14 @@
         "quarter": "Altstadt Grossbasel",
         "city": "Basel",
         "address": "Heuberg, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.58766508102417,
+                47.55576705932617
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Rheinsprung</b> (BS) - Basel",
@@ -753,7 +1187,14 @@
         "quarter": "Altstadt Grossbasel",
         "city": "Basel",
         "address": "Rheinsprung, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.590259075164795,
+                47.558189392089844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Schanzenstrasse</b> (BS) - Basel",
@@ -765,7 +1206,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Schanzenstrasse, 4056, Basel",
-        "zipcode": "4056"
+        "zipcode": "4056",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.581483840942383,
+                47.562171936035156
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Gewerbestrasse</b> (BL) - Allschwil",
@@ -777,7 +1225,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Gewerbestrasse, 4123, ",
-        "zipcode": "4123"
+        "zipcode": "4123",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.544740676879883,
+                47.55746841430664
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Münsterplatz</b> (BS) - Basel",
@@ -789,7 +1244,14 @@
         "quarter": "Altstadt Grossbasel",
         "city": "Basel",
         "address": "Münsterplatz, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.590781211853027,
+                47.5569953918457
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Maiengasse</b> (BS) - Basel",
@@ -801,7 +1263,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Maiengasse, 4056, Basel",
-        "zipcode": "4056"
+        "zipcode": "4056",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.57801628112793,
+                47.56112289428711
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Schönbeinstrasse</b> (BS) - Basel",
@@ -813,7 +1282,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.581610202789307,
+                47.55903625488281
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Hebelstrasse</b> (BS) - Basel",
@@ -825,7 +1301,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.584112167358398,
+                47.55998611450195
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Pestalozzistrasse</b> (BS) - Basel",
@@ -837,7 +1320,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.579587459564209,
+                47.56483459472656
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Riehenstrasse</b> (BS) - Basel",
@@ -849,7 +1339,14 @@
         "quarter": "Wettstein",
         "city": "Basel",
         "address": "Zugang Sandgrube Süd, 4058, Basel",
-        "zipcode": "4058"
+        "zipcode": "4058",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.606314182281494,
+                47.56443786621094
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Klingelbergstrasse</b> (BS) - Basel",
@@ -861,7 +1358,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.5790019035339355,
+                47.564697265625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Spitalstrasse</b> (BS) - Basel",
@@ -873,7 +1377,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.58121919631958,
+                47.56391525268555
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Nadelberg</b> (BS) - Basel",
@@ -885,7 +1396,14 @@
         "quarter": "Altstadt Grossbasel",
         "city": "Basel",
         "address": "Nadelberg, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.585227012634277,
+                47.55842208862305
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort St. Johanns-Ring</b> (BS) - Basel",
@@ -897,7 +1415,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.5794782638549805,
+                47.56534194946289
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Spitalstrasse</b> (BS) - Basel",
@@ -909,7 +1434,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.58323860168457,
+                47.562381744384766
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Petersgraben</b> (BS) - Basel",
@@ -921,7 +1453,14 @@
         "quarter": "Altstadt Grossbasel",
         "city": "Basel",
         "address": "Nadelberg, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.584747314453125,
+                47.558414459228516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Klingelbergstrasse</b> (BS) - Basel",
@@ -933,7 +1472,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Klingelbergstrasse, 4056, Basel",
-        "zipcode": "4056"
+        "zipcode": "4056",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.579653263092041,
+                47.56303405761719
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Spiegelgasse</b> (BS) - Basel",
@@ -945,7 +1491,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.587279796600342,
+                47.5601921081543
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Totengässlein</b> (BS) - Basel",
@@ -957,7 +1510,14 @@
         "quarter": "Altstadt Grossbasel",
         "city": "Basel",
         "address": "Totengässlein, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.586130142211914,
+                47.55858612060547
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Wilhelm Klein-Strasse</b> (BS) - Basel",
@@ -969,7 +1529,14 @@
         "quarter": "St. Johann",
         "city": "Basel",
         "address": "Wilhelm Klein-Strasse, 4012, Basel",
-        "zipcode": "4012"
+        "zipcode": "4012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.565068244934082,
+                47.571590423583984
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Burgfelderstrasse</b> (BS) - Basel",
@@ -981,7 +1548,14 @@
         "quarter": "St. Johann",
         "city": "Basel",
         "address": "Dammerkirchstrasse, 4012, Basel",
-        "zipcode": "4012"
+        "zipcode": "4012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.565530776977539,
+                47.56471633911133
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Leimenstrasse</b> (BS) - Basel",
@@ -993,7 +1567,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Leimenstrasse, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.581186771392822,
+                47.5533332824707
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Spitalstrasse</b> (BS) - Basel",
@@ -1005,7 +1586,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.580080986022949,
+                47.565093994140625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Hebelstrasse</b> (BS) - Basel",
@@ -1017,7 +1605,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Hebelstrasse, 4056, Basel",
-        "zipcode": "4056"
+        "zipcode": "4056",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.582394123077393,
+                47.561126708984375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Birmannsgasse</b> (BS) - Basel",
@@ -1029,7 +1624,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Birmannsgasse, 4055, Basel",
-        "zipcode": "4055"
+        "zipcode": "4055",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.578746318817139,
+                47.55849838256836
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Klingelbergstrasse</b> (BS) - Basel",
@@ -1041,7 +1643,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.580174922943115,
+                47.5637092590332
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Petersgraben</b> (BS) - Basel",
@@ -1053,7 +1662,14 @@
         "quarter": "Altstadt Grossbasel",
         "city": "Basel",
         "address": "Rosshofgasse, 4051, Basel",
-        "zipcode": "4051"
+        "zipcode": "4051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.584752082824707,
+                47.55757141113281
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Missionsstrasse</b> (BS) - Basel",
@@ -1065,7 +1681,14 @@
         "quarter": "Am Ring",
         "city": "Basel",
         "address": "Missionsstrasse, 4055, Basel",
-        "zipcode": "4055"
+        "zipcode": "4055",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.5756611824035645,
+                47.56155776977539
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Basel, Standort Hebelstrasse</b> (BS) - Basel",
@@ -1077,7 +1700,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "Picassoplatz, 4010, Basel",
-        "zipcode": "4010"
+        "zipcode": "4010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.583789348602295,
+                47.55992889404297
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL</b> (NE) - Neuchâtel",
@@ -1089,7 +1719,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rue de la Maladière, 2000, ",
-        "zipcode": "2000"
+        "zipcode": "2000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.945991516113281,
+                46.99785614013672
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL</b> (VD) - Ecublens (VD)",
@@ -1101,7 +1738,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin des Triaudes, 1024, ",
-        "zipcode": "1024"
+        "zipcode": "1024",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.565562725067139,
+                46.52412033081055
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL</b> (VD) - Saint-Sulpice (VD),Ecublens (VD)",
@@ -1113,7 +1757,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route Cantonale, 1025, ",
-        "zipcode": "1025"
+        "zipcode": "1025",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.565594673156738,
+                46.516510009765625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL</b> (GE) - Genève",
@@ -1125,7 +1776,14 @@
         "quarter": "Pâquis",
         "city": "Genève",
         "address": "Chemin des Mines, 1202, Genève",
-        "zipcode": "1202"
+        "zipcode": "1202",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.147281169891357,
+                46.22184371948242
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL, Laboratoire Bâle (laba)</b> (BS) - Basel",
@@ -1137,7 +1795,14 @@
         "quarter": "Vorstädte",
         "city": "Basel",
         "address": "St. Johanns-Vorstadt, 4031, Basel",
-        "zipcode": "4031"
+        "zipcode": "4031",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.584393501281738,
+                47.56303405761719
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL, Campus Sion</b> (VS) - Sion",
@@ -1149,7 +1814,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rue de l'Industrie, 1950, ",
-        "zipcode": "1950"
+        "zipcode": "1950",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.361345291137695,
+                46.2269172668457
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL</b> (VD) - Ecublens (VD)",
@@ -1161,7 +1833,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin de la Raye, 1024, ",
-        "zipcode": "1024"
+        "zipcode": "1024",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.563052654266357,
+                46.52427291870117
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL</b> (VD) - Ecublens (VD)",
@@ -1173,7 +1852,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de la Sorge, 1015, ",
-        "zipcode": "1015"
+        "zipcode": "1015",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.571329116821289,
+                46.522037506103516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL</b> (VD) - Ecublens (VD)",
@@ -1185,7 +1871,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin de la Dent d'Oche, 1024, ",
-        "zipcode": "1024"
+        "zipcode": "1024",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.560234069824219,
+                46.51791763305664
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Ecole polytechnique fédérale de Lausanne EPFL</b> (VD) - Ecublens (VD)",
@@ -1197,7 +1890,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin de la Raye, 1024, ",
-        "zipcode": "1024"
+        "zipcode": "1024",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.563817024230957,
+                46.524662017822266
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1209,7 +1909,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Sonneggstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.544960975646973,
+                47.382408142089844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Schwerzenbach</b> (ZH) - Schwerzenbach",
@@ -1221,7 +1928,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Schorenstrasse, 8603, ",
-        "zipcode": "8603"
+        "zipcode": "8603",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.655211448669434,
+                47.38469314575195
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ</b> (ZH) - Zürich",
@@ -1233,7 +1947,14 @@
         "quarter": "Industriequartier",
         "city": "Zürich",
         "address": "Technoparkstrasse, 8010, Zürich",
-        "zipcode": "8010"
+        "zipcode": "8010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.515568733215332,
+                47.38984680175781
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1245,7 +1966,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Hochstrasse, 8044, Zürich",
-        "zipcode": "8044"
+        "zipcode": "8044",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.554793357849121,
+                47.37825393676758
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1257,7 +1985,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Weinbergstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.544214248657227,
+                47.381675720214844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1269,7 +2004,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Wasserwerkstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54073715209961,
+                47.38301086425781
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1281,7 +2023,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Turnerstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.544812202453613,
+                47.38311767578125
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Oerlikon</b> (ZH) - Zürich",
@@ -1293,7 +2042,14 @@
         "quarter": "Seebach",
         "city": "Zürich",
         "address": "Neunbrunnenstrasse, 8050, Zürich",
-        "zipcode": "8050"
+        "zipcode": "8050",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.539772033691406,
+                47.417388916015625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1305,7 +2061,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Zürichbergstrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.552813529968262,
+                47.373191833496094
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1317,7 +2080,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Hirschengraben, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54543399810791,
+                47.37604904174805
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1329,7 +2099,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Hirschengraben, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.545952796936035,
+                47.375205993652344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1341,7 +2118,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Weinbergstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.543832778930664,
+                47.38020324707031
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1353,7 +2137,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Scheuchzerstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.545039176940918,
+                47.38267517089844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1365,7 +2156,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Universitätstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.547872543334961,
+                47.38043975830078
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1377,7 +2175,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Weinbergstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.543998718261719,
+                47.37948989868164
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1389,7 +2194,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Stampfenbachstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.541731834411621,
+                47.38145446777344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1401,7 +2213,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Leonhardshalde, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54541015625,
+                47.376712799072266
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1413,7 +2232,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Haldeneggsteig, 8092, Zürich",
-        "zipcode": "8092"
+        "zipcode": "8092",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54495620727539,
+                47.38014602661133
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Balgrist</b> (ZH) - Zürich",
@@ -1425,7 +2251,14 @@
         "quarter": "Kreis 8",
         "city": "Zürich",
         "address": "Lengghalde, 8008, Zürich",
-        "zipcode": "8008"
+        "zipcode": "8008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.574235916137695,
+                47.35240936279297
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1437,7 +2270,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Sonneggstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.546175956726074,
+                47.37995910644531
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1449,7 +2289,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Stampfenbachstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.543022155761719,
+                47.38059616088867
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1461,7 +2308,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Rämistrasse, 8091, Zürich",
-        "zipcode": "8091"
+        "zipcode": "8091",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.55301570892334,
+                47.37770080566406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1473,7 +2327,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Universitätstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.547886848449707,
+                47.379276275634766
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1485,7 +2346,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Universitätstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.547911643981934,
+                47.378883361816406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1497,7 +2365,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Weinbergstrasse, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54406452178955,
+                47.37794876098633
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1509,7 +2384,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Haldenbachstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.550870895385742,
+                47.3809928894043
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1521,7 +2403,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Sonneggstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54666805267334,
+                47.38008117675781
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1533,7 +2422,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Universitätstrasse, 8092, Zürich",
-        "zipcode": "8092"
+        "zipcode": "8092",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.549254417419434,
+                47.37827682495117
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Eidgenössische Technische Hochschule Zürich ETHZ, Standort Zentrum</b> (ZH) - Zürich",
@@ -1545,7 +2441,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Nelkenstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.546432495117188,
+                47.38209915161133
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Eidgenössische Technische Hochschule ETHZ Hönggerberg</b> (ZH) - Zürich",
@@ -1557,7 +2460,14 @@
         "quarter": "Höngg",
         "city": "Zürich",
         "address": "Laura-Hezner-Weg, 8093, Zürich",
-        "zipcode": "8093"
+        "zipcode": "8093",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.50771713256836,
+                47.40850067138672
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Eidgenössische Technische Hochschule ETHZ</b> (ZH) - Zürich",
@@ -1569,7 +2479,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Rämistrasse, 8091, Zürich",
-        "zipcode": "8091"
+        "zipcode": "8091",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.547501564025879,
+                47.376258850097656
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Universität</b> (LU) - Luzern",
@@ -1581,7 +2498,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Frohburgstrasse, 6005, ",
-        "zipcode": "6005"
+        "zipcode": "6005",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.312200546264648,
+                47.04965591430664
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Varnbüelstrasse</b> (SG) - St. Gallen",
@@ -1593,7 +2517,14 @@
         "quarter": "Rosenberg",
         "city": "Unknown City",
         "address": "Vadianstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.373311042785645,
+                47.43149185180664
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Bahnhofstrasse</b> (SG) - St. Gallen",
@@ -1605,7 +2536,14 @@
         "quarter": "Rosenberg",
         "city": "Unknown City",
         "address": "Bahnhofstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.37299633026123,
+                47.425865173339844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG</b> (SG) - St. Gallen",
@@ -1617,7 +2555,14 @@
         "quarter": "Rotmonten",
         "city": "Unknown City",
         "address": "Holzstrasse, 9010, ",
-        "zipcode": "9010"
+        "zipcode": "9010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.374914169311523,
+                47.43788146972656
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Tigerbergstrasse</b> (SG) - St. Gallen",
@@ -1629,7 +2574,14 @@
         "quarter": "Rosenberg",
         "city": "Unknown City",
         "address": "Tigerbergstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.374059677124023,
+                47.42765808105469
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Gatterstrasse</b> (SG) - St. Gallen",
@@ -1641,7 +2593,14 @@
         "quarter": "St. Jakob",
         "city": "Unknown City",
         "address": "Dufourstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.372994422912598,
+                47.431861877441406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG</b> (SG) - St. Gallen",
@@ -1653,7 +2612,14 @@
         "quarter": "Rosenberg",
         "city": "Unknown City",
         "address": "Höhenweg, 9001, ",
-        "zipcode": "9001"
+        "zipcode": "9001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.372261047363281,
+                47.43002700805664
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG</b> (SG) - St. Gallen",
@@ -1665,7 +2631,14 @@
         "quarter": "Rotmonten",
         "city": "Unknown City",
         "address": "Guisanstrasse, 9010, ",
-        "zipcode": "9010"
+        "zipcode": "9010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.375503540039062,
+                47.43437576293945
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Müller-Friedbergstrasse</b> (SG) - St. Gallen",
@@ -1677,7 +2650,14 @@
         "quarter": "St. Jakob",
         "city": "Unknown City",
         "address": "Müller-Friedberg-Strasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.375055313110352,
+                47.42805480957031
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Guisanstrasse</b> (SG) - St. Gallen",
@@ -1689,7 +2669,14 @@
         "quarter": "Rotmonten",
         "city": "Unknown City",
         "address": "Guisanstrasse, 9010, ",
-        "zipcode": "9010"
+        "zipcode": "9010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.374073028564453,
+                47.432315826416016
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Tigerbergstrasse</b> (SG) - St. Gallen",
@@ -1701,7 +2688,14 @@
         "quarter": "Rosenberg",
         "city": "Unknown City",
         "address": "Tigerbergstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.373093605041504,
+                47.42839431762695
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Bodanstrasse</b> (SG) - St. Gallen",
@@ -1713,7 +2707,14 @@
         "quarter": "St. Jakob",
         "city": "Unknown City",
         "address": "Bodanstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.373501777648926,
+                47.430755615234375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Blumenbergplatz</b> (SG) - St. Gallen",
@@ -1725,7 +2726,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": ", 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.373616218566895,
+                47.42733383178711
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Bodanstrasse</b> (SG) - St. Gallen",
@@ -1737,7 +2745,14 @@
         "quarter": "St. Jakob",
         "city": "Unknown City",
         "address": "Bodanstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.373119354248047,
+                47.43086242675781
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Tannenstrasse</b> (SG) - St. Gallen",
@@ -1749,7 +2764,14 @@
         "quarter": "Rotmonten",
         "city": "Unknown City",
         "address": "Girtannerstrasse, 9010, ",
-        "zipcode": "9010"
+        "zipcode": "9010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.377961158752441,
+                47.43440628051758
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort St. Jakob-Strasse</b> (SG) - St. Gallen",
@@ -1761,7 +2783,14 @@
         "quarter": "St. Jakob",
         "city": "Unknown City",
         "address": "St. Jakob-Strasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.378214836120605,
+                47.42917251586914
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Rosenbergstrasse</b> (SG) - St. Gallen",
@@ -1773,7 +2802,14 @@
         "quarter": "Rosenberg",
         "city": "Unknown City",
         "address": "Rosenbergstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.368531227111816,
+                47.42345428466797
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Tellstrasse</b> (SG) - St. Gallen",
@@ -1785,7 +2821,14 @@
         "quarter": "Rosenberg",
         "city": "Unknown City",
         "address": "Tellstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.371038436889648,
+                47.42557907104492
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Tigerstrasse</b> (SG) - St. Gallen",
@@ -1797,7 +2840,14 @@
         "quarter": "Rosenberg",
         "city": "Unknown City",
         "address": "Tigerbergstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.372838020324707,
+                47.42780303955078
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Rosenbergstrasse</b> (SG) - St. Gallen",
@@ -1809,7 +2859,14 @@
         "quarter": "Rosenberg",
         "city": "Unknown City",
         "address": "Rosenbergstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.37092113494873,
+                47.42509460449219
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität St. Gallen HSG, Standort Guisanstrasse</b> (SG) - St. Gallen",
@@ -1821,7 +2878,14 @@
         "quarter": "Rotmonten",
         "city": "Unknown City",
         "address": "Guisanstrasse, 9010, ",
-        "zipcode": "9010"
+        "zipcode": "9010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.373377799987793,
+                47.43201446533203
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Universität HSG</b> (SG) - St. Gallen",
@@ -1833,7 +2897,14 @@
         "quarter": "St. Jakob",
         "city": "Unknown City",
         "address": "Dufourstrasse, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.375113487243652,
+                47.43150329589844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Faculté des lettres et sciences humaines</b> (NE) - Lac de Neuchâtel (NE),Neuchâtel,Hauterive (NE)",
@@ -1845,7 +2916,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": ", 2068, ",
-        "zipcode": "2068"
+        "zipcode": "2068",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.971007823944092,
+                47.00691223144531
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Centre international d'étude du sport</b> (NE) - Neuchâtel",
@@ -1857,7 +2935,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Avenue DuPeyrou, 2000, ",
-        "zipcode": "2000"
+        "zipcode": "2000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.933488368988037,
+                46.99394989013672
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Institut des sciences du langage et de la communication</b> (NE) - Neuchâtel",
@@ -1869,7 +2954,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rue de la Pierre-à-Mazel, 2002, ",
-        "zipcode": "2002"
+        "zipcode": "2002",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.941305160522461,
+                46.995140075683594
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Faculté des lettres et sciences humaines, Institut d'ethnologie</b> (NE) - Neuchâtel",
@@ -1881,7 +2973,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rue de Saint-Nicolas, 2000, ",
-        "zipcode": "2000"
+        "zipcode": "2000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.920483589172363,
+                46.99052429199219
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Faculté des sciences, Institut de biologie</b> (NE) - Neuchâtel",
@@ -1893,7 +2992,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin du Pertuis-du-Sault, 2000, ",
-        "zipcode": "2000"
+        "zipcode": "2000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.935677528381348,
+                47.00001907348633
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Rectorat</b> (NE) - Neuchâtel",
@@ -1905,7 +3011,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Faubourg de l'Hôpital, 2002, ",
-        "zipcode": "2002"
+        "zipcode": "2002",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.935635566711426,
+                46.99476623535156
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Faculté des sciences économiques</b> (NE) - Neuchâtel",
@@ -1917,7 +3030,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rue Abram-Louis-Breguet, 2002, ",
-        "zipcode": "2002"
+        "zipcode": "2002",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.9404988288879395,
+                46.99376678466797
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Faculté des lettres et sciences humaines</b> (NE) - Neuchâtel",
@@ -1929,7 +3049,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Faubourg de l'Hôpital, 2002, ",
-        "zipcode": "2002"
+        "zipcode": "2002",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.934484958648682,
+                46.99392318725586
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Faculté des lettres et sciences humaines</b> (NE) - Neuchâtel",
@@ -1941,7 +3068,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Quai Robert-Comtesse, 2002, ",
-        "zipcode": "2002"
+        "zipcode": "2002",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.942226409912109,
+                46.993499755859375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Université de Neuchâtel, Faculté des lettres et sciences humaines, ILCF</b> (NE) - Neuchâtel",
@@ -1953,7 +3087,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Faubourg de l'Hôpital, 2000, ",
-        "zipcode": "2000"
+        "zipcode": "2000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.937748432159424,
+                46.994903564453125
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -1965,7 +3106,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Hofweg, 3013, Bern",
-        "zipcode": "3013"
+        "zipcode": "3013",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.445335865020752,
+                46.95702362060547
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -1977,7 +3125,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Kleine Westtangente, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.438076496124268,
+                46.95195770263672
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -1989,7 +3144,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Murtenstrasse, 3008, Bern",
-        "zipcode": "3008"
+        "zipcode": "3008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.425671100616455,
+                46.949703216552734
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2001,7 +3163,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Donnerbühlweg, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.433267593383789,
+                46.951236724853516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2013,7 +3182,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Vereinsweg, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.434881210327148,
+                46.954612731933594
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2025,7 +3201,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Hochschulstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.435436725616455,
+                46.94995880126953
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2037,7 +3220,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Altenbergrain, 3013, Bern",
-        "zipcode": "3013"
+        "zipcode": "3013",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.445035457611084,
+                46.9528694152832
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2049,7 +3239,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Kleine Westtangente, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.436910629272461,
+                46.95027542114258
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2061,7 +3258,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Murtenstrasse, 3008, Bern",
-        "zipcode": "3008"
+        "zipcode": "3008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.422307968139648,
+                46.9529914855957
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2073,7 +3277,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Hallerstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.434854984283447,
+                46.952247619628906
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2085,7 +3296,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Falkenplatz, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.435779571533203,
+                46.95120620727539
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2097,7 +3315,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Hallerstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.435100555419922,
+                46.952903747558594
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2109,7 +3334,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Sidlerstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.43880558013916,
+                46.95127868652344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2121,7 +3353,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Sidlerstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.437584400177002,
+                46.95121765136719
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2133,7 +3372,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Platanenhof, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.429872512817383,
+                46.95392990112305
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2145,7 +3391,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Schlösslistrasse, 3008, Bern",
-        "zipcode": "3008"
+        "zipcode": "3008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.432474136352539,
+                46.946834564208984
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern, Standort Sulgenauweg</b> (BE) - Bern",
@@ -2157,7 +3410,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Wabernstrasse, 3007, Bern",
-        "zipcode": "3007"
+        "zipcode": "3007",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.437802314758301,
+                46.93843078613281
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2169,7 +3429,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Neubrückstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.432301044464111,
+                46.961734771728516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2181,7 +3448,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Freiburgstrasse, 3010, Bern",
-        "zipcode": "3010"
+        "zipcode": "3010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.42382287979126,
+                46.946197509765625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2193,7 +3467,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Freiburgstrasse, 3010, Bern",
-        "zipcode": "3010"
+        "zipcode": "3010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.423946380615234,
+                46.947776794433594
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2205,7 +3486,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Murtenstrasse, 3008, Bern",
-        "zipcode": "3008"
+        "zipcode": "3008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.424631118774414,
+                46.9503059387207
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2217,7 +3505,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Herrengasse, 3011, Bern",
-        "zipcode": "3011"
+        "zipcode": "3011",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.448678970336914,
+                46.94727325439453
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2229,7 +3524,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Gesellschaftsstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.4333977699279785,
+                46.95421600341797
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2241,7 +3543,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Donnerbühlweg, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.43186616897583,
+                46.95137023925781
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2253,7 +3562,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Hallerstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.4353437423706055,
+                46.951725006103516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2265,7 +3581,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Morillonstrasse, 3007, Bern",
-        "zipcode": "3007"
+        "zipcode": "3007",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.434787273406982,
+                46.93157958984375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2277,7 +3600,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Bremgartenstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.426163196563721,
+                46.957008361816406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2289,7 +3619,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Alpeneggstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.438455104827881,
+                46.954017639160156
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2301,7 +3638,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Mittelstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.435734272003174,
+                46.95554733276367
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern</b> (BE) - Bern",
@@ -2313,7 +3657,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Schützenmattstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.4401936531066895,
+                46.95376968383789
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Bern, Ethologische Station Hasli</b> (BE) - Bern",
@@ -2325,7 +3676,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Wohlenstrasse, 3032, Bern",
-        "zipcode": "3032"
+        "zipcode": "3032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.3983588218688965,
+                46.96726608276367
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haus der Universität</b> (BE) - Bern",
@@ -2337,7 +3695,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Schlösslistrasse, 3008, Bern",
-        "zipcode": "3008"
+        "zipcode": "3008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.432474136352539,
+                46.946834564208984
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2349,7 +3714,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Hirschengraben, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.546889305114746,
+                47.374244689941406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH, Standort Zentrum</b> (ZH) - Zürich",
@@ -2361,7 +3733,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Zürichbergstrasse, 8091, Zürich",
-        "zipcode": "8091"
+        "zipcode": "8091",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.551169395446777,
+                47.372623443603516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2373,7 +3752,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Winterthurerstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54704475402832,
+                47.38829040527344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2385,7 +3771,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Zürichbergstrasse, 8044, Zürich",
-        "zipcode": "8044"
+        "zipcode": "8044",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.556620597839355,
+                47.37460708618164
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2397,7 +3790,14 @@
         "quarter": "Hottingen",
         "city": "Zürich",
         "address": "Steinwiesstrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.55761432647705,
+                47.37213134765625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2409,7 +3809,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Universitätstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.548418045043945,
+                47.38287353515625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2421,7 +3828,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Pestalozzistrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.555442810058594,
+                47.37276840209961
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH, Zentralbibliothek</b> (ZH) - Zürich",
@@ -2433,7 +3847,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Chorgasse, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.545448303222656,
+                47.37422180175781
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2445,7 +3866,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Kirchgasse, 8024, Zürich",
-        "zipcode": "8024"
+        "zipcode": "8024",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.544435501098633,
+                47.3701286315918
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2457,7 +3885,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Rämistrasse, 8091, Zürich",
-        "zipcode": "8091"
+        "zipcode": "8091",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54778003692627,
+                47.37295913696289
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2469,7 +3904,14 @@
         "quarter": "Hottingen",
         "city": "Zürich",
         "address": "Freiestrasse, 8091, Zürich",
-        "zipcode": "8091"
+        "zipcode": "8091",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.554065704345703,
+                47.370933532714844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH, Standort Oerlikon</b> (ZH) - Zürich",
@@ -2481,7 +3923,14 @@
         "quarter": "Seebach",
         "city": "Zürich",
         "address": "Binzmühlestrasse, 8050, Zürich",
-        "zipcode": "8050"
+        "zipcode": "8050",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.549342155456543,
+                47.414546966552734
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH, Standort Zentrum</b> (ZH) - Zürich",
@@ -2493,7 +3942,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Plattenstrasse, 8091, Zürich",
-        "zipcode": "8091"
+        "zipcode": "8091",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.553226470947266,
+                47.37364959716797
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2505,7 +3961,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Waltersbachstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.5414457321167,
+                47.383941650390625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2517,7 +3980,14 @@
         "quarter": "Industriequartier",
         "city": "Zürich",
         "address": "Konradstrasse, 8005, Zürich",
-        "zipcode": "8005"
+        "zipcode": "8005",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.535785675048828,
+                47.3808708190918
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2529,7 +3999,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Florhofgasse, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.548346519470215,
+                47.3722038269043
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2541,7 +4018,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Winterthurerstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54554557800293,
+                47.39143371582031
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2553,7 +4037,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Seilergraben, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.545145988464355,
+                47.37544250488281
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2565,7 +4056,14 @@
         "quarter": "Hottingen",
         "city": "Zürich",
         "address": "Hauserstrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.56506633758545,
+                47.371219635009766
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2577,7 +4075,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Hirschengraben, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54553508758545,
+                47.376094818115234
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2589,7 +4094,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Talstrasse, 8022, Zürich",
-        "zipcode": "8022"
+        "zipcode": "8022",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.533811569213867,
+                47.37105941772461
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2601,7 +4113,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Kantonsschulstrasse, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.548492431640625,
+                47.37137222290039
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2613,7 +4132,14 @@
         "quarter": "Hottingen",
         "city": "Zürich",
         "address": "Neptunstrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.55705738067627,
+                47.36590576171875
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2625,7 +4151,14 @@
         "quarter": "Hottingen",
         "city": "Zürich",
         "address": "Treichlerstrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.55782413482666,
+                47.370216369628906
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2637,7 +4170,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Mühlegasse, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.545072555541992,
+                47.374542236328125
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2649,7 +4189,14 @@
         "quarter": "Oberstrass",
         "city": "Zürich",
         "address": "Blümlisalpstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.547918319702148,
+                47.38735580444336
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2661,7 +4208,14 @@
         "quarter": "Kreis 8",
         "city": "Zürich",
         "address": "Forchstrasse, 8008, Zürich",
-        "zipcode": "8008"
+        "zipcode": "8008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.575040817260742,
+                47.35342788696289
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2673,7 +4227,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Künstlergasse, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.547104835510254,
+                47.37471008300781
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2685,7 +4246,14 @@
         "quarter": "Oerlikon",
         "city": "Zürich",
         "address": "Winterthurerstrasse, 8057, Zürich",
-        "zipcode": "8057"
+        "zipcode": "8057",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.551915168762207,
+                47.40027618408203
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH, Standort Kilchberg</b> (ZH) - Zürichsee (ZH),Kilchberg (ZH)",
@@ -2697,7 +4265,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Seestrasse, 8802, ",
-        "zipcode": "8802"
+        "zipcode": "8802",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.55192756652832,
+                47.320098876953125
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2709,7 +4284,14 @@
         "quarter": "Kreis 8",
         "city": "Zürich",
         "address": "Mühlebachstrasse, 8008, Zürich",
-        "zipcode": "8008"
+        "zipcode": "8008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.55378532409668,
+                47.361698150634766
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2721,7 +4303,14 @@
         "quarter": "Kreis 4",
         "city": "Zürich",
         "address": "Militärstrasse, 8004, Zürich",
-        "zipcode": "8004"
+        "zipcode": "8004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.53349494934082,
+                47.37624740600586
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH, Standort Zentrum</b> (ZH) - Zürich",
@@ -2733,7 +4322,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Plattenstrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.553496360778809,
+                47.373268127441406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH, Standort Oerlikon</b> (ZH) - Zürich",
@@ -2745,7 +4341,14 @@
         "quarter": "Seebach",
         "city": "Zürich",
         "address": "Andreasstrasse, 8050, Zürich",
-        "zipcode": "8050"
+        "zipcode": "8050",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.548888206481934,
+                47.4132194519043
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2757,7 +4360,14 @@
         "quarter": "Kreis 8",
         "city": "Zürich",
         "address": "Zollikerstrasse, 8008, Zürich",
-        "zipcode": "8008"
+        "zipcode": "8008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.55997085571289,
+                47.35749816894531
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2769,7 +4379,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Kurvenstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.542205810546875,
+                47.38440704345703
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2781,7 +4398,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Zähringerstrasse, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.5447998046875,
+                47.375213623046875
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2793,7 +4417,14 @@
         "quarter": "Kreis 8",
         "city": "Zürich",
         "address": "Lenggstrasse, 8008, Zürich",
-        "zipcode": "8008"
+        "zipcode": "8008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.570358276367188,
+                47.35407257080078
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2805,7 +4436,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Freiestrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.553044319152832,
+                47.37287902832031
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH, Standort Oerlikon</b> (ZH) - Zürich",
@@ -2817,7 +4455,14 @@
         "quarter": "Oerlikon",
         "city": "Zürich",
         "address": "Affolternstrasse, 8050, Zürich",
-        "zipcode": "8050"
+        "zipcode": "8050",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.540749549865723,
+                47.41105270385742
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2829,7 +4474,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Sternwartstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.550858497619629,
+                47.376922607421875
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2841,7 +4493,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Attenhoferstrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.557172775268555,
+                47.37397766113281
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2853,7 +4512,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Stadelhoferstrasse, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.547531127929688,
+                47.36684036254883
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2865,7 +4531,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Sumatrastrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.543207168579102,
+                47.38166427612305
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2877,7 +4550,14 @@
         "quarter": "Kreis 8",
         "city": "Zürich",
         "address": "Zollikerstrasse, 8008, Zürich",
-        "zipcode": "8008"
+        "zipcode": "8008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.560725212097168,
+                47.358367919921875
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2889,7 +4569,14 @@
         "quarter": "Fluntern",
         "city": "Zürich",
         "address": "Zürichbergstrasse, 8032, Zürich",
-        "zipcode": "8032"
+        "zipcode": "8032",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.55217456817627,
+                47.37302780151367
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2901,7 +4588,14 @@
         "quarter": "Kreis 12",
         "city": "Zürich",
         "address": "Luegislandstrasse, 8051, Zürich",
-        "zipcode": "8051"
+        "zipcode": "8051",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.564695358276367,
+                47.405948638916016
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2913,7 +4607,14 @@
         "quarter": "Unterstrass",
         "city": "Zürich",
         "address": "Kurvenstrasse, 8006, Zürich",
-        "zipcode": "8006"
+        "zipcode": "8006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.541759490966797,
+                47.38490676879883
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2925,7 +4626,14 @@
         "quarter": "Kreis 8",
         "city": "Zürich",
         "address": "Zollikerstrasse, 8008, Zürich",
-        "zipcode": "8008"
+        "zipcode": "8008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.558186531066895,
+                47.35868453979492
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Universität Zürich UZH</b> (ZH) - Zürich",
@@ -2937,7 +4645,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Rämistrasse, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.550017356872559,
+                47.37207794189453
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Università della Svizzera italiana USI, Campus Lugano Ovest</b> (TI) - Lugano",
@@ -2949,7 +4664,14 @@
         "quarter": "Molino Nuovo",
         "city": "Unknown City",
         "address": "Via Antonio Fogazzaro, 6900, ",
-        "zipcode": "6900"
+        "zipcode": "6900",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.957698822021484,
+                46.01020050048828
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Università della Svizzera italiana USI, Campus di Mendrisio</b> (TI) - Mendrisio",
@@ -2961,7 +4683,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Via Giuseppe Buffi, 6872, ",
-        "zipcode": "6872"
+        "zipcode": "6872",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.985228538513184,
+                45.866695404052734
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Schaffhausen PHSH</b> (SH) - Schaffhausen",
@@ -2973,7 +4702,14 @@
         "quarter": "Niklausen",
         "city": "Unknown City",
         "address": "Amsler-Laffon-Strasse, 8200, ",
-        "zipcode": "8200"
+        "zipcode": "8200",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.642210960388184,
+                47.70753860473633
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Schaffhausen PHSH</b> (SH) - Schaffhausen",
@@ -2985,7 +4721,14 @@
         "quarter": "Niklausen",
         "city": "Unknown City",
         "address": "Ebnatstrasse, 8200, ",
-        "zipcode": "8200"
+        "zipcode": "8200",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.645369529724121,
+                47.707340240478516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Luzern, Standort Sentimatt</b> (LU) - Luzern",
@@ -2997,7 +4740,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Sentimatt, 6003, ",
-        "zipcode": "6003"
+        "zipcode": "6003",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.296024322509766,
+                47.05387496948242
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Luzern, Standort Frohburgstrasse</b> (LU) - Luzern",
@@ -3009,7 +4759,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Frohburgstrasse, 6005, ",
-        "zipcode": "6005"
+        "zipcode": "6005",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.312407493591309,
+                47.04936599731445
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Luzern, Standort Pfistergasse</b> (LU) - Luzern",
@@ -3021,7 +4778,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Pfistergasse, 6003, ",
-        "zipcode": "6003"
+        "zipcode": "6003",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.302388191223145,
+                47.0510368347168
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Luzern, Standort Bellerive</b> (LU) - Luzern",
@@ -3033,7 +4797,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Bellerivestrasse, 6006, ",
-        "zipcode": "6006"
+        "zipcode": "6006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.329803466796875,
+                47.056644439697266
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Luzern, Standort Musegg</b> (LU) - Luzern",
@@ -3045,7 +4816,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Schirmertorweg, 6004, ",
-        "zipcode": "6004"
+        "zipcode": "6004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.306063652038574,
+                47.05461502075195
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Luzern, Standort Sagenmatt</b> (LU) - Luzern",
@@ -3057,7 +4835,14 @@
         "quarter": "Reussbühl",
         "city": "Unknown City",
         "address": "Sagenmattstrasse, 6003, ",
-        "zipcode": "6003"
+        "zipcode": "6003",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.2896089553833,
+                47.053775787353516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole Pédagogique HEP-BEJUNE, Site de La Chaux-de-Fonds</b> (NE) - La Chaux-de-Fonds",
@@ -3069,7 +4854,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rue de Beauregard, 2300, ",
-        "zipcode": "2300"
+        "zipcode": "2300",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.82431173324585,
+                47.107749938964844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole Pédagogique HEP-BEJUNE, Site de Bienne</b> (BE) - Biel/Bienne,Brügg",
@@ -3081,7 +4873,14 @@
         "quarter": "Mâche/Mett",
         "city": "Unknown City",
         "address": "Chemin de la Ciblerie / Scheibenweg, 2503, ",
-        "zipcode": "2503"
+        "zipcode": "2503",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.268144130706787,
+                47.1381721496582
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole Pédagogique HEP-BEJUNE, Site de Delémont</b> (JU) - Delémont",
@@ -3093,7 +4892,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de Moutier, 2800, ",
-        "zipcode": "2800"
+        "zipcode": "2800",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.35295295715332,
+                47.362606048583984
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole pédagogique Fribourg HEP FR, Site HEP III</b> (FR) - Fribourg",
@@ -3105,7 +4911,14 @@
         "quarter": "Schönberg/Schoenberg",
         "city": "Unknown City",
         "address": "Chemin du Palatinat, 1702, ",
-        "zipcode": "1702"
+        "zipcode": "1702",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.1595048904418945,
+                46.81251525878906
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole pédagogique Fribourg HEP FR, Site HEP I</b> (FR) - Fribourg",
@@ -3117,7 +4930,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Rue de Morat / Murtengasse, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.158876419067383,
+                46.811222076416016
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole pédagogique Fribourg HEP FR, Site HEP II</b> (FR) - Fribourg",
@@ -3129,7 +4949,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Rue de Morat / Murtengasse, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.1590352058410645,
+                46.80936813354492
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Graubünden Chur phGR</b> (GR) - Chur",
@@ -3141,7 +4968,14 @@
         "quarter": "Masans",
         "city": "Unknown City",
         "address": "Scalärastrasse, 7023, ",
-        "zipcode": "7023"
+        "zipcode": "7023",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.536943435668945,
+                46.86703109741211
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Zug</b> (ZG) - Zug",
@@ -3153,7 +4987,14 @@
         "quarter": "Neustadt",
         "city": "Unknown City",
         "address": "Zugerbergstrasse, 6300, ",
-        "zipcode": "6300"
+        "zipcode": "6300",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.518654823303223,
+                47.16225814819336
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Fachhochschule Nordwestschweiz FHNW, Pädagogische Hochschule, Standort Solothurn</b> (SO) - Solothurn",
@@ -3165,7 +5006,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Obere Sternengasse, 4501, ",
-        "zipcode": "4501"
+        "zipcode": "4501",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.543616771697998,
+                47.21217727661133
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Bern PHBern, Standort Muesmattstrasse</b> (BE) - Bern",
@@ -3177,7 +5025,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Baltzerstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.428527355194092,
+                46.95317459106445
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Bern PHBern</b> (BE) - Bern",
@@ -3189,7 +5044,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Murtenstrasse, 3008, Bern",
-        "zipcode": "3008"
+        "zipcode": "3008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.422307968139648,
+                46.9529914855957
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Bern PHBern, Standort Weltistrasse</b> (BE) - Bern",
@@ -3201,7 +5063,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Weltistrasse, 3006, Bern",
-        "zipcode": "3006"
+        "zipcode": "3006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.475581645965576,
+                46.94568634033203
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Bern PHBern, Standort Muristalden</b> (BE) - Bern",
@@ -3213,7 +5082,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Muristrasse, 3006, Bern",
-        "zipcode": "3006"
+        "zipcode": "3006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.460587501525879,
+                46.944278717041016
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Bern PHBern, Standort Helvetiaplatz</b> (BE) - Bern",
@@ -3225,7 +5101,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Feldeggweg, 3005, Bern",
-        "zipcode": "3005"
+        "zipcode": "3005",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.448553562164307,
+                46.94424057006836
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Thurgau PHTG</b> (TG) - Kreuzlingen",
@@ -3237,7 +5120,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Weinstrasse, 8280, ",
-        "zipcode": "8280"
+        "zipcode": "8280",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.180352210998535,
+                47.647056579589844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule Wallis PH-VS, Standort Brig</b> (VS) - Brig-Glis",
@@ -3249,7 +5139,14 @@
         "quarter": "Unknown Quarter",
         "city": "Brig-Glis",
         "address": "Alte Simplonstrasse, 3900, Brig-Glis",
-        "zipcode": "3900"
+        "zipcode": "3900",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.990724086761475,
+                46.3157958984375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule St. Gallen PHSG, Hochschulgebäude Mariaberg Rorschach</b> (SG) - Rorschach",
@@ -3261,7 +5158,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Mariabergstrasse, 9400, ",
-        "zipcode": "9400"
+        "zipcode": "9400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.495279312133789,
+                47.47188949584961
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule St. Gallen PHSG, Hochschulgebäude Hadwig St. Gallen</b> (SG) - St. Gallen",
@@ -3273,7 +5177,14 @@
         "quarter": "St. Jakob",
         "city": "Unknown City",
         "address": "Notkerstrasse, 9007, ",
-        "zipcode": "9007"
+        "zipcode": "9007",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.38234806060791,
+                47.43019485473633
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule St. Gallen PHSG, Hochschulgebäude Stella Maris Rorschach</b> (SG) - Rorschach",
@@ -3285,7 +5196,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Müller-Friedbergstrasse, 9400, ",
-        "zipcode": "9400"
+        "zipcode": "9400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.501343727111816,
+                47.47397994995117
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Pädagogische Hochschule St. Gallen PHSG, Hochschulgebäude Gossau</b> (SG) - Gossau (SG)",
@@ -3297,7 +5215,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Seminarstrasse, 9200, ",
-        "zipcode": "9200"
+        "zipcode": "9200",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.2525053024292,
+                47.40973663330078
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Pädagogische Hochschule PHZH</b> (ZH) - Zürich",
@@ -3309,7 +5234,14 @@
         "quarter": "Kreis 4",
         "city": "Zürich",
         "address": "Europaallee Passage, 8004, Zürich",
-        "zipcode": "8004"
+        "zipcode": "8004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.534499168395996,
+                47.3776969909668
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école pédagogique du canton de Vaud HEP, Site de Sébeillon</b> (VD) - Lausanne",
@@ -3321,7 +5253,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue de Sébeillon, 1004, Lausanne",
-        "zipcode": "1004"
+        "zipcode": "1004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.619101524353027,
+                46.52317810058594
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école pédagogique du canton de Vaud HEP, Site de Sévelin</b> (VD) - Lausanne",
@@ -3333,7 +5272,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Avenue de Sévelin, 1004, Lausanne",
-        "zipcode": "1004"
+        "zipcode": "1004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.618963241577148,
+                46.52280044555664
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3345,7 +5291,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Turbinenstrasse, 8400, Winterthur",
-        "zipcode": "8400"
+        "zipcode": "8400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.719242095947266,
+                47.49652862548828
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Wädenswil</b> (ZH) - Wädenswil",
@@ -3357,7 +5310,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Einsiedlerstrasse, 8820, ",
-        "zipcode": "8820"
+        "zipcode": "8820",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.687246322631836,
+                47.21951675415039
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Wädenswil</b> (ZH) - Wädenswil",
@@ -3369,7 +5329,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Einsiedlerstrasse, 8820, ",
-        "zipcode": "8820"
+        "zipcode": "8820",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.68529224395752,
+                47.220481872558594
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Wädenswil</b> (ZH) - Wädenswil",
@@ -3381,7 +5348,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Grüentalweg, 8820, ",
-        "zipcode": "8820"
+        "zipcode": "8820",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.68038558959961,
+                47.21805191040039
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3393,7 +5367,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Steiggasse, 8400, Winterthur",
-        "zipcode": "8400"
+        "zipcode": "8400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.726640701293945,
+                47.497459411621094
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3405,7 +5386,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Katharina-Sulzer-Platz, 8400, Winterthur",
-        "zipcode": "8400"
+        "zipcode": "8400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.717169761657715,
+                47.49684143066406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Zürich, Campus Zentrum</b> (ZH) - Zürich",
@@ -3417,7 +5405,14 @@
         "quarter": "Kreis 4",
         "city": "Zürich",
         "address": "Militärstrasse, 8004, Zürich",
-        "zipcode": "8004"
+        "zipcode": "8004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.531746864318848,
+                47.37763977050781
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Zürich, Campus Zentrum</b> (ZH) - Zürich",
@@ -3429,7 +5424,14 @@
         "quarter": "Kreis 4",
         "city": "Zürich",
         "address": "Lagerstrasse, 8004, Zürich",
-        "zipcode": "8004"
+        "zipcode": "8004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.532485961914062,
+                47.377742767333984
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3441,7 +5443,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Bahnfussweg, 8401, Winterthur",
-        "zipcode": "8401"
+        "zipcode": "8401",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.727288246154785,
+                47.503318786621094
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3453,7 +5462,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Steiggasse, 8400, Winterthur",
-        "zipcode": "8400"
+        "zipcode": "8400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.7313871383667,
+                47.497554779052734
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3465,7 +5481,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Lagerplatz, 8400, Winterthur",
-        "zipcode": "8400"
+        "zipcode": "8400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.716938972473145,
+                47.4934196472168
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3477,7 +5500,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Obere Kirchgasse, 8403, Winterthur",
-        "zipcode": "8403"
+        "zipcode": "8403",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.729511260986328,
+                47.49848937988281
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3489,7 +5519,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Technikumstrasse, 8400, Winterthur",
-        "zipcode": "8400"
+        "zipcode": "8400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.725258827209473,
+                47.49822235107422
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Wädenswil</b> (ZH) - Wädenswil",
@@ -3501,7 +5538,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Einsiedlerstrasse, 8820, ",
-        "zipcode": "8820"
+        "zipcode": "8820",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.67932415008545,
+                47.225006103515625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Wädenswil</b> (ZH) - Wädenswil",
@@ -3513,7 +5557,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Einsiedlerstrasse, 8820, ",
-        "zipcode": "8820"
+        "zipcode": "8820",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.685750007629395,
+                47.21976089477539
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3525,7 +5576,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Bahnhofplatz, 8400, Winterthur",
-        "zipcode": "8400"
+        "zipcode": "8400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.725110054016113,
+                47.50080871582031
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3537,7 +5595,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Technikumstrasse, 8400, Winterthur",
-        "zipcode": "8400"
+        "zipcode": "8400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.729750633239746,
+                47.498104095458984
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3549,7 +5614,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "St.-Georgen-Platz, 8401, Winterthur",
-        "zipcode": "8401"
+        "zipcode": "8401",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.726530075073242,
+                47.502220153808594
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3561,7 +5633,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Steiggasse, 8400, Winterthur",
-        "zipcode": "8400"
+        "zipcode": "8400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.729731559753418,
+                47.497032165527344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3573,7 +5652,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Technoparkstrasse, 8401, Winterthur",
-        "zipcode": "8401"
+        "zipcode": "8401",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.71691608428955,
+                47.49474334716797
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Winterthur</b> (ZH) - Winterthur",
@@ -3585,7 +5671,14 @@
         "quarter": "Stadt",
         "city": "Winterthur",
         "address": "Rosenstrasse, 8403, Winterthur",
-        "zipcode": "8403"
+        "zipcode": "8403",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.728982925415039,
+                47.49637985229492
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Wirtschaft, Standort Rösslimatte</b> (LU) - Luzern",
@@ -3597,7 +5690,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rösslimatte, 6005, ",
-        "zipcode": "6005"
+        "zipcode": "6005",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.315038681030273,
+                47.043914794921875
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Standort Baselstrasse</b> (LU) - Luzern",
@@ -3609,7 +5709,14 @@
         "quarter": "Reussbühl",
         "city": "Unknown City",
         "address": "Baselstrasse, 6003, ",
-        "zipcode": "6003"
+        "zipcode": "6003",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.293081283569336,
+                47.053131103515625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Technik und Architektur</b> (LU) - Horw",
@@ -3621,7 +5728,14 @@
         "quarter": "Ennethorw",
         "city": "Unknown City",
         "address": "Brünigweg, 6048, ",
-        "zipcode": "6048"
+        "zipcode": "6048",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.305948257446289,
+                47.01374816894531
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Soziale Arbeit</b> (LU) - Luzern",
@@ -3633,7 +5747,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rösslimattstrasse, 6002, ",
-        "zipcode": "6002"
+        "zipcode": "6002",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.314844131469727,
+                47.0466194152832
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Wirtschaft, Standort Zentralstrasse</b> (LU) - Luzern",
@@ -3645,7 +5766,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Zentralstrasse, 6003, ",
-        "zipcode": "6003"
+        "zipcode": "6003",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.30980396270752,
+                47.04853439331055
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Design und Kunst</b> (LU) - Emmen",
@@ -3657,7 +5785,14 @@
         "quarter": "Emmenbrücke",
         "city": "Unknown City",
         "address": "Nylsuisseplatz, 6020, ",
-        "zipcode": "6020"
+        "zipcode": "6020",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.27770709991455,
+                47.07119369506836
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Soziale Arbeit</b> (LU) - Luzern",
@@ -3669,7 +5804,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Bürgenstrasse, 6002, ",
-        "zipcode": "6002"
+        "zipcode": "6002",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.313713073730469,
+                47.047977447509766
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Musik</b> (LU) - Kriens",
@@ -3681,7 +5823,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Arsenalstrasse, 6010, ",
-        "zipcode": "6010"
+        "zipcode": "6010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.296968460083008,
+                47.032562255859375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Wirtschaft, Standort Frankenstrasse</b> (LU) - Luzern",
@@ -3693,7 +5842,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Frankenstrasse, 6003, ",
-        "zipcode": "6003"
+        "zipcode": "6003",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.30873966217041,
+                47.049034118652344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Hochschule Luzern, Soziale Arbeit</b> (LU) - Luzern",
@@ -3705,7 +5861,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Werftestrasse, 6005, ",
-        "zipcode": "6005"
+        "zipcode": "6005",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.314653396606445,
+                47.04795837402344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Kalaidos Banking+Finance School Vezia</b> (TI) - Vezia",
@@ -3717,7 +5880,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Via Morosini, 6943, ",
-        "zipcode": "6943"
+        "zipcode": "6943",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.93612003326416,
+                46.02779769897461
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Kalaidos Banking+Finance School</b> (ZH) - Zürich",
@@ -3729,7 +5899,14 @@
         "quarter": "Seebach",
         "city": "Zürich",
         "address": "Jungholzstrasse, 8050, Zürich",
-        "zipcode": "8050"
+        "zipcode": "8050",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.54350471496582,
+                47.41545867919922
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Kalaidos Banking+Finance School Lausanne</b> (VD) - Lausanne",
@@ -3741,7 +5918,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Galeries Saint-François, 1003, Lausanne",
-        "zipcode": "1003"
+        "zipcode": "1003",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.635108947753906,
+                46.51943588256836
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de Santé Vaud HESAV, Site Beaumont</b> (VD) - Lausanne",
@@ -3753,7 +5937,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue du Bugnon, 1011, Lausanne",
-        "zipcode": "1011"
+        "zipcode": "1011",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.644684314727783,
+                46.524085998535156
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Haute Ecole Arc Ingénierie</b> (NE) - La Chaux-de-Fonds",
@@ -3765,7 +5956,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Eplatures-Grise, 2322, ",
-        "zipcode": "2322"
+        "zipcode": "2322",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.7950310707092285,
+                47.0793571472168
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de gestion Fribourg HEG-FR</b> (FR) - Fribourg",
@@ -3777,7 +5975,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Chemin du Musée, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.156759262084961,
+                46.793678283691406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de Santé Vaud HESAV, Site Bugnon</b> (VD) - Lausanne",
@@ -3789,7 +5994,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue du Bugnon, 1011, Lausanne",
-        "zipcode": "1011"
+        "zipcode": "1011",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.640083312988281,
+                46.5242919921875
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Haute Ecole de la Santé</b> (VD) - Lausanne",
@@ -3801,7 +6013,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Avenue des Bergières, 1004, Lausanne",
-        "zipcode": "1004"
+        "zipcode": "1004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.6228790283203125,
+                46.529510498046875
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole d'Art et de Design Genève HEAD, Site James-Fazy</b> (GE) - Genève",
@@ -3813,7 +6032,14 @@
         "quarter": "Grottes et Saint-Gervais",
         "city": "Genève",
         "address": "Boulevard James-Fazy, 1201, Genève",
-        "zipcode": "1201"
+        "zipcode": "1201",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.141093730926514,
+                46.20893478393555
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole d'Art et de Design Genève HEAD, Site Encyclopédie</b> (GE) - Genève",
@@ -3825,7 +6051,14 @@
         "quarter": "Saint-Jean et Charmilles",
         "city": "Genève",
         "address": "Chemin Galiffe, 8973, Genève",
-        "zipcode": "8973"
+        "zipcode": "8973",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.135619163513184,
+                46.206905364990234
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école spécialisée bernoise, Département Technique et informatique, Site de Vauffelin</b> (BE) - Sauge",
@@ -3837,7 +6070,14 @@
         "quarter": "Unknown Quarter",
         "city": "Sauge",
         "address": "Route Principale, 2537, Sauge",
-        "zipcode": "2537"
+        "zipcode": "2537",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.277803897857666,
+                47.176307678222656
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud HEIG-VD, Site Centre St-Roch</b> (VD) - Yverdon-les-Bains",
@@ -3849,7 +6089,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rue du Nord, 1401, ",
-        "zipcode": "1401"
+        "zipcode": "1401",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.6472015380859375,
+                46.78108596801758
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école d'ingénieurs et d'architectes de Fribourg HEIA-FR, Site Pérolles</b> (FR) - Fribourg",
@@ -3861,7 +6108,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "180, 1705, ",
-        "zipcode": "1705"
+        "zipcode": "1705",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.1603922843933105,
+                46.792728424072266
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école de musique de Genève HEM, Rue du Diorama</b> (GE) - Genève",
@@ -3873,7 +6127,14 @@
         "quarter": "Jonction",
         "city": "Genève",
         "address": "Rue du Diorama, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.138455390930176,
+                46.20231628417969
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de musique de Genève HEM, Site de Neuchâtel</b> (NE) - Neuchâtel",
@@ -3885,7 +6146,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Espace de l'Europe, 2000, ",
-        "zipcode": "2000"
+        "zipcode": "2000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.9417924880981445,
+                46.998653411865234
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole Arc, Site de Neuchâtel</b> (NE) - Neuchâtel",
@@ -3897,7 +6165,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Espace de l'Europe, 2000, ",
-        "zipcode": "2000"
+        "zipcode": "2000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.9417924880981445,
+                46.998653411865234
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école de travail social Genève HETS, Infotheque, Psychomotricité</b> (GE) - Genève",
@@ -3909,7 +6184,14 @@
         "quarter": "Plainpalais",
         "city": "Genève",
         "address": "Rue du Pré-Jérôme, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.14595890045166,
+                46.19256591796875
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole d'Art et de Design Genève HEAD, Site Général-Dufour</b> (GE) - Genève",
@@ -3921,7 +6203,14 @@
         "quarter": "Cité",
         "city": "Genève",
         "address": "Rue du Général-Dufour, 1204, Genève",
-        "zipcode": "1204"
+        "zipcode": "1204",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.140691757202148,
+                46.202369689941406
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Haute école de viticulture et oenologie</b> (VD) - Nyon",
@@ -3933,7 +6222,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin du Groseillier, 1260, ",
-        "zipcode": "1260"
+        "zipcode": "1260",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.232863426208496,
+                46.398014068603516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de Santé Vaud HESAV</b> (VD) - Lausanne",
@@ -3945,7 +6241,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Avenue de l'Élysée, 1006, Lausanne",
-        "zipcode": "1006"
+        "zipcode": "1006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.63123893737793,
+                46.510765075683594
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école de travail social Genève</b> (GE) - Genève",
@@ -3957,7 +6260,14 @@
         "quarter": "Plainpalais",
         "city": "Genève",
         "address": "Rue Prévost-Martin, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.144640922546387,
+                46.19355392456055
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école des arts de la scène, Manufacture</b> (VD) - Lausanne",
@@ -3969,7 +6279,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue du Grand-Pré, 1008, Lausanne",
-        "zipcode": "1008"
+        "zipcode": "1008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.604745388031006,
+                46.52690887451172
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de Gestion de Genève HEG, Campus de Battelle</b> (GE) - Carouge (GE)",
@@ -3981,7 +6298,14 @@
         "quarter": "La Praille",
         "city": "Unknown City",
         "address": "Route de Drize, 1234, ",
-        "zipcode": "1234"
+        "zipcode": "1234",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.139766693115234,
+                46.17578125
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole Arc Ingénierie, Pôle horloger, Le Locle</b> (NE) - Le Locle",
@@ -3993,7 +6317,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Avenue de l'Hôtel-de-Ville, 2400, ",
-        "zipcode": "2400"
+        "zipcode": "2400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.7428412437438965,
+                47.05466842651367
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole Arc Ingénierie, Parc technologique de St-Imier</b> (BE) - Saint-Imier",
@@ -4005,7 +6336,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Rue de la Serre, 2610, ",
-        "zipcode": "2610"
+        "zipcode": "2610",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.002590656280518,
+                47.15504837036133
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute École d'Ingénierie et de Gestion du Canton de Vaud HEIG-VD, Site de Cheseaux</b> (VD) - Yverdon-les-Bains",
@@ -4017,7 +6355,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de Cheseaux, 1401, ",
-        "zipcode": "1401"
+        "zipcode": "1401",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.659737586975098,
+                46.7793083190918
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école de santé Fribourg HEdS-FR, St-Justin</b> (FR) - Fribourg",
@@ -4029,7 +6374,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Rue de Rome, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.1532979011535645,
+                46.807735443115234
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de Travail Social HES-SO Valais</b> (VS) - Sierre",
@@ -4041,7 +6393,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de la Plaine, 3960, ",
-        "zipcode": "3960"
+        "zipcode": "3960",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.536412715911865,
+                46.29275894165039
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de Gestion et Tourisme HES-SO Valais</b> (VS) - Sierre",
@@ -4053,7 +6412,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de la Plaine, 3960, ",
-        "zipcode": "3960"
+        "zipcode": "3960",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.536412715911865,
+                46.29275894165039
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole d'Art et de Design Genève HEAD, Site Boulevard Helvétique</b> (GE) - Genève",
@@ -4065,7 +6431,14 @@
         "quarter": "Cité",
         "city": "Genève",
         "address": "Boulevard Helvétique, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.150982856750488,
+                46.19857406616211
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole d'Ingénierie HES-SO Valais</b> (VS) - Sion",
@@ -4077,7 +6450,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin de la Sitterie, 1950, ",
-        "zipcode": "1950"
+        "zipcode": "1950",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.358895778656006,
+                46.24058532714844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école de viticulture et oenologie Changins</b> (VD) - Duillier",
@@ -4089,7 +6469,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de Nyon, 1266, ",
-        "zipcode": "1266"
+        "zipcode": "1266",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.235716342926025,
+                46.400028228759766
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école d'ingénieurs et d'architectes de Fribourg HEIA-FR, Site Beauregard</b> (FR) - Fribourg",
@@ -4101,7 +6488,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Rue de la Carrière, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.145684242248535,
+                46.80315017700195
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de l'Arc Jurassien HE-Arc, Site de Delémont</b> (JU) - Delémont",
@@ -4113,7 +6507,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Route de Moutier, 2800, ",
-        "zipcode": "2800"
+        "zipcode": "2800",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.35295295715332,
+                47.362606048583984
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école de travail social et de la santé Lausanne HETSL</b> (VD) - Lausanne",
@@ -4125,7 +6526,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Chemin des Abeilles, 1010, Lausanne",
-        "zipcode": "1010"
+        "zipcode": "1010",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.648189067840576,
+                46.54061508178711
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école de musique de Genève HEM, Administration</b> (GE) - Genève",
@@ -4137,7 +6545,14 @@
         "quarter": "Jonction",
         "city": "Genève",
         "address": "Rue de la Synagogue, 1205, Genève",
-        "zipcode": "1205"
+        "zipcode": "1205",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.139133453369141,
+                46.2025260925293
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute École d'Art et de Design Genève HEAD, Site Franchises</b> (GE) - Genève",
@@ -4149,7 +6564,14 @@
         "quarter": "Saint-Jean et Charmilles",
         "city": "Genève",
         "address": "Rue de Lyon, 1203, Genève",
-        "zipcode": "1203"
+        "zipcode": "1203",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.121776103973389,
+                46.20982360839844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole Arc, Site de Neuchâtel</b> (NE) - Neuchâtel",
@@ -4161,7 +6583,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Espace de l'Europe, 2000, ",
-        "zipcode": "2000"
+        "zipcode": "2000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.938662528991699,
+                46.99762725830078
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école d'ingénierie et d'architecture de Fribourg HEIA-FR, Site Arsenaux</b> (FR) - Fribourg",
@@ -4173,7 +6602,14 @@
         "quarter": "Pérolles",
         "city": "Unknown City",
         "address": "Route des Arsenaux, 1700, ",
-        "zipcode": "1700"
+        "zipcode": "1700",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.152294158935547,
+                46.7962532043457
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute École de Musique Vaud Valais Fribourg HEMU, Site de Fribourg</b> (FR) - Fribourg,Granges-Paccot",
@@ -4185,7 +6621,14 @@
         "quarter": "Agy",
         "city": "Unknown City",
         "address": "Route Louis-Braille, 1763, ",
-        "zipcode": "1763"
+        "zipcode": "1763",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.141256809234619,
+                46.81254577636719
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école de musique de Genève HEM, Rue Petitot</b> (GE) - Genève",
@@ -4197,7 +6640,14 @@
         "quarter": "Cité",
         "city": "Genève",
         "address": "Rue Jean-Petitot, 1204, Genève",
-        "zipcode": "1204"
+        "zipcode": "1204",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.1417412757873535,
+                46.20302963256836
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de Musique de Lausanne HEMU, Site du Flon</b> (VD) - Lausanne",
@@ -4209,7 +6659,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue des Côtes-de-Montbenon, 1001, Lausanne",
-        "zipcode": "1001"
+        "zipcode": "1001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.626607418060303,
+                46.52133560180664
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de Santé HES-SO Valais, Site de Sion</b> (VS) - Sion",
@@ -4221,7 +6678,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Chemin de l'Agasse, 1950, ",
-        "zipcode": "1950"
+        "zipcode": "1950",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.351088047027588,
+                46.235679626464844
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute Ecole de Santé Vaud HESAV, Site César-Roux</b> (VD) - Lausanne",
@@ -4233,7 +6697,14 @@
         "quarter": "Unknown Quarter",
         "city": "Lausanne",
         "address": "Rue du Bugnon, 1011, Lausanne",
-        "zipcode": "1011"
+        "zipcode": "1011",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.638319969177246,
+                46.524375915527344
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Haute école du paysage, d'ingénierie et d'architecture de Genève HEPIA, Site Genève</b> (GE) - Genève",
@@ -4245,7 +6716,14 @@
         "quarter": "Grottes et Saint-Gervais",
         "city": "Genève",
         "address": "Rue de la Prairie, 1202, Genève",
-        "zipcode": "1202"
+        "zipcode": "1202",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                6.135863780975342,
+                46.20930099487305
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Interstaatliche Hochschule für Technik Buchs NTB, Studienzentrum St. Gallen</b> (SG) - St. Gallen",
@@ -4257,7 +6735,14 @@
         "quarter": "Lachen",
         "city": "Unknown City",
         "address": "Schönauweg, 9000, ",
-        "zipcode": "9000"
+        "zipcode": "9000",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.346978187561035,
+                47.41779708862305
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Interstaatliche Hochschule für Technik NTB</b> (SG) - Buchs (SG)",
@@ -4269,7 +6754,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Oberstüdtlistrasse, 9470, ",
-        "zipcode": "9470"
+        "zipcode": "9470",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.473700523376465,
+                47.17267990112305
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Scuola universitaria professionale della Svizzera italiana SUPSI, Dipartimento economia aziendale, sanità e sociale</b> (TI) - Manno",
@@ -4281,7 +6773,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Via Violino, 6928, ",
-        "zipcode": "6928"
+        "zipcode": "6928",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.926456451416016,
+                46.03580093383789
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Scuola universitaria professionale della Svizzera italiana SUPSI, Scuola Teatro Dimitri</b> (TI) - Terre di Pedemonte",
@@ -4293,7 +6792,14 @@
         "quarter": "Unknown Quarter",
         "city": "Terre di Pedemonte",
         "address": "Stradón, 6653, Terre di Pedemonte",
-        "zipcode": "6653"
+        "zipcode": "6653",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.731925010681152,
+                46.18621826171875
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Scuola universitaria professionale della Svizzera italiana SUPSI, Direzione</b> (TI) - Manno",
@@ -4305,7 +6811,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Via Pobiette, 6928, ",
-        "zipcode": "6928"
+        "zipcode": "6928",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.924459457397461,
+                46.031494140625
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Scuola universitaria professionale della Svizzera italiana SUPSI, Dipartimento formazione e apprendimento</b> (TI) - Locarno",
@@ -4317,7 +6830,14 @@
         "quarter": "Locarno Monti",
         "city": "Unknown City",
         "address": "Piazza di San Francesco, 6600, ",
-        "zipcode": "6600"
+        "zipcode": "6600",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.791525840759277,
+                46.1673698425293
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Scuola universitaria professionale della Svizzera italiana SUPSI, Conservatorio della Svizzera italiana</b> (TI) - Lugano",
@@ -4329,7 +6849,14 @@
         "quarter": "Molino Nuovo",
         "city": "Unknown City",
         "address": "Via Soldino, 6932, ",
-        "zipcode": "6932"
+        "zipcode": "6932",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.939598083496094,
+                46.00609588623047
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Technik und Informatik, Standort Nidau</b> (BE) - Nidau",
@@ -4341,7 +6868,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Schlossstrasse, 2560, ",
-        "zipcode": "2560"
+        "zipcode": "2560",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.237982749938965,
+                47.12734603881836
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Gestaltung und Kunst</b> (BE) - Bern",
@@ -4353,7 +6887,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Fellerstrasse, 3027, Bern",
-        "zipcode": "3027"
+        "zipcode": "3027",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.39146089553833,
+                46.94668960571289
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Konservierung und Restaurierung</b> (BE) - Bern",
@@ -4365,7 +6906,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Fellerstrasse, 3027, Bern",
-        "zipcode": "3027"
+        "zipcode": "3027",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.39146089553833,
+                46.94668960571289
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Soziale Arbeit</b> (BE) - Bern",
@@ -4377,7 +6925,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Falkenplatz, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.43532657623291,
+                46.95143508911133
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Wirtschaft</b> (BE) - Bern",
@@ -4389,7 +6944,14 @@
         "quarter": "Sandrain",
         "city": "Bern",
         "address": "Brückenstrasse, 3005, Bern",
-        "zipcode": "3005"
+        "zipcode": "3005",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.440577983856201,
+                46.94231414794922
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Architektur, Bauingenieurwesen und Maschinentechnik, Standort Burgdorf</b> (BE) - Burgdorf",
@@ -4401,7 +6963,14 @@
         "quarter": "Im Choser",
         "city": "Unknown City",
         "address": "Pestalozzistrasse, 3400, ",
-        "zipcode": "3400"
+        "zipcode": "3400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.621702671051025,
+                47.0572395324707
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Gesundheit</b> (BE) - Bern",
@@ -4413,7 +6982,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Murtenstrasse, 3008, Bern",
-        "zipcode": "3008"
+        "zipcode": "3008",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.42734432220459,
+                46.94878005981445
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Hochschule der Künste, Schweizer Opernstudio, Standort Biel</b> (BE) - Biel/Bienne",
@@ -4425,7 +7001,14 @@
         "quarter": "Altstadt / Vieille Ville",
         "city": "Unknown City",
         "address": "Place du Bourg / Burgplatz, 2501, ",
-        "zipcode": "2501"
+        "zipcode": "2501",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.245272636413574,
+                47.141334533691406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Hochschule der Künste, Fachbereich Musik und Bewegung (Rhythmik), Standort Biel</b> (BE) - Biel/Bienne",
@@ -4437,7 +7020,14 @@
         "quarter": "Altstadt / Vieille Ville",
         "city": "Unknown City",
         "address": "Place du Bourg / Burgplatz, 2501, ",
-        "zipcode": "2501"
+        "zipcode": "2501",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.245272636413574,
+                47.141334533691406
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Musik</b> (BE) - Bern",
@@ -4449,7 +7039,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Kasernenstrasse, 3013, Bern",
-        "zipcode": "3013"
+        "zipcode": "3013",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.460562705993652,
+                46.95558166503906
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Musik</b> (BE) - Bern",
@@ -4461,7 +7058,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Ostermundigenstrasse, 3006, Bern",
-        "zipcode": "3006"
+        "zipcode": "3006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.473627090454102,
+                46.956298828125
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Oper/Theater</b> (BE) - Bern",
@@ -4473,7 +7077,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Zikadenweg, 3006, Bern",
-        "zipcode": "3006"
+        "zipcode": "3006",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.47117805480957,
+                46.95698165893555
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Technik und Informatik, Standort Biel</b> (BE) - Biel/Bienne",
@@ -4485,7 +7096,14 @@
         "quarter": "Altstadt / Vieille Ville",
         "city": "Unknown City",
         "address": "Rue de la Source / Quellgasse, 2502, ",
-        "zipcode": "2502"
+        "zipcode": "2502",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.24470853805542,
+                47.14241027832031
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Technik und Informatik</b> (BE) - Bern",
@@ -4497,7 +7115,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Wankdorffeldstrasse, 3014, Bern",
-        "zipcode": "3014"
+        "zipcode": "3014",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.456000328063965,
+                46.96485900878906
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Soziale Arbeit</b> (BE) - Bern",
@@ -4509,7 +7134,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Hallerstrasse, 3012, Bern",
-        "zipcode": "3012"
+        "zipcode": "3012",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.434945106506348,
+                46.952552795410156
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Technik und Informatik, Standort Biel</b> (BE) - Biel/Bienne",
@@ -4521,7 +7153,14 @@
         "quarter": "Beaumont/Jutzhubel",
         "city": "Unknown City",
         "address": "La Haute-Route / Höheweg, 2502, ",
-        "zipcode": "2502"
+        "zipcode": "2502",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.243814945220947,
+                47.14277648925781
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Musik</b> (BE) - Bern",
@@ -4533,7 +7172,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Eigerplatz, 3007, Bern",
-        "zipcode": "3007"
+        "zipcode": "3007",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.431480407714844,
+                46.94109344482422
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Elektrotechnik und Informationstechnologie, Standort Burgdorf</b> (BE) - Burgdorf",
@@ -4545,7 +7191,14 @@
         "quarter": "Im Choser",
         "city": "Unknown City",
         "address": "Jlcoweg, 3400, ",
-        "zipcode": "3400"
+        "zipcode": "3400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.613674163818359,
+                47.062015533447266
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Berner Fachhochschule</b> (BE) - Zollikofen",
@@ -4557,7 +7210,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Länggasse, 3052, ",
-        "zipcode": "3052"
+        "zipcode": "3052",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.468017101287842,
+                46.99175262451172
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Hochschule der Künste, Schweizerisches Literaturinstitut, Standort Biel</b> (BE) - Biel/Bienne",
@@ -4569,7 +7229,14 @@
         "quarter": "Altstadt / Vieille Ville",
         "city": "Unknown City",
         "address": "Faubourg du Lac / Seevorstadt, 2502, ",
-        "zipcode": "2502"
+        "zipcode": "2502",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.242646217346191,
+                47.1400032043457
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Architektur, Holz und Bau, Standort Biel</b> (BE) - Biel/Bienne",
@@ -4581,7 +7248,14 @@
         "quarter": "Boujean/Bözingen",
         "city": "Unknown City",
         "address": "Route de Soleure / Solothurnstrasse, 2504, ",
-        "zipcode": "2504"
+        "zipcode": "2504",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.276848793029785,
+                47.15830612182617
+            ]
+        }
     },
     {
         "label": "<i><i>Schul Hochschulareal</i></i> <b>Berner Fachhochschule</b> (BE) - Burgdorf",
@@ -4593,7 +7267,14 @@
         "quarter": "Im Choser",
         "city": "Unknown City",
         "address": "Jlcoweg, 3400, ",
-        "zipcode": "3400"
+        "zipcode": "3400",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.614813804626465,
+                47.062320709228516
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule der Künste, Standort Schwabstrasse</b> (BE) - Bern",
@@ -4605,7 +7286,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Schwabstrasse, 3018, Bern",
-        "zipcode": "3018"
+        "zipcode": "3018",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.393045425415039,
+                46.94504165649414
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Technik und Informatik, Standort Biel</b> (BE) - Biel/Bienne",
@@ -4617,7 +7305,14 @@
         "quarter": "Altstadt / Vieille Ville",
         "city": "Unknown City",
         "address": "Faubourg-du-lac / Seevorstadt, 2502, ",
-        "zipcode": "2502"
+        "zipcode": "2502",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.242506980895996,
+                47.140560150146484
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Berner Fachhochschule, Fachbereich Gesundheit</b> (BE) - Bern",
@@ -4629,7 +7324,14 @@
         "quarter": "Unknown Quarter",
         "city": "Bern",
         "address": "Haslerstrasse, 3007, Bern",
-        "zipcode": "3007"
+        "zipcode": "3007",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                7.4323649406433105,
+                46.94476318359375
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Zürcher Hochschule der Künste ZHdK, Theater der Künste</b> (ZH) - Zürich",
@@ -4641,7 +7343,14 @@
         "quarter": "Altstadt",
         "city": "Zürich",
         "address": "Gessnerallee, 8001, Zürich",
-        "zipcode": "8001"
+        "zipcode": "8001",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                8.53396224975586,
+                47.37474822998047
+            ]
+        }
     },
     {
         "label": "<i>Schul- und Hochschulareal</i> <b>Fachhochschule Physiotherapie Graubünden Thim van der Laan</b> (GR) - Landquart",
@@ -4653,7 +7362,14 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Weststrasse, 7302, ",
-        "zipcode": "7302"
+        "zipcode": "7302",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.559382438659668,
+                46.95452117919922
+            ]
+        }
     },
     {
         "label": "<i>Bus</i> <b>Chur, Ringstrasse FHGR</b>",
@@ -4665,6 +7381,13 @@
         "quarter": "Unknown Quarter",
         "city": "Unknown City",
         "address": "Pulvermühlestrasse, 7004, ",
-        "zipcode": "7004"
+        "zipcode": "7004",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                9.512577056884766,
+                46.85331344604492
+            ]
+        }
     }
 ]

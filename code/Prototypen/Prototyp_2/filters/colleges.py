@@ -53,6 +53,14 @@ def nearby_amenities():
             }
         }
     }, {"_id": 0})  # This projection excludes the _id field from the results
-
-
     return jsonify(list(nearby_amenities))
+
+@bp.route('/get_all_unique_colleges', methods=['POST'])
+def get_all_unique_colleges():
+    collection_colleges = get_college_collection()
+
+    # Get all unique colleges with their _id
+    unique_colleges = collection_colleges.distinct("name")
+
+    return jsonify(list(unique_colleges))
+
