@@ -1,7 +1,7 @@
 from flask import Flask
 from filters import amenities, colleges
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='images')
 app.register_blueprint(amenities.bp, url_prefix='/amenities')
 app.register_blueprint(colleges.bp, url_prefix='/colleges')
 
