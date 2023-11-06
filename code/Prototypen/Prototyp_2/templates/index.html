@@ -2,13 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Map Search</title>
+    <title>University Life Quality</title>
     <!-- Include Leaflet CSS and JavaScript -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
 
+
+
+    <style>
+        .title-with-bg {
+            background-image: url('../images/university_life.png');
+            background-repeat: no-repeat;   /* To ensure the image doesn't repeat */
+            background-size: cover;         /* This will cover the entire element area */
+            background-position: center -300px;
+            padding: 300px;            /* Add some padding: top-bottom and left-right */
+            color: black;                   /* Change text color, if needed, for better visibility */
+            font-family: 'Open Sans', sans-serif;  /* Use Open Sans font */
+            font-size: 50px;                /* Increase font size */
+            font-weight: 500;               /* Font weight for a calm feel */
+
+            /* Flexbox properties */
+            display: flex;
+            align-items: center;            /* Vertical centering */
+            justify-content: center;     /* Push content to the far right */
+            width: 100%;                   /* Take the full available height */
+        }
+
+    </style>
     <style>
         #map { height: 800px; }
 
@@ -21,27 +46,9 @@
     </style>
 </head>
 <body>
-
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 text-center my-3">
-            <h1>University Life Quality Evaluator</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <form id="collegeSelectForm" class="row">
-                <label for="collegeSelectDropdown" class="col-sm-1 col-form-label">Select a College:</label>
-                <div class="col-sm-11">
-                    <select class="form-control" id="collegeSelectDropdown" name="college">
-                        {% for college in college_names %}
-                            <option value="{{ college }}">{{ college }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-            </form>
-        </div>
-
+        <div class="title-with-bg">University Life Quality Evaluator</div>
     </div>
     <div class="row my-4">
         <div class="col-3 border">
@@ -78,7 +85,7 @@
                 <button type="submit" class="btn btn-primary mt-3">Filter Colleges</button>
 
             <div class="mt-5">
-                <h3>Filtered Universities</h3>
+                <h3>Filtered Colleges</h3>
                 <table class="table">
                     <thead>
                         <tr>
@@ -99,18 +106,19 @@
                         if (e.target && e.target.classList.contains('delete-row')) {
                             // Remove the corresponding row
                             e.target.closest('tr').remove();
+                            fetchAndDisplayCollegesOnMap();
                         }
                     });
                 });
             </script>
 
         </div>
-        <div class="col-7">
+        <div class="col-6">
             <div class="col-12 border">
                 <div id="map" class="my-3"></div>
             </div>
         </div>
-        <div class="col-2">
+        <div class="col-3">
 
             <div class="col-12 border">
                 <h4>Amenities</h4>
@@ -130,51 +138,61 @@
 
 
                 <!-- Food & Drink -->
-                <h5>Food & Drink</h5>
-                <div class="form-group">
-                    <label for="bar">Bar</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="bar" value="3">
+                <h5 data-toggle="collapse" data-target="#foodDrinkCollapse" aria-expanded="false" aria-controls="foodDrinkCollapse" style="cursor: pointer;">
+                    Food & Drink <i class="bi bi-chevron-down"></i>
+                </h5>
+                <div id="foodDrinkCollapse" class="collapse">
+                    <div class="form-group">
+                        <label for="bar">Bar</label>
+                        <input type="range" class="form-control-range" min="1" max="5" step="1" id="bar" value="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="biergarten">Biergarten</label>
+                        <input type="range" class="form-control-range" min="1" max="5" step="1" id="biergarten" value="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="cafe">Cafe</label>
+                        <input type="range" class="form-control-range" min="1" max="5" step="1" id="cafe" value="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="fast_food">Fast Food</label>
+                        <input type="range" class="form-control-range" min="1" max="5" step="1" id="fast_food" value="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="food_court">Food Court</label>
+                        <input type="range" class="form-control-range" min="1" max="5" step="1" id="food_court" value="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="ice_cream">Ice Cream</label>
+                        <input type="range" class="form-control-range" min="1" max="5" step="1" id="ice_cream" value="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="restaurant">Restaurant</label>
+                        <input type="range" class="form-control-range" min="1" max="5" step="1" id="restaurant" value="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="pub">Pub</label>
+                        <input type="range" class="form-control-range" min="1" max="5" step="1" id="pub" value="3">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="biergarten">Biergarten</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="biergarten" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="cafe">Cafe</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="cafe" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="fast_food">Fast Food</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="fast_food" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="food_court">Food Court</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="food_court" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="ice_cream">Ice Cream</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="ice_cream" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="restaurant">Restaurant</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="restaurant" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="pub">Pub</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="pub" value="3">
-                </div>
+
+
 
 
                 <!-- Entertainment & Culture -->
-                <h5>Entertainment & Culture</h5>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="arts_centre" id="arts_centre">
-                    <label class="form-check-label" for="arts_centre">Arts Centre</label>
+                <h5 data-toggle="collapse" data-target="#entertainmentCollapse" aria-expanded="false" aria-controls="entertainmentCollapse" style="cursor: pointer;">
+                    Entertainment & Culture <i class="bi bi-chevron-down"></i>
+                </h5>
+                    <div id="entertainmentCollapse" class="collapse">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="arts_centre" id="arts_centre">
+                        <label class="form-check-label" for="arts_centre">Arts Centre</label>
+                    </div>
                 </div>
                 <!-- ... add other checkboxes for this category similarly ... -->
 
                 <!-- Community & Education -->
-                <h5>Community & Education</h5>
+                <h5>Community & Education <i class="bi bi-chevron-down"></i> </h5>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="community_centre" id="community_centre">
                     <label class="form-check-label" for="community_centre">Community Centre</label>
@@ -182,7 +200,7 @@
                 <!-- ... add other checkboxes for this category similarly ... -->
 
                 <!-- Financial Services -->
-                <h5>Financial Services</h5>
+                <h5>Financial Services <i class="bi bi-chevron-down"></i> </h5>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="atm" id="atm">
                     <label class="form-check-label" for="atm">ATM</label>
@@ -190,7 +208,7 @@
                 <!-- ... add other checkboxes for this category similarly ... -->
 
                 <!-- Transportation -->
-                <h5>Transportation</h5>
+                <h5>Transportation <i class="bi bi-chevron-down"></i> </h5>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="bus_station" id="bus_station">
                     <label class="form-check-label" for="bus_station">Bus Station</label>
@@ -198,7 +216,7 @@
                 <!-- ... add other checkboxes for this category similarly ... -->
 
                 <!-- Health & Safety -->
-                <h5>Health & Safety</h5>
+                <h5>Health & Safety <i class="bi bi-chevron-down"></i> </h5>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="clinic" id="clinic">
                     <label class="form-check-label" for="clinic">Clinic</label>
@@ -206,7 +224,7 @@
                 <!-- ... add other checkboxes for this category similarly ... -->
 
                 <!-- Postal & Communication -->
-                <h5>Postal & Communication</h5>
+                <h5>Postal & Communication <i class="bi bi-chevron-down"></i> </h5>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="post_box" id="post_box">
                     <label class="form-check-label" for="post_box">Post Box</label>
@@ -241,32 +259,15 @@
         coordinates.forEach(coord => L.marker([coord.lat, coord.lon]).addTo(map));
     }
 
-    // Fetch amenities based on college name and display markers on map
-    function onCollegeSelected(collegeName) {
-        fetch('/colleges/nearby_amenities', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ college_name: collegeName })
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Clear previous markers from the Leaflet map
-            map.eachLayer(layer => {
-                if (layer instanceof L.Marker) {
-                    map.removeLayer(layer);
-                }
-            });
+    //Drop downs clicked
+    $('#foodDrinkCollapse').on('show.bs.collapse', function () {
+        $('.bi-chevron-down').toggleClass('bi-chevron-up bi-chevron-down');
+    })
 
-            // Add new markers for each amenity
-            data.forEach(amenity => {
-                L.marker([amenity.lat, amenity.lon]).addTo(map)
-                  .bindPopup(amenity.name);  // Assuming each amenity has a 'name' attribute
-            });
-        })
-        .catch(error => {
-            console.error("Error fetching nearby amenities:", error);
-        });
-    }
+    $('#foodDrinkCollapse').on('hide.bs.collapse', function () {
+        $('.bi-chevron-up').toggleClass('bi-chevron-down bi-chevron-up');
+    })
+
 
     // Event listener for dropdown change
     document.getElementById('collegeSelectDropdown').addEventListener('change', function() {
@@ -308,6 +309,7 @@
                     });
 
                     cellDelete.appendChild(deleteButton);
+                    fetchAndDisplayCollegesOnMap();
                 });
             })
             .catch(error => {
@@ -324,6 +326,51 @@
             fetchAllUniqueColleges();
         });
     });
+
+    function fetchAndDisplayCollegesOnMap() {
+        const collegeNames = Array.from(document.querySelectorAll("#universityTableBody td:first-child")).map(td => td.textContent);
+
+
+
+        test = api-services.getColleges
+
+
+        fetch('/colleges/get_colleges_by_names', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ college_names: collegeNames })
+        })
+        .then(response => response.json())
+        .then(colleges => {
+            // Clear previous markers from the Leaflet map
+            map.eachLayer(layer => {
+                if (layer instanceof L.Marker) {
+                    map.removeLayer(layer);
+                }
+            });
+
+            // Add new markers for each college
+            colleges.forEach(college => {
+                L.marker([college.lat, college.lon], {icon: blueIcon}).addTo(map)
+                  .bindPopup(college.name);
+            });
+        })
+        .catch(error => {
+            console.error("Error fetching colleges:", error);
+        });
+    }
+
+
+    // Assuming you have already defined a blueIcon for Leaflet:
+    const blueIcon = L.icon({
+        iconUrl: '../images/university.png',
+        iconSize: [38, 35], // Size of the icon, [width, height]
+        iconAnchor: [22, 94], // Point of the icon which will correspond to marker's location
+        popupAnchor: [-3, -76] // Point from which the popup should open relative to the iconAnchor
+    });
+
+
+
 
 </script>
 

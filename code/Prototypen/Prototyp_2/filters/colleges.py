@@ -64,3 +64,9 @@ def get_all_unique_colleges():
 
     return jsonify(list(unique_colleges))
 
+@bp.route('/get_colleges_by_names', methods=['POST'])
+def get_colleges_by_names():
+    college_names = request.json.get('college_names', [])
+    collection_colleges = get_college_collection()
+    colleges = collection_colleges.find({"name": {"$in": college_names}}, {"_id": 0})
+    return jsonify(list(colleges))
