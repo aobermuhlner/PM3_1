@@ -1,0 +1,62 @@
+<div class="col-3 border">
+                <!-- Type of University -->
+                <h4>Colleges</h4>
+                <h5>College Type</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="university">
+                    <label class="form-check-label" for="university">University</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="college">
+                    <label class="form-check-label" for="college">College</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="pedagogical_college">
+                    <label class="form-check-label" for="pedagogical_college">Pedagogical College</label>
+                </div>
+
+                <!-- Language of state -->
+                <h5>Language of state</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="german">
+                    <label class="form-check-label" for="german">German</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="french">
+                    <label class="form-check-label" for="french">French</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="italian">
+                    <label class="form-check-label" for="italian">Italian</label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Filter Colleges</button>
+
+            <div class="mt-5">
+                <h3>Filtered Colleges</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">University Name</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="universityTableBody">
+                        <!-- Rows will be dynamically populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const tableBody = document.getElementById('universityTableBody');
+                    tableBody.addEventListener('click', function(e) {
+                        if (e.target && e.target.classList.contains('delete-row')) {
+                            // Remove the corresponding row
+                            e.target.closest('tr').remove();
+                            fetchAndDisplayCollegesOnMap();
+                        }
+                    });
+                });
+            </script>
+
+        </div>

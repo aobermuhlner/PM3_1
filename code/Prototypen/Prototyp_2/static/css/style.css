@@ -1,0 +1,27 @@
+.title-with-bg {
+    background-image: url('../images/university_life.png');
+    background-repeat: no-repeat;   /* To ensure the image doesn't repeat */
+    background-size: cover;         /* This will cover the entire element area */
+    background-position: center -300px;
+    padding: 300px;                 /* Add some padding: top-bottom and left-right */
+    color: black;                   /* Change text color, if needed, for better visibility */
+    font-family: 'Open Sans', sans-serif;  /* Use Open Sans font */
+    font-size: 50px;                /* Increase font size */
+    font-weight: 500;               /* Font weight for a calm feel */
+
+    /* Flexbox properties */
+    display: flex;
+    align-items: center;            /* Vertical centering */
+    justify-content: center;        /* Push content to the far right */
+    width: 100%;                    /* Take the full available height */
+}
+
+#map {
+    height: 800px;
+}
+
+#universityTableBody {
+    max-height: 500px;  /* Adjust the height as needed */
+    overflow-y: auto;
+    display: block; /* Necessary to make tbody scrollable */
+}
