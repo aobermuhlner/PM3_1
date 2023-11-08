@@ -1,9 +1,9 @@
 // This file could include functions and event listeners related to amenities filtering
 
 // For illustration purposes, let's assume you have similar functionality for amenities as you do for colleges.
-export function filterAmenities() {
+//export function filterAmenities() {
     // Functionality to filter amenities goes here
-}
+//}
 
 function createAmenitiesSection(title, amenities) {
     // Create the main container for the amenities section

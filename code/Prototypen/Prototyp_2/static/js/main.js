@@ -8,7 +8,9 @@ function loadHTML(file, elementId) {
 
 // Load the external HTML files into their respective divs
 document.addEventListener('DOMContentLoaded', function() {
-    loadHTML('colleges_filter.html', 'colleges-filter-container');
-    loadHTML('map.html', 'map-container');
-    loadHTML('amenities_filter.html', 'amenities-filter-container');
+    loadHTML('/static/view/colleges_filter.html', 'colleges-filter-container');
+    loadHTML('/static/view/map.html', 'map-container', function() {
+        initMap(); // Call a function that initializes the map.
+    });
+    loadHTML('/static/view/amenities_filter.html', 'amenities-filter-container');
 });

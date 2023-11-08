@@ -33,4 +33,4 @@ function fetchAndDisplayCollegesOnMap(map, blueIcon) {
     });
 }
 
-export { addMarkers, fetchAndDisplayCollegesOnMap };
+//export { addMarkers, fetchAndDisplayCollegesOnMap };
