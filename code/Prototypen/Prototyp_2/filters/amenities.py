@@ -71,7 +71,33 @@ def get_nearby_amenities(latitude, longitude, distance_km=0.5, limit=10000):
     # Execute the query in the database
     # 'find()' returns a cursor that iterates through the found documents
     results = collection.find(query).limit(limit)
-    return list(results)
+    # Food and Beverage Services
+    food_beverage_services = ['bar', 'cafe', 'fast_food', 'food_court', 'restaurant', 'pub']
+
+    # Entertainment and Cultural Venues
+    entertainment_cultural = ['arts_centre', 'casino', 'cinema', 'events_venue', 'music_venue', 'nightclub', 'theatre']
+
+    # Public and Civic Services
+    public_civic_services = ['library', 'atm', 'bank', 'police', 'post_box', 'post_office']
+
+    # Transportation and Health Services
+    transportation_health = ['bus_station', 'bicycle_parking', 'bicycle_repair_station', 'doctors', 'hospital', 'pharmacy']
+    #return the category
+    
+    if category == 'fbs':
+        return [doc for doc in results if doc.get('amenity') in food_beverage_services]
+
+    elif category == 'ecv':
+        return [doc for doc in results if doc.get('amenity') in entertainment_cultural]
+    elif category == 'pcs':
+        return [doc for doc in results if doc.get('amenity') in public_civic_services]
+    elif category == 'ths':
+        return [doc for doc in results if doc.get('amenity') in transportation_health]
+    elif category is None:
+        # Handle the None case as needed
+        return list(results)
+    else:
+        return list(results)
 
 
 if __name__ == "__main__":
