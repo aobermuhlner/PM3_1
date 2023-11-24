@@ -99,7 +99,90 @@ def get_nearby_amenities(latitude, longitude, distance_km=0.5, limit=10000):
     else:
         return list(results)
 
+@bp.route('/get_amenitites_nearby_scatter')
+def get_amenities_scatterplot(inputlatitude, inputlongitude, distance_km=0.5, limit=10000, category=None):
+    # Fetches nearby amenities based on provided latitude, longitude, distance, and category.
+    # The function 'get_nearby_amenities' is assumed to return a list of amenities
+    # within the specified distance from the input coordinates.
+    data = get_nearby_amenities(inputlatitude, inputlongitude, distance_km, category=category)
 
+    # Your input coordinates as a tuple.
+    input_coordinates = (inputlatitude, inputlongitude)
+
+    # Initialize a list to store distances from the input coordinates to each amenity.
+    distances = []
+
+    # Iterate through each amenity in the data.
+    for item in data:
+        # Extract the coordinates of the current amenity.
+        object_coordinates = (item['lat'], item['lon'])
+
+        # Calculate the geodesic distance (in meters) from the input coordinates to the amenity's coordinates.
+        # 'geodesic' function computes the shortest distance over the earth's surface.
+        # The '.meters' attribute converts the distance to meters.
+        distance = geodesic(input_coordinates, object_coordinates).meters
+
+        # Append the calculated distance to the distances list.
+        distances.append(distance)
+
+    # Return the list of distances.
+    # This list can be used to plot a scatterplot, where each point represents an amenity,
+    # and its distance from the input coordinates.
+    return distances
+@bp.route('/get_amenitites_nearby_barrchart')
+def get_amenities_barchart(latitude, longitude, distance_km=0.5, limit=10000, category=None, sortbycat=False):
+    # Get nearby amenities based on the provided latitude, longitude, and other parameters.
+    data = get_nearby_amenities(latitude, longitude, distance_km, category=category)
+
+    # Initialize a dictionary to store counts of each amenity.
+    amenity_counts = {}
+
+    # Iterate through each item in the returned data.
+    for item in data:
+        amenity = item['amenity']  # Extract the amenity type.
+        # Count the occurrences of each amenity.
+        if amenity in amenity_counts:
+            amenity_counts[amenity] += 1
+        else:
+            amenity_counts[amenity] = 1
+
+    # Convert the dictionary of amenity counts into a list of lists.
+    amenity_list = [[key, value] for key, value in amenity_counts.items()]
+
+    # If sorting by category is enabled,
+    if sortbycat:
+        # Define the categories.
+        food_beverage_services = ['bar', 'cafe', 'fast_food', 'food_court', 'restaurant', 'pub']
+        entertainment_cultural = ['arts_centre', 'casino', 'cinema', 'events_venue', 'music_venue', 'nightclub', 'theatre']
+        public_civic_services = ['library', 'atm', 'bank', 'police', 'post_box', 'post_office']
+        transportation_health = ['bus_station', 'bicycle_parking', 'bicycle_repair_station', 'doctors', 'hospital', 'pharmacy']
+
+        # Initialize a dictionary to count amenities by these categories.
+        category_counts = {
+            'Food and Beverage Services': 0,
+            'Entertainment and Cultural Venues': 0,
+            'Public and Civic Services': 0,
+            'Transportation and Health Services': 0
+        }
+
+        # Categorize and count the amenities.
+        for amenity, count in amenity_list:
+            if amenity in food_beverage_services:
+                category_counts['Food and Beverage Services'] += count
+            elif amenity in entertainment_cultural:
+                category_counts['Entertainment and Cultural Venues'] += count
+            elif amenity in public_civic_services:
+                category_counts['Public and Civic Services'] += count
+            elif amenity in transportation_health:
+                category_counts['Transportation and Health Services'] += count
+
+        # Convert the category counts to a list of lists and return it.
+        category_counts_list = [[category, count] for category, count in category_counts.items()]
+        return category_counts_list
+
+    # If not sorting by category, return the list of amenities as is.
+    else:
+        return amenity_list
 if __name__ == "__main__":
     # Coordinates of the center and distance are set again
     latitude = 47.49652862548828
@@ -111,3 +194,7 @@ if __name__ == "__main__":
         print(doc)
     # Print the number of documents found
     print(len(liste)) 
+        print(len(liste)) 
+    print(get_amenities_barchart(latitude, longitude, 0.5, category=''))
+    print(get_amenities_scatterplot(latitude, longitude, 0.5, category=''))
+    print(get_amenities_barchart(latitude, longitude, 0.1, category='', sortbycat=True))
