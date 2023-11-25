@@ -1,128 +1,125 @@
+
 <body>
-        <div class="col-12 border">
-            <h4>Amenities</h4>
-            <h5>Settings</h5>
+    <div class="col-12 border">
+        <h4>Amenities</h4>
+        <h5>Settings</h5>
+        <div class="form-group">
+            <label for="customRange1">Distance to College (in kilometers):</label>
+            <input type="range" class="form-control-range" id="distanceSlider" min="1" max="10" value="5">
+            <span id="distanceValue">5 km</span>
+        </div>
+
+        <script>
+            // Update the displayed distance value when the slider changes
+            document.getElementById('distanceSlider').addEventListener('input', function() {
+                document.getElementById('distanceValue').textContent = this.value + " km";
+            });
+        </script>
+
+
+        <!-- Food & Drink -->
+        <h5 data-toggle="collapse" data-target="#foodDrinkCollapse" aria-expanded="false" aria-controls="foodDrinkCollapse" style="cursor: pointer;">
+            Food & Drink <i class="bi bi-chevron-down"></i>
+        </h5>
+        <div id="foodDrinkCollapse" class="collapse">
             <div class="form-group">
-                <label ="customRange1">Distance to College (in kilometers):</label>
-                <input type="range" class="form-control-range" id="distanceSlider" min="1" max="10" value="5">
-                <span id="distanceValue">5 km</span>
+                <label for="bar">Bar</label>
+                <input type="range" class="form-control-range" min="1" max="5" step="1" id="bar" value="3">
             </div>
-
-            <script>
-                // Update the displayed distance value when the slider changes
-                document.getElementById('distanceSlider').addEventListener('input', function() {
-                    document.getElementById('distanceValue').textContent = this.value + " km";
-                });
-            </script>
-
-
-            <!-- Food & Drink -->
-            <h5 data-toggle="collapse" data-target="#foodDrinkCollapse" aria-expanded="false" aria-controls="foodDrinkCollapse" style="cursor: pointer;">
-                Food & Drink <i class="bi bi-chevron-down"></i>
-            </h5>
-            <div id="foodDrinkCollapse" class="collapse">
-                <div class="form-group">
-                    <label for="bar">Bar</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="bar" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="biergarten">Biergarten</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="biergarten" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="cafe">Cafe</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="cafe" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="fast_food">Fast Food</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="fast_food" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="food_court">Food Court</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="food_court" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="ice_cream">Ice Cream</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="ice_cream" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="restaurant">Restaurant</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="restaurant" value="3">
-                </div>
-                <div class="form-group">
-                    <label for="pub">Pub</label>
-                    <input type="range" class="form-control-range" min="1" max="5" step="1" id="pub" value="3">
-                </div>
+            <div class="form-group">
+                <label for="biergarten">Biergarten</label>
+                <input type="range" class="form-control-range" min="1" max="5" step="1" id="biergarten" value="3">
             </div>
-
-
-            <!-- Entertainment & Culture -->
-            <h5 data-toggle="collapse" data-target="#entertainmentCollapse" aria-expanded="false" aria-controls="entertainmentCollapse" style="cursor: pointer;">
-                Entertainment & Culture <i class="bi bi-chevron-down"></i>
-            </h5>
-                <div id="entertainmentCollapse" class="collapse">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="arts_centre" id="arts_centre">
-                    <label class="form-check-label" for="arts_centre">Arts Centre</label>
-                </div>
+            <div class="form-group">
+                <label for="cafe">Cafe</label>
+                <input type="range" class="form-control-range" min="1" max="5" step="1" id="cafe" value="3">
             </div>
-            <!-- ... add other checkboxes for this category similarly ... -->
-
-            <!-- Community & Education -->
-            <h5>Community & Education <i class="bi bi-chevron-down"></i> </h5>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="community_centre" id="community_centre">
-                <label class="form-check-label" for="community_centre">Community Centre</label>
+            <div class="form-group">
+                <label for="fast_food">Fast Food</label>
+                <input type="range" class="form-control-range" min="1" max="5" step="1" id="fast_food" value="3">
             </div>
-            <!-- ... add other checkboxes for this category similarly ... -->
-
-            <!-- Financial Services -->
-            <h5>Financial Services <i class="bi bi-chevron-down"></i> </h5>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="atm" id="atm">
-                <label class="form-check-label" for="atm">ATM</label>
+            <div class="form-group">
+                <label for="food_court">Food Court</label>
+                <input type="range" class="form-control-range" min="1" max="5" step="1" id="food_court" value="3">
             </div>
-            <!-- ... add other checkboxes for this category similarly ... -->
-
-            <!-- Transportation -->
-            <h5>Transportation <i class="bi bi-chevron-down"></i> </h5>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="bus_station" id="bus_station">
-                <label class="form-check-label" for="bus_station">Bus Station</label>
+            <div class="form-group">
+                <label for="ice_cream">Ice Cream</label>
+                <input type="range" class="form-control-range" min="1" max="5" step="1" id="ice_cream" value="3">
             </div>
-            <!-- ... add other checkboxes for this category similarly ... -->
-
-            <!-- Health & Safety -->
-            <h5>Health & Safety <i class="bi bi-chevron-down"></i> </h5>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="clinic" id="clinic">
-                <label class="form-check-label" for="clinic">Clinic</label>
+            <div class="form-group">
+                <label for="restaurant">Restaurant</label>
+                <input type="range" class="form-control-range" min="1" max="5" step="1" id="restaurant" value="3">
             </div>
-            <!-- ... add other checkboxes for this category similarly ... -->
-
-            <!-- Postal & Communication -->
-            <h5 data-toggle="collapse" data-target="#postalCollapse" aria-expanded="false" aria-controls="postalCollapse" style="cursor: pointer;">
-                Postal & Communication <i class="bi bi-chevron-down"></i>
-            </h5>
-            <div id="postalCollapse" class="collapse">
-                <div class="form-group" id="postal">
-                    <!-- The dynamic content will be inserted here -->
-                </div>
+            <div class="form-group">
+                <label for="pub">Pub</label>
+                <input type="range" class="form-control-range" min="1" max="5" step="1" id="pub" value="3">
             </div>
         </div>
 
 
-    <!-- Include your JavaScript file before the closing body tag -->
-    <script src="path_to_your_javascript_file.js"></script>
-    <script>
-        // This script block should be placed right before the closing </body> tag.
-        document.addEventListener('DOMContentLoaded', function() {
-            // Define your amenities here
-            const postalAmenities = ['post_box'];
+        <!-- Entertainment & Culture -->
+        <h5 data-toggle="collapse" data-target="#entertainmentCollapse" aria-expanded="false" aria-controls="entertainmentCollapse" style="cursor: pointer;">
+            Entertainment & Culture <i class="bi bi-chevron-down"></i>
+        </h5>
+            <div id="entertainmentCollapse" class="collapse">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="arts_centre" id="arts_centre">
+                <label class="form-check-label" for="arts_centre">Arts Centre</label>
+            </div>
+        </div>
+        <!-- ... add other checkboxes for this category similarly ... -->
 
-            // Call the createAmenitiesSection function and append the result to the postalCollapse div
-            const postalSection = createAmenitiesSection('Postal & Communication', postalAmenities);
-            document.getElementById('postalCollapse').appendChild(postalSection);
-        });
-    </script>
+        <!-- Community & Education -->
+        <h5>Community & Education <i class="bi bi-chevron-down"></i> </h5>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="community_centre" id="community_centre">
+            <label class="form-check-label" for="community_centre">Community Centre</label>
+        </div>
+        <!-- ... add other checkboxes for this category similarly ... -->
+
+        <!-- Financial Services -->
+        <h5>Financial Services <i class="bi bi-chevron-down"></i> </h5>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="atm" id="atm">
+            <label class="form-check-label" for="atm">ATM</label>
+        </div>
+        <!-- ... add other checkboxes for this category similarly ... -->
+
+        <!-- Transportation -->
+        <h5>Transportation <i class="bi bi-chevron-down"></i> </h5>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="bus_station" id="bus_station">
+            <label class="form-check-label" for="bus_station">Bus Station</label>
+        </div>
+        <!-- ... add other checkboxes for this category similarly ... -->
+
+        <!-- Health & Safety -->
+        <h5>Health & Safety <i class="bi bi-chevron-down"></i> </h5>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="clinic" id="clinic">
+            <label class="form-check-label" for="clinic">Clinic</label>
+        </div>
+        <!-- ... add other checkboxes for this category similarly ... -->
+
+        <!-- Postal & Communication -->
+        <h5 data-toggle="collapse" data-target="#postalCollapse" aria-expanded="false" aria-controls="postalCollapse" style="cursor: pointer;">
+            Postal & Communication <i class="bi bi-chevron-down"></i>
+        </h5>
+        <div id="postalCollapse" class="collapse">
+            <div class="form-group" id="postal">
+                <!-- The dynamic content will be inserted here -->
+            </div>
+        </div>
+
+        <h5>Test generated amenitites </h5>
+        <div id="dynamicAmenitiesContainer"></div>
+    </div>
+
+
+
+
+
 </body>
+
+<script src="/static/js/main.js"></script>
+ <script src="js/map.js') }}"></script>

@@ -5,25 +5,42 @@
     // Functionality to filter amenities goes here
 //}
 
-function createAmenitiesSection(title, amenities) {
+
+function createAmenitiesSection(sectionName, amenities) {
+    const sectionId = sectionName.replace(/\s+/g, '') + 'Collapse'; // Create a unique ID for the section
+    console.log("Creating amenities section for", sectionName);
     // Create the main container for the amenities section
     const sectionContainer = document.createElement('div');
 
-    // Create and append the header
     const header = document.createElement('h5');
     header.setAttribute('data-toggle', 'collapse');
-    header.setAttribute('data-target', '#foodDrinkCollapse');
+    header.setAttribute('data-target', `#${sectionId}`);
     header.setAttribute('aria-expanded', 'false');
-    header.setAttribute('aria-controls', 'foodDrinkCollapse');
+    header.setAttribute('aria-controls', sectionId);
     header.style.cursor = 'pointer';
-    header.innerHTML = `${title} <i class="bi bi-chevron-down"></i>`;
+
+    // Add title text to the header
+    const headerText = document.createTextNode(`${sectionName} `);
+    header.appendChild(headerText);
+
+    // Create and append the icon to the header
+    const icon = document.createElement('i');
+    icon.className = 'bi bi-chevron-down';
+    header.appendChild(icon);
+
+    // Append the header to the section container
     sectionContainer.appendChild(header);
 
     // Create the collapse container
     const collapseContainer = document.createElement('div');
-    collapseContainer.id = 'foodDrinkCollapse';
+    collapseContainer.id = sectionId;
     collapseContainer.className = 'collapse';
     sectionContainer.appendChild(collapseContainer);
+
+    // Add click event listener to the header to toggle the collapse container
+    header.addEventListener('click', function() {
+        toggleCollapse(sectionId, icon);
+    });
 
     // Function to create range inputs
     function createRangeInput(id, label) {
@@ -32,7 +49,7 @@ function createAmenitiesSection(title, amenities) {
 
         const labelElement = document.createElement('label');
         labelElement.setAttribute('for', id);
-        labelElement.innerText = label;
+        labelElement.innerText = formatLabelText(label); // Use formatted text
         formGroup.appendChild(labelElement);
 
         const inputElement = document.createElement('input');
@@ -50,12 +67,61 @@ function createAmenitiesSection(title, amenities) {
 
     // Loop through each amenity and append a range input to the collapse container
     amenities.forEach(amenity => {
-        collapseContainer.appendChild(createRangeInput(amenity, amenity.charAt(0).toUpperCase() + amenity.slice(1)));
+        const amenityId = amenity.replace(/\s+/g, '');
+        collapseContainer.appendChild(createRangeInput(amenityId, amenity));
     });
 
     return sectionContainer;
 }
+function formatLabelText(text) {
+    return text.split('_')
+               .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+               .join(' ');
+}
+function toggleCollapse(sectionId, icon) {
+    const collapseSection = document.getElementById(sectionId);
+    if (collapseSection.style.display === 'none' || collapseSection.style.display === '') {
+        collapseSection.style.display = 'block';
+        icon.className = 'bi bi-chevron-up'; // Change icon to chevron-up
+    } else {
+        collapseSection.style.display = 'none';
+        icon.className = 'bi bi-chevron-down'; // Change icon to chevron-down
+    }
+}
 
 
+////////////////////////////////////////////////////////////////
+// Functions called for HTML FILE
+document.addEventListener('DOMContentLoaded', function() {
+    // Food & Drink
+    var foodDrinkAmenities = ['bar', 'cafe', 'fast_food', 'food_court', 'restaurant', 'pub'];
+    var foodDrinkSection = createAmenitiesSection('Food & Drinks', foodDrinkAmenities);
+    document.getElementById('dynamicAmenitiesContainer').appendChild(foodDrinkSection);
 
-//run scripts in the end
+    // Entertainment & Culture
+    var entertainmentCultureAmenities = ['arts_centre', 'casino', 'cinema', 'events_venue', 'music_venue', 'nightclub', 'theatre', 'library'];
+    var entertainmentCultureSection = createAmenitiesSection('Entertainment & Culture', entertainmentCultureAmenities);
+    document.getElementById('dynamicAmenitiesContainer').appendChild(entertainmentCultureSection);
+
+    // Financial Services and Postal & Communication
+    var financialPostalAmenities = ['atm', 'bank', 'post_box', 'post_office'];
+    var financialPostalSection = createAmenitiesSection('Financial & Postal Services', financialPostalAmenities);
+    document.getElementById('dynamicAmenitiesContainer').appendChild(financialPostalSection);
+
+    // Transportation
+    var transportationAmenities = ['bus_station', 'bicycle_parking', 'bicycle_repair_station'];
+    var transportationSection = createAmenitiesSection('Transportation', transportationAmenities);
+    document.getElementById('dynamicAmenitiesContainer').appendChild(transportationSection);
+
+    // Health & Safety
+    var healthSafetyAmenities = ['doctors', 'hospital', 'pharmacy', 'police'];
+    var healthSafetySection = createAmenitiesSection('Health & Safety', healthSafetyAmenities);
+    document.getElementById('dynamicAmenitiesContainer').appendChild(healthSafetySection);
+
+    console.log("dynamicAmenitiesContainer2")
+});
+
+//Checks if distance is changed of radius
+document.getElementById('distanceSlider').addEventListener('input', function() {
+    document.getElementById('distanceValue').textContent = this.value + " km";
+});

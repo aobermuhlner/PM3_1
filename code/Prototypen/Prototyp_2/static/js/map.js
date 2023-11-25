@@ -1,4 +1,6 @@
 // This file will initialize the map and manage map-related functionalities
+//
+//
 
 //import { addMarkers, fetchAndDisplayCollegesOnMap } from './colleges_filter.js';
 
@@ -9,12 +11,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Assuming you have already defined a blueIcon for Leaflet in this file or another imported file:
 const blueIcon = L.icon({
     iconUrl: '../images/university.png',
-    iconSize: [38, 35], // Size of the icon, [width, height]
-    iconAnchor: [22, 94], // Point of the icon which will correspond to marker's location
-    popupAnchor: [-3, -76] // Point from which the popup should open relative to the iconAnchor
+    iconSize: [38, 35],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76]
 });
 
 function initMap() {
@@ -32,12 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Assuming you have already defined a blueIcon for Leaflet in this file or another imported file:
     const blueIcon = L.icon({
         iconUrl: '../images/university.png',
-        iconSize: [38, 35], // Size of the icon, [width, height]
-        iconAnchor: [22, 94], // Point of the icon which will correspond to marker's location
-        popupAnchor: [-3, -76] // Point from which the popup should open relative to the iconAnchor
+        iconSize: [38, 35],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76]
     });
 
     fetchAllUniqueColleges();
