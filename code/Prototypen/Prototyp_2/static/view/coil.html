@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chart-container {
+            position: relative;
+            height:40vh; 
+            width:80vw;
+            margin-top: 20px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 2px solid #eee;
+        }
+        .card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Amenities Dashboard</h1>
+    <div class="input-group">
+        <input type="text" id="latitude" class="form-control" placeholder="Enter latitude">
+        <input type="text" id="longitude" class="form-control" placeholder="Enter longitude">
+        <button id="fetch-data" class="btn">Get Amenities</button>
+    </div>
+    <hr>
+    <div class="chart-container">
+        <canvas id="amenitiesChart"></canvas>
+    </div>
+    <div class="card" id="nearest-restaurant">
+        <h3>Nearest Restaurant</h3>
+        <!-- Details will be filled by JavaScript -->
+    </div>
+    <div class="card" id="nearest-pick-category">
+        <h3>Nearest [Pick Category]</h3>
+        <!-- Details will be filled by JavaScript -->
+    </div>
+    <div class="card" id="further-statistics">
+        <h3>Further Statistics</h3>
+        <!-- Details will be filled by JavaScript -->
+    </div>
+    <div class="card" id="get-route">
+        <h3>Get Route</h3>
+        <!-- Form or details will be filled by JavaScript -->
+    </div>
+    <div class="card" id="schedule">
+        <h3>Schedule</h3>
+        <!-- Details will be filled by JavaScript -->
+    </div>
+    <div class="card" id="map">
+        <h3>Map</h3>
+        <!-- Embedded map or link to map will be filled by JavaScript -->
+    </div>
+    <div class="card" id="other-university-buildings">
+        <h3>Other University Buildings</h3>
+        <!-- List will be filled by JavaScript -->
+    </div>
+    <div class="card" id="search-internet">
+        <h3>Search the Internet</h3>
+        <!-- Search functionality or link will be filled by JavaScript -->
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // JavaScript to handle form submission, fetch data, and update the dashboard
+    // This is a placeholder. You need to implement the actual JavaScript to make it work.
+    $(document).ready(function() {
+        $('#fetch-data').click(function() {
+            var latitude = $('#latitude').val();
+            var longitude = $('#longitude').val();
+            // Call your Flask endpoint with these coordinates
+            // Update the dashboard with the received data
+        });
+    });
+</script>
+
+</body>
+</html>
+
