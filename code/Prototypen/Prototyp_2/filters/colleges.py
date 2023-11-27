@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, jsonify, request
-from services.mongodb_service import get_db
-from services.mongodb_service import get_college_collection, get_amenities_collection
+from services.mongodb_service import get_db, get_college_collection, get_amenities_collection
 
 bp = Blueprint('colleges', __name__)
 DISTANCE_KM = 1
@@ -63,6 +62,15 @@ def get_all_unique_colleges():
     unique_colleges = collection_colleges.distinct("name")
 
     return jsonify(list(unique_colleges))
+
+@bp.route('/get_all_unique_cities', methods=['POST'])
+def get_all_unique_cities():
+    collection_colleges = get_college_collection()
+
+    # Get all unique cities with their _id
+    unique_cities = collection_colleges.distinct("city")
+
+    return jsonify(list(unique_cities))
 
 @bp.route('/get_colleges_by_names', methods=['POST'])
 def get_colleges_by_names():

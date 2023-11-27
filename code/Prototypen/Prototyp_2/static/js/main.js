@@ -31,12 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOMContentLoaded amenities event fired");
+    /*
     loadHTML('/static/view/amenities_filter.html', 'amenities-filter-container', function() {
         var script = document.createElement('script');
         script.src = '/static/js/amenities_filter.js';
         document.body.appendChild(script);
     });
+    */
     loadHTML('/static/view/colleges_filter.html', 'colleges-filter-container', function() {
         var script = document.createElement('script');
         script.src = '/static/js/colleges_filter.js';

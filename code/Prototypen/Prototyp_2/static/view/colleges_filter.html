@@ -1,35 +1,22 @@
 
                 <!-- Type of University -->
-                <h4>Colleges</h4>
+                <h1>Colleges</h1>
                 <h5>College Type</h5>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="university">
-                    <label class="form-check-label" for="university">University</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="college">
-                    <label class="form-check-label" for="college">College</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="pedagogical_college">
-                    <label class="form-check-label" for="pedagogical_college">Pedagogical College</label>
+                <div class="college-filter">
+                    <input type="text" id="universityName" placeholder="Search by University Name...">
+                    <select id="cityFilter">
+                        <option value="">Select City</option>
+                        <!-- City options here -->
+                    </select>
+                    <select id="categoryFilter">
+                        <option value="">Select Category</option>
+                        <option value="university (Universität)">University </option>
+                        <option value="university_of_applied_sciences (Fachhochschule)">University of Applied Sciences</option>
+                        <option value="college_of_education (Pädagogische Hochschule)">College of Education</option>
+                    </select>
                 </div>
 
-                <!-- Language of state -->
-                <h5>Language of state</h5>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="german">
-                    <label class="form-check-label" for="german">German</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="french">
-                    <label class="form-check-label" for="french">French</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="italian">
-                    <label class="form-check-label" for="italian">Italian</label>
-                </div>
-                <button type="submit" class="btn btn-primary mt-3">Filter Colleges</button>
+
 
             <div class="mt-5">
                 <h3>Filtered Colleges</h3>

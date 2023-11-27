@@ -34,3 +34,34 @@ function fetchAndDisplayCollegesOnMap(map, blueIcon) {
 }
 
 //export { addMarkers, fetchAndDisplayCollegesOnMap };
+function populateCityFilter() {
+    fetch('/colleges/get_all_unique_cities', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(cities => {
+        const cityFilter = document.getElementById('cityFilter');
+        cityFilter.innerHTML = '<option value="">Select City</option>'; // Reset the dropdown
+
+        // Populate the dropdown with cities
+        cities.forEach(city => {
+            if(city) { // Check to avoid adding empty values
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                cityFilter.appendChild(option);
+            }
+        });
+    })
+    .catch(error => {
+        console.error("Error fetching cities:", error);
+    });
+}
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    populateCityFilter();
+});

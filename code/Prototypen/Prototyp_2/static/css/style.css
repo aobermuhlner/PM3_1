@@ -17,11 +17,36 @@
 }
 
 #map {
-    height: 800px;
+    height: 780px;
 }
 
 #universityTableBody {
     max-height: 500px;  /* Adjust the height as needed */
     overflow-y: auto;
     display: block; /* Necessary to make tbody scrollable */
+}
+
+
+/* Increase width of tooltip */
+.tooltip-inner {
+    max-width: 500px; /* or any width you prefer */
+    width: auto; /* Adjust this as needed */
+}
+
+.college-filter > * {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#amenity-container {
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+#colleges-filter-container {
+    max-height: 800px; /* Adjust this value as needed */
+    overflow-y: auto; /* Adds a scrollbar if content exceeds max height */
+}
+#map {
+    max-height: 800px;
 }

@@ -1,8 +1,6 @@
 from flask import Blueprint, jsonify, request
 from services.mongodb_service import get_db, get_amenities_collection
-from pymongo import MongoClient
 from geopy.distance import geodesic
-from pymongo.errors import ConnectionFailure
 import logging
 
 # Configure logging to write to a file
@@ -194,7 +192,7 @@ if __name__ == "__main__":
         print(doc)
     # Print the number of documents found
     print(len(liste)) 
-        print(len(liste)) 
+    print(len(liste))
     print(get_amenities_barchart(latitude, longitude, 0.5, category=''))
     print(get_amenities_scatterplot(latitude, longitude, 0.5, category=''))
     print(get_amenities_barchart(latitude, longitude, 0.1, category='', sortbycat=True))

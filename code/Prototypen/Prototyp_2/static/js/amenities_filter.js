@@ -6,13 +6,13 @@
 //}
 
 
+
 function createAmenitiesSection(sectionName, amenities) {
     const sectionId = sectionName.replace(/\s+/g, '') + 'Collapse'; // Create a unique ID for the section
-    console.log("Creating amenities section for", sectionName);
     // Create the main container for the amenities section
     const sectionContainer = document.createElement('div');
 
-    const header = document.createElement('h5');
+    const header = document.createElement('h4');
     header.setAttribute('data-toggle', 'collapse');
     header.setAttribute('data-target', `#${sectionId}`);
     header.setAttribute('aria-expanded', 'false');
@@ -62,8 +62,20 @@ function createAmenitiesSection(sectionName, amenities) {
         inputElement.value = '3';
         formGroup.appendChild(inputElement);
 
+        // Tooltip title
+        var tooltipTitle = "Left: Not Interested | Center: Moderately Interested | Right: Very Interested";;
+
+        // Initialize Bootstrap tooltip
+        $(inputElement).tooltip({
+            title: tooltipTitle,
+            placement: 'top',
+            trigger: 'hover'
+        });
+
         return formGroup;
     }
+
+
 
     // Loop through each amenity and append a range input to the collapse container
     amenities.forEach(amenity => {
@@ -117,11 +129,28 @@ document.addEventListener('DOMContentLoaded', function() {
     var healthSafetyAmenities = ['doctors', 'hospital', 'pharmacy', 'police'];
     var healthSafetySection = createAmenitiesSection('Health & Safety', healthSafetyAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(healthSafetySection);
-
-    console.log("dynamicAmenitiesContainer2")
 });
 
 //Checks if distance is changed of radius
 document.getElementById('distanceSlider').addEventListener('input', function() {
     document.getElementById('distanceValue').textContent = this.value + " km";
 });
+
+
+$(document).ready(function() {
+    var $distanceSlider = $('#distanceSlider');
+
+    // Initialize the tooltip
+    document.getElementById('distanceSlider').tooltip({
+        title: function() {
+            return $(this).val();
+        },
+        trigger: 'hover'
+    });
+
+    // Update the tooltip title on slider change
+    $distanceSlider.on('input', function() {
+        $(this).attr('data-original-title', $(this).val()).tooltip('show');
+    });
+});
+
