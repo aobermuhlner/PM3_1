@@ -75,8 +75,6 @@ function createAmenitiesSection(sectionName, amenities) {
         return formGroup;
     }
 
-
-
     // Loop through each amenity and append a range input to the collapse container
     amenities.forEach(amenity => {
         const amenityId = amenity.replace(/\s+/g, '');
@@ -85,6 +83,7 @@ function createAmenitiesSection(sectionName, amenities) {
 
     return sectionContainer;
 }
+
 function formatLabelText(text) {
     return text.split('_')
                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -129,28 +128,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var healthSafetyAmenities = ['doctors', 'hospital', 'pharmacy', 'police'];
     var healthSafetySection = createAmenitiesSection('Health & Safety', healthSafetyAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(healthSafetySection);
+
+    //Checks if distance is changed of radius
+    /*
+    document.getElementById('distanceSlider').addEventListener('input', function() {
+        document.getElementById('distanceValue').textContent = this.value ;
+    }); */
+
 });
 
-//Checks if distance is changed of radius
-document.getElementById('distanceSlider').addEventListener('input', function() {
-    document.getElementById('distanceValue').textContent = this.value + " km";
-});
 
 
-$(document).ready(function() {
-    var $distanceSlider = $('#distanceSlider');
-
-    // Initialize the tooltip
-    document.getElementById('distanceSlider').tooltip({
-        title: function() {
-            return $(this).val();
-        },
-        trigger: 'hover'
-    });
-
-    // Update the tooltip title on slider change
-    $distanceSlider.on('input', function() {
-        $(this).attr('data-original-title', $(this).val()).tooltip('show');
-    });
-});
 

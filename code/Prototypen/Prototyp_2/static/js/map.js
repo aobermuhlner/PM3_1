@@ -1,6 +1,7 @@
 // This file will initialize the map and manage map-related functionalities
 //
 //
+//Global markers
 
 //import { addMarkers, fetchAndDisplayCollegesOnMap } from './colleges_filter.js';
 

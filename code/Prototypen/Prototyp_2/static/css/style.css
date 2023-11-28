@@ -50,3 +50,77 @@
 #map {
     max-height: 800px;
 }
+
+
+/*city filer for colleges */
+.city-box {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.city-box span {
+    margin-left: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+/* Optional: Add some hover effect for the close button */
+.city-box span:hover {
+    color: darkred;
+}
+
+/*college category filrer for colleges */
+.college-box {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.college-box span {
+    margin-left: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+/* Optional: Add some hover effect for the close button */
+.college-box span:hover {
+    color: darkred;
+}
+
+/* Colleges Filter BUtton */
+.btn-dark {
+    background-color: cadetblue;
+    color: white;
+    /* Add more styling as needed */
+}
+
+
+/* college table */
+.college-name-box {
+    padding: 5px 10px;
+    margin: 5px;
+    width: 400px;
+    background-color: lightsteelblue; /* or any color of your choice */
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    display: inline-block; /* or 'block' for each box on a new line */
+    position: relative; /* Positioning context for the close button */
+}
+
+.close-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%); /* Center vertically */
+    color: red;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: darkred;
+}

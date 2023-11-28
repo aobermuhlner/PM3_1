@@ -78,3 +78,35 @@ def get_colleges_by_names():
     collection_colleges = get_college_collection()
     colleges = collection_colleges.find({"name": {"$in": college_names}}, {"_id": 0})
     return jsonify(list(colleges))
+
+
+@bp.route('/get_colleges_filtered', methods=['POST'])
+@bp.route('/get_colleges_filtered', methods=['POST'])
+def get_colleges_filtered():
+    data = request.json
+    categories = data.get('categories', [])
+    cities = data.get('cities', [])
+
+    collection_colleges = get_college_collection()
+
+    query = {}
+    if categories:
+        query["Kategorie"] = {"$in": categories}
+    if cities:
+        query["city"] = {"$in": cities}
+
+    filtered_colleges = collection_colleges.find(
+        query,
+        {"_id": 0, "name": 1, "lat": 1, "lon": 1}
+    )
+
+    colleges_data = list(filtered_colleges)
+    return jsonify(colleges_data)
+
+
+
+
+if __name__ == "__main__":
+    # Coordinates of the center and distance are set again
+    latitude = 47.49652862548828
+    longitude = 8.719242095947266

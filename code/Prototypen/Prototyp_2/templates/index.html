@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>University Life Quality</title>
-    <!-- Include Leaflet CSS and JavaScript -->
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <!-- From the filesystem added by us -->
+
+    <!-- Internal CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/icon.png">
+
+    <!-- External JavaScript -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Internal JavaScript -->
     <script src="/static/js/main.js"></script>
     <script src="/static/js/amenities_filter.js"></script>
     <script src="/static/js/colleges_filter.js"></script>
-
+    <sccript> let collegeMarkers = []; // Global array to keep track of markers</sccript>
 </head>
+
 <body>
 
 <div class="container-fluid">
@@ -35,16 +42,24 @@
                 <h1>Colleges</h1>
                     <h5>College Type</h5>
                     <div class="college-filter">
-                        <input type="text" id="universityName" placeholder="Search by University Name...">
+                        <!-- City FILTER -->
                         <select id="cityFilter">
                             <option value="">Select City</option>
                         </select>
+                        <div id="selectedCities"></div>
+
+                        <!-- College Category -->1
                         <select id="categoryFilter">
                             <option value="">Select Category</option>
-                            <option value="university (Universität)">University </option>
-                            <option value="university_of_applied_sciences (Fachhochschule)">University of Applied Sciences</option>
-                            <option value="college_of_education (Pädagogische Hochschule)">College of Education</option>
+                            <option value="FH">University </option>
+                            <option value="UH">University of Applied Sciences</option>
+                            <option value="PH">College of Education</option>
                         </select>
+
+                        <div id="selectedCollegeCategories"></div>
+                        <hr class="hr" />
+                        <button id="filterCollegesBtn" class="btn btn-dark">Filter Colleges</button>
+                        <div id="selectedColleges"></div>
                     </div>
             </div>
 
@@ -54,10 +69,13 @@
             <!-- AMENITY FILTER -->
             <div id="amenity-container" class="col-3 border">
                 <h2>Amenities</h2>
+                <!-- Range distance -->
                 <div class="form-group">
                     <label for="customRange1">Distance to College (in kilometers):</label>
                     <input type="range" class="form-control-range" id="distanceSlider" min="1" max="10" value="5">
                 </div>
+                <hr class="hr" />
+                <!-- Amenities  -->
                 <div id="dynamicAmenitiesContainer"></div>
             </div>
 
