@@ -24,7 +24,7 @@ def some_route():
 
 
 @bp.route('/get_amenitites_nearby')
-def get_nearby_amenities(latitude, longitude, distance_km=0.5, limit=10000):
+def get_nearby_amenities(latitude, longitude, distance_km=0.5,category= None, limit=10000):
     """
     Function to get nearby amenities based on a center point and a specified distance.
     Uses geodesic calculations to determine the area of interest and performs a MongoDB query.
@@ -83,19 +83,19 @@ def get_nearby_amenities(latitude, longitude, distance_km=0.5, limit=10000):
     #return the category
     
     if category == 'fbs':
-        return [doc for doc in results if doc.get('amenity') in food_beverage_services]
+        return jsonify( [doc for doc in results if doc.get('amenity') in food_beverage_services])
 
     elif category == 'ecv':
-        return [doc for doc in results if doc.get('amenity') in entertainment_cultural]
+        return   jsonify( [doc for doc in results if doc.get('amenity') in entertainment_cultural])
     elif category == 'pcs':
-        return [doc for doc in results if doc.get('amenity') in public_civic_services]
+        return  jsonify( [doc for doc in results if doc.get('amenity') in public_civic_services])
     elif category == 'ths':
-        return [doc for doc in results if doc.get('amenity') in transportation_health]
+        return  jsonify( [doc for doc in results if doc.get('amenity') in transportation_health])
     elif category is None:
         # Handle the None case as needed
-        return list(results)
+        return jsonify(list(results))
     else:
-        return list(results)
+        return jsonify( list(results))
 
 @bp.route('/get_amenitites_nearby_scatter')
 def get_amenities_scatterplot(inputlatitude, inputlongitude, distance_km=0.5, limit=10000, category=None):
@@ -176,11 +176,11 @@ def get_amenities_barchart(latitude, longitude, distance_km=0.5, limit=10000, ca
 
         # Convert the category counts to a list of lists and return it.
         category_counts_list = [[category, count] for category, count in category_counts.items()]
-        return category_counts_list
+        return  jsonify(category_counts_list)
 
     # If not sorting by category, return the list of amenities as is.
     else:
-        return amenity_list
+        return jsonify(amenity_list)
 if __name__ == "__main__":
     # Coordinates of the center and distance are set again
     latitude = 47.49652862548828
