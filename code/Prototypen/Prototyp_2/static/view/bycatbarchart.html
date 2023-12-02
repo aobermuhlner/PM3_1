@@ -15,7 +15,7 @@
         // Function to fetch data and generate chart
         function generateChart() {
             // Make a request to the Flask route
-            fetch('/get_amenitites_nearby_barrchart?latitude=47.49652862548828&longitude=8.719242095947266&distance_km=0.5&limit=10000&sortbycat=true')
+            fetch('/colleges/get_amenitites_nearby_barrchart?latitude=47.49652862548828&longitude=8.719242095947266&distance_km=0.5&limit=10000&sortbycat=true')
                 .then(response => response.json())
                 .then(data => {
                     // Process the data to separate labels and values
