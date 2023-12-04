@@ -81,7 +81,6 @@ def get_colleges_by_names():
 
 
 @bp.route('/get_colleges_filtered', methods=['POST'])
-@bp.route('/get_colleges_filtered', methods=['POST'])
 def get_colleges_filtered():
     data = request.json
     categories = data.get('categories', [])

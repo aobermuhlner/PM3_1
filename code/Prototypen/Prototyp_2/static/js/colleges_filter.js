@@ -1,8 +1,13 @@
-// This file will handle all the operations related to colleges filtering
+
+/* -------------------------------------
+   Global Variables
+------------------------------------- */
+let collegeMarkersMap = {}; // Global map to store markers by college name
 
 
-
-// Add markers to the map for each college
+/* -------------------------------------
+   College Markers and Map Update Functions
+------------------------------------- */
 function addMarkers(map, coordinates) {
     coordinates.forEach(coord => L.marker([coord.lat, coord.lon]).addTo(map));
 }
@@ -107,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const collegeNames = colleges.map(college => college.name);
             const uniqueColleges = [...new Set(collegeNames)];
             console.log(colleges); // Handle the response data
-            displaySelectedColleges(uniqueColleges);
+            displaySelectedColleges(colleges);
             updateMapWithColleges(colleges);
         })
         .catch(error => {
@@ -115,6 +120,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Observes if colleges are selected and then call amenity function:
+    const observer = new MutationObserver(function(mutations) {
+        console.log("Observes if colleges are selected and then call amenity function:")
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                onSelectedCollegesChanged();
+            }
+        });
+    });
 
 });
 
@@ -123,10 +137,14 @@ function displaySelectedColleges(colleges) {
     const selectedCollegesDiv = document.getElementById('selectedColleges');
     selectedCollegesDiv.innerHTML = '';
 
-    colleges.forEach(collegeName => {
+    colleges.forEach(college => {
         const collegeBox = document.createElement('div');
         collegeBox.className = 'college-name-box';
-        collegeBox.textContent = collegeName;
+        collegeBox.textContent = college.name; // Display the name of the college
+
+        // Store latitude and longitude as data attributes
+        collegeBox.setAttribute('data-lat', college.lat);
+        collegeBox.setAttribute('data-lon', college.lon);
 
         const closeButton = document.createElement('span');
         closeButton.textContent = '×';
@@ -135,9 +153,10 @@ function displaySelectedColleges(colleges) {
             selectedCollegesDiv.removeChild(collegeBox);
 
             // Remove the corresponding marker from the map
-            if (collegeMarkersMap[collegeName]) {
-                map.removeLayer(collegeMarkersMap[collegeName]);
-                delete collegeMarkersMap[collegeName]; // Remove the reference
+            if (collegeMarkersMap[college.name]) {
+                removeCollegeMarker(college.name);
+                map.removeLayer(collegeMarkersMap[college.name]);
+                delete collegeMarkersMap[college.name]; // Remove the reference
             }
         };
 
@@ -145,7 +164,6 @@ function displaySelectedColleges(colleges) {
         selectedCollegesDiv.appendChild(collegeBox);
     });
 }
-
 
 
 
@@ -201,17 +219,93 @@ function addCollegeCategory(collegeCategory, categoryValue) {
 
 function updateMapWithColleges(colleges) {
     // Clear existing markers
+    clearMap();
     for (let key in collegeMarkersMap) {
-        map.removeLayer(collegeMarkersMap[key]);
+        if (collegeMarkersMap[key].marker) {
+            map.removeLayer(collegeMarkersMap[key].marker);
+        }
     }
     collegeMarkersMap = {}; // Reset the markers map
 
     // Add new markers
     colleges.forEach(college => {
         if (college.lat && college.lon) {
-            const marker = L.marker([college.lat, college.lon]).addTo(map)
-                            .bindPopup(college.name);
-            collegeMarkersMap[college.name] = marker; // Store marker by college name
+            // Create a new marker
+            const marker = L.marker([college.lat, college.lon]).bindPopup(college.name);
+            marker.addTo(map);
+
+            // Store marker along with lat and lon in collegeMarkersMap
+            collegeMarkersMap[college.name] = {
+                lat: college.lat,
+                lon: college.lon,
+                marker: marker
+            };
+        }
+    });
+}
+
+
+
+// This function
+function onSelectedCollegesChanged() {
+    console.log("onSelectedCollegesChanged")
+    const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
+    if (items.length > 0) {
+        items.forEach(item => {
+            const latitude = item.getAttribute('data-lat');
+            const longitude = item.getAttribute('data-lon');
+            // You might want to aggregate these coordinates or choose one
+            getNearbyAmenities(latitude, longitude);
+        });
+    }
+}
+
+/*
+const selectedCollegesDiv = document.getElementById('selectedColleges');
+observer.observe(selectedCollegesDiv, { childList: true });
+*/
+
+
+
+//////////////////////////////////////////////////  College markers handler
+// Function to add a new college marker
+function addCollegeMarker(collegeName, lat, lon) {
+    const marker = L.marker([lat, lon]).bindPopup(collegeName);
+    collegeMarkersMap[collegeName] = { lat, lon, marker };
+    marker.addTo(map); // Assuming 'map' is your Leaflet map instance
+}
+
+// Function to remove a college marker
+function removeCollegeMarker(collegeName) {
+    const collegeInfo = collegeMarkersMap[collegeName];
+    if (collegeInfo && collegeInfo.marker) {
+        map.removeLayer(collegeInfo.marker); // Remove marker from the map
+    }
+    delete collegeMarkersMap[collegeName]; // Remove entry from the map
+}
+
+// Function to update all markers on the map based on collegeMarkersMap
+function updateMapMarkers() {
+    // First, clear all existing markers from the map
+    for (const key in collegeMarkersMap) {
+        if (collegeMarkersMap[key].marker) {
+            map.removeLayer(collegeMarkersMap[key].marker);
+        }
+    }
+
+    // Then, add back markers from the updated collegeMarkersMap
+    for (const key in collegeMarkersMap) {
+        const collegeInfo = collegeMarkersMap[key];
+        collegeInfo.marker = L.marker([collegeInfo.lat, collegeInfo.lon]).bindPopup(key);
+        collegeInfo.marker.addTo(map);
+    }
+}
+//clear map FUnction
+function clearMap() {
+    map.eachLayer(function(layer) {
+        // Check if the layer is not the base map layer
+        if (!layer._url) {  // Assuming base layers have an '_url' property (like tile layers)
+            map.removeLayer(layer);
         }
     });
 }

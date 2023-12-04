@@ -139,4 +139,71 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+/*
+function getNearbyAmenities() {
+    const selectedCollegesDiv = document.getElementById('selectedColleges');
+    const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
+
+    if (items.length > 0) {
+        items.forEach(item => {
+            const collegeName = item.textContent.trim();
+
+            fetch('/colleges/get_colleges_by_names', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ college_names: [collegeName] }) // Fetching data for one college at a time
+            })
+            .then(response => response.json())
+            .then(collegeData => {
+                const college = collegeData[0]; // Assuming the first element is the relevant college data
+                if (college && college.lat && college.lon) {
+                    const distanceKm = document.getElementById('distanceSlider').value;
+                    fetchNearbyAmenities(college.lat, college.lon, distanceKm);
+                }
+            })
+            .catch(error => console.error("Error fetching college data:", error));
+        });
+    }
+}
+ */
+
+function fetchNearbyAmenities(latitude, longitude, distanceKm) {
+    fetch(`/get_amenitites_nearby?latitude=${latitude}&longitude=${longitude}&distance_km=${distanceKm}`, {
+        method: 'GET'
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data); // Handle the response data
+        // Additional code to handle the data (e.g., placing markers on the map)
+    })
+    .catch(error => console.error('Error fetching amenities:', error));
+}
+
+
+
+function getNearbyAmenities() {
+    const selectedCollegesDiv = document.getElementById('selectedColleges');
+    const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
+
+    if (items.length > 0) {
+        items.forEach(item => {
+            // Assuming each item has data-lat and data-lon attributes
+            const latitude = item.getAttribute('data-lat');
+            const longitude = item.getAttribute('data-lon');
+            const distanceKm = document.getElementById('distanceSlider').value;
+
+            if (latitude && longitude) {
+                fetch(`/colleges/get_amenitites_nearby?latitude=${latitude}&longitude=${longitude}&distance_km=${distanceKm}`, {
+                    method: 'GET'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); // Handle the response data
+                    // Additional code to handle the data (e.g., placing markers on the map)
+                })
+                .catch(error => console.error('Error fetching amenities:', error));
+            }
+        });
+    }
+}
 
