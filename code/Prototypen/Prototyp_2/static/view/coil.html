@@ -38,7 +38,7 @@
             padding: 10px 20px;
             background-color: #007bff;
             border: none;
-            border-radius: 4px;
+            border-radius: 1px;
             color: white;
             cursor: pointer;
         }
@@ -63,7 +63,7 @@
 <body>
 
 <div class="container">
-    <h1>Amenities Dashboard</h1>
+    <!--<h1>Amenities Dashboard</h1>
     <div class="input-group">
         <input type="text" id="latitude" class="form-control" placeholder="Enter latitude">
         <input type="text" id="longitude" class="form-control" placeholder="Enter longitude">
@@ -75,14 +75,20 @@
     </div>
     <div class="card" id="nearest-restaurant">
         <h3>Nearest Restaurant</h3>
-        <!-- Details will be filled by JavaScript -->
-    </div>
-    <div class="card" id="nearest-pick-category">
-        <h3>Nearest [Pick Category]</h3>
-        <!-- Details will be filled by JavaScript -->
+        Details will be filled by JavaScript 
+    </div>-->
+    <div class="card" id="nearest-sorted-category">
+        <h3>Amenities nearby- sorted by category</h3>
+        <!-- integrating iframe -->
+
+        <iframe src="bycatbarchart.html?latitude=47.49652862548828&longitude=8.719242095947266&distance_km=0.5&limit=10000&sortbycat=true width="80%" height="400"></iframe>
+
+
+
+
     </div>
     <div class="card" id="further-statistics">
-        <h3>Further Statistics</h3>
+        <h3>Amenities nearby - selected category</h3>
         <!-- Details will be filled by JavaScript -->
     </div>
     <div class="card" id="get-route">
