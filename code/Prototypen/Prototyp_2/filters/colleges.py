@@ -12,47 +12,6 @@ def index():
 
     return render_template('index.html', college_names=college_names)
 
-'''
-@bp.route('/nearby_amenities', methods=['POST'])
-def nearby_amenities():
-    collection_amenities = get_amenities_collection()
-
-    # Fetch amenities with the "distance_to_facility" attribute less than 0.2
-    # and exclude the _id field
-    filtered_amenities = collection_amenities.find({"distance_to_facility": {"$lt": 0.2}}, {"_id": 0})
-
-    # Convert the cursor to a list and serialize it to JSON
-    amenities = list(filtered_amenities)
-
-    return jsonify(amenities)
-
-    '''
-
-
-@bp.route('/nearby_amenities', methods=['POST'])
-def nearby_amenities():
-    collection_colleges = get_college_collection()
-    collection_amenities = get_amenities_collection()
-    college_name = request.json.get('college_name')
-    college = collection_colleges.find_one({"name": college_name})
-
-    if not college:
-        return jsonify({"error": "College not found"}), 400
-
-    lon, lat = college['lon'], college['lat']
-
-    nearby_amenities = collection_amenities.find({
-        "location": {
-            "$near": {
-                "$geometry": {
-                    "type": "Point",
-                    "coordinates": [lon, lat]
-                },
-                "$maxDistance": DISTANCE_KM * 1000  # Convert distance to meters
-            }
-        }
-    }, {"_id": 0})  # This projection excludes the _id field from the results
-    return jsonify(list(nearby_amenities))
 
 @bp.route('/get_all_unique_colleges', methods=['POST'])
 def get_all_unique_colleges():
@@ -96,7 +55,7 @@ def get_colleges_filtered():
 
     filtered_colleges = collection_colleges.find(
         query,
-        {"_id": 0, "name": 1, "lat": 1, "lon": 1}
+        {"_id": 0, "label": 1, "lat": 1, "lon": 1}
     )
 
     colleges_data = list(filtered_colleges)
