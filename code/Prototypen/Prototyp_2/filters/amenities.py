@@ -142,9 +142,23 @@ def get_amenities_scatterplot(
         # 'geodesic' function computes the shortest distance over the earth's surface.
         # The '.meters' attribute converts the distance to meters.
         distance = geodesic(input_coordinates, object_coordinates).meters
+        if category == "fbs":
+            yaxis = 1
+            distances[dictid] = (name, distance, yaxis)
 
-        # Append the calculated distance to the distances dict.
-        distances[dictid] = (name, distance)
+        elif category == "ecv":
+            yaxis = 2
+            distances[dictid] = (name, distance, yaxis)
+        elif category == "pcs":
+            yaxis = 3
+            distances[dictid] = (name, distance, yaxis)
+        elif category == "ths":
+            yaxis = 4
+            distances[dictid] = (name, distance, yaxis)
+        elif category is None:
+            # Handle the None case as needed
+            # Append the calculated distance to the distances dict.
+            distances[dictid] = (name, distance)
         dictid += 1
     # Return the list of distances.
     # This list can be used to plot a scatterplot, where each point represents an amenity,
