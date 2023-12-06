@@ -81,7 +81,7 @@
         <h3>Amenities nearby- sorted by category</h3>
         <!-- integrating iframe -->
 
-        <iframe src="bycatbarchart.html?latitude=47.49652862548828&longitude=8.719242095947266&distance_km=0.5&limit=10000&sortbycat=true width="80%" height="400"></iframe>
+        <iframe id="barchartcategory" width="100%" height="400"></iframe>
 
 
 
@@ -115,16 +115,28 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    // JavaScript to handle form submission, fetch data, and update the dashboard
-    // This is a placeholder. You need to implement the actual JavaScript to make it work.
-    $(document).ready(function() {
-        $('#fetch-data').click(function() {
-            var latitude = $('#latitude').val();
-            var longitude = $('#longitude').val();
-            // Call your Flask endpoint with these coordinates
-            // Update the dashboard with the received data
-        });
-    });
+  
+      // Funktion zum Extrahieren von URL-Parametern aus dem übergeordneten Fenster
+    function getParamsFromParent() {
+        const parentParams = new URLSearchParams(window.parent.location.search);
+        return {
+            latitude: parentParams.get('latitude'),
+            longitude: parentParams.get('longitude'),
+            distanceKm: parentParams.get('distance_km'),
+            limit: parentParams.get('limit'),
+            sortByCat: parentParams.get('sortbycat') === 'true'
+        };
+    }
+
+    // Funktion zum Aktualisieren des iframe src
+    function updateIframeSrc() {
+        const params = getParamsFromParent();
+        var iframeUrl = `bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&limit=${params.limit}&sortbycat=${params.sortByCat}`;
+        document.getElementById('barchartcategory').src = iframeUrl;
+    }
+
+    // Aufrufen der Funktion beim Laden der Seite
+    window.onload = updateIframeSrc;
 </script>
 
 </body>
