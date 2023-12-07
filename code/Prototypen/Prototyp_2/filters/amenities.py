@@ -21,28 +21,14 @@ def some_route():
     return jsonify({"message": "This is an example from amenities.py"})
 
 
-<<<<<<< HEAD
-@bp.route("/get_amenitites_nearby", methods=['POST'])
-def get_nearby_amenities():
-    latitude = request.form.get('latitude', type=float)
-    longitude = request.form.get('longitude', type=float)
-    distance_km = request.form.get('distance_km', default=0.5, type=float)
-    category = request.form.get('category')
-    limit = request.form.get('limit', default=10000, type=int)
-=======
 @bp.route("/get_amenitites_nearby")
 def get_nearby_amenities(
     latitude, longitude, distance_km=0.5, category=None, limit=10000
 ):
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
     """
     Function to get nearby amenities based on a center point and a specified distance.
     Uses centerSphere calculations to determine the area of interest and performs a MongoDB query.
     """
-<<<<<<< HEAD
-  #  print(latitude, longitude,distance_km,category,limit)
-=======
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
 
     try:
         # Connect to MongoDB
@@ -50,35 +36,19 @@ def get_nearby_amenities(
     except Exception as e:
         # Print any error encountered during the connection attempt
         # print("Fehler beim Abrufen der Datenbankliste:", e)
-<<<<<<< HEAD
-        print(f"An error occurred: {e}")
-=======
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
         logging.error("Error in get_nearby_amenities: %s", e, exc_info=True)
 
         # Define the center point (longitude, latitude) and radius in radians
     center_point = [longitude, latitude]
     radius_radians = distance_km / 6371  # Earth's radius in kilometers
     query = {
-<<<<<<< HEAD
-        "_id": 0,"name": 1,"location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
-=======
         "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
     }
 
     # Execute the query in the database
     # 'find()' returns a cursor that iterates through the found documents
     results = collection.find(query).limit(limit)
     # Food and Beverage Services
-<<<<<<< HEAD
-
-
-    for document in results:
-        print(document)
-
-=======
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
     food_beverage_services = [
         "bar",
         "cafe",
@@ -144,11 +114,7 @@ def get_nearby_amenities(
         return jsonify(list(results))
 
 
-<<<<<<< HEAD
-@bp.route("/get_amenitites_nearby_scatter", methods=['GET'])
-=======
 @bp.route("/get_amenitites_nearby_scatter")
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
 def get_amenities_scatterplot(
     inputlatitude, inputlongitude, distance_km=0.5, limit=10000, category=None
 ):
@@ -180,10 +146,6 @@ def get_amenities_scatterplot(
             yaxis = 1
             distances[dictid] = (name, distance, yaxis)
 
-<<<<<<< HEAD
-        # Append the calculated distance to the distances dict.
-        distances[dictid] = (name, distance)
-=======
         elif category == "ecv":
             yaxis = 2
             distances[dictid] = (name, distance, yaxis)
@@ -197,7 +159,6 @@ def get_amenities_scatterplot(
             # Handle the None case as needed
             # Append the calculated distance to the distances dict.
             distances[dictid] = (name, distance)
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
         dictid += 1
     # Return the list of distances.
     # This list can be used to plot a scatterplot, where each point represents an amenity,
@@ -296,15 +257,9 @@ def get_amenities_barchart(
 
 if __name__ == "__main__":
     # Coordinates of the center and distance are set again
-<<<<<<< HEAD
-    latitude = 47.3776969909668
-    longitude = 8.534499168395996
-    distance_km = 3  # Convert 500 meters to kilometers for geopy library
-=======
     latitude = 47.49652862548828
     longitude = 8.719242095947266
     distance_km = 0.5  # Convert 500 meters to kilometers for geopy library
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
     liste = get_nearby_amenities(latitude, longitude, 0.1)
     for doc in liste:
         # Print each document found in the defined area
@@ -312,10 +267,6 @@ if __name__ == "__main__":
     # Print the number of documents found
     print(len(liste))
     print(len(liste))
-<<<<<<< HEAD
-
-=======
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
     print(get_amenities_barchart(latitude, longitude, 0.5, category=""))
     print(get_amenities_scatterplot(latitude, longitude, 0.5, category=""))
     print(get_amenities_barchart(latitude, longitude, 0.1, category="", sortbycat=True))

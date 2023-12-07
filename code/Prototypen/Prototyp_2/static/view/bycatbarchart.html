@@ -11,22 +11,9 @@
         <canvas id="amenitiesChart"></canvas>
     </div>
 
-<<<<<<< HEAD
-    <script>
-        // Function to fetch data and generate chart
-        function generateChart() {
-            // Make a request to the Flask route
-            fetch('/colleges/get_amenitites_nearby_barrchart?latitude=47.49652862548828&longitude=8.719242095947266&distance_km=0.5&limit=10000&sortbycat=true')
-                .then(response => response.json())
-                .then(data => {
-                    // Process the data to separate labels and values
-                    const labels = data.map(item => item[0]);
-                    const values = data.map(item => item[1]);
-=======
    <script>
     // Auslesen aller URL-Parameter
     const urlParams = new URLSearchParams(window.location.search);
->>>>>>> 37b3fe5abb84886c252aa757d14780308b20a0b6
 
     // Funktion zum Erstellen der Anfrage-URL
     function createRequestURL() {
