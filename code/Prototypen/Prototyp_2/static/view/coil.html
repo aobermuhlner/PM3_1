@@ -38,7 +38,7 @@
             padding: 10px 20px;
             background-color: #007bff;
             border: none;
-            border-radius: 4px;
+            border-radius: 1px;
             color: white;
             cursor: pointer;
         }
@@ -63,7 +63,7 @@
 <body>
 
 <div class="container">
-    <h1>Amenities Dashboard</h1>
+    <!--<h1>Amenities Dashboard</h1>
     <div class="input-group">
         <input type="text" id="latitude" class="form-control" placeholder="Enter latitude">
         <input type="text" id="longitude" class="form-control" placeholder="Enter longitude">
@@ -75,50 +75,68 @@
     </div>
     <div class="card" id="nearest-restaurant">
         <h3>Nearest Restaurant</h3>
-        <!-- Details will be filled by JavaScript -->
+        Details will be filled by JavaScript 
+    </div>-->
+    <div class="card" id="nearest-sorted-category">
+        <h3>Amenities nearby- sorted by category</h3>
+        <!-- integrating iframe -->
+
+        <iframe id="barchartcategory" width="100%" height="400"></iframe>
+
+
+
+
     </div>
-    <div class="card" id="nearest-pick-category">
-        <h3>Nearest [Pick Category]</h3>
-        <!-- Details will be filled by JavaScript -->
+     <div class="card" id="nearest-sorted-category">
+        <h3>Amenities nearby- selected  category</h3>
+        <!-- integrating iframe -->
+
+        <iframe id="barchartselectedcategory" width="100%" height="400"></iframe>
+
+
+
+
     </div>
-    <div class="card" id="further-statistics">
-        <h3>Further Statistics</h3>
-        <!-- Details will be filled by JavaScript -->
-    </div>
-    <div class="card" id="get-route">
-        <h3>Get Route</h3>
+   
+    <div class="card" id="distance_scatter">
+        <h3>Amenities- Distance from selected building</h3>
         <!-- Form or details will be filled by JavaScript -->
     </div>
     <div class="card" id="schedule">
-        <h3>Schedule</h3>
+        <h3>Train schedule</h3>
         <!-- Details will be filled by JavaScript -->
     </div>
     <div class="card" id="map">
-        <h3>Map</h3>
+        <h3>Other University Buildings</h3>
         <!-- Embedded map or link to map will be filled by JavaScript -->
     </div>
-    <div class="card" id="other-university-buildings">
-        <h3>Other University Buildings</h3>
-        <!-- List will be filled by JavaScript -->
-    </div>
-    <div class="card" id="search-internet">
-        <h3>Search the Internet</h3>
-        <!-- Search functionality or link will be filled by JavaScript -->
-    </div>
+  
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    // JavaScript to handle form submission, fetch data, and update the dashboard
-    // This is a placeholder. You need to implement the actual JavaScript to make it work.
-    $(document).ready(function() {
-        $('#fetch-data').click(function() {
-            var latitude = $('#latitude').val();
-            var longitude = $('#longitude').val();
-            // Call your Flask endpoint with these coordinates
-            // Update the dashboard with the received data
-        });
-    });
+  
+      // Funktion zum Extrahieren von URL-Parametern aus dem übergeordneten Fenster
+    function getParamsFromParent() {
+        const parentParams = new URLSearchParams(window.parent.location.search);
+        return {
+            latitude: parentParams.get('latitude'),
+            longitude: parentParams.get('longitude'),
+            distanceKm: parentParams.get('distance_km'),
+            limit: parentParams.get('limit'),
+            sortByCat: parentParams.get('sortbycat') === 'true'
+        };
+    }
+
+    // Funktion zum Aktualisieren des iframe src
+    function updateIframeSrc() {
+        const params = getParamsFromParent();
+        var iframeUrl = `bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&limit=${params.limit}&sortbycat=${params.sortByCat}`;
+        document.getElementById('barchartcategory').src = iframeUrl;
+    }
+
+    // Aufrufen der Funktion beim Laden der Seite
+    window.onload = updateIframeSrc;
 </script>
 
 </body>
