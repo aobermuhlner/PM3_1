@@ -46,7 +46,6 @@ def get_nearby_amenities():
     query = {
         "_id": 0,"name": 1,"location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
 #        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
-#        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
     }
 
     # Execute the query in the database
@@ -55,7 +54,7 @@ def get_nearby_amenities():
     # Food and Beverage Services
 
 
-
+    print(results)
     for document in results:
         print(document)
 
@@ -263,6 +262,62 @@ def get_amenities_barchart(
     # If not sorting by category, return the list of amenities as is.
     else:
         return jsonify(amenity_list)
+
+
+## Calcualte College Score Functions
+
+def distanceAmenityToCollege(amenity, college):
+    # Assuming 'amenity' and 'college' are dictionaries with 'lat' and 'lon' keys
+    distance = ((amenity['lat'] - college['lat'])**2 + (amenity['lon'] - college['lon'])**2)**0.5
+    return distance
+
+@bp.route("/get_college_score", methods=['POST'])
+def calculate_college_score():
+    try:
+        # Retrieve data from form
+        amenities = request.form.get('amenities')  # Expected to be JSON string
+        amenityRelevance = request.form.get('amenityRelevance')  # Expected to be JSON string
+        colleges = request.form.get('colleges')  # Expected to be JSON string
+
+        # Convert JSON strings to Python objects
+   #     amenities = json.loads(amenities) if amenities else []
+  #      colleges = json.loads(colleges) if colleges else []
+  #      amenityRelevance = json.loads(amenityRelevance) if amenityRelevance else []
+        results = []
+
+        # Convert amenityRelevance to a dictionary for easier lookup
+        relevance_dict = {item['amenity']: item['relevance'] for item in amenityRelevance}
+
+        for college in colleges:
+            collegeScore = 0
+            collegeAmenities = []
+
+            for amenity in amenities:
+                distance = distanceAmenityToCollege(amenity, college)
+                relevance = relevance_dict.get(amenity['amenity'], 0)
+                score = relevance / distance if distance != 0 else 0
+                collegeScore += score
+
+                collegeAmenities.append({
+                    'amenityName': amenity['amenity'],
+                    'amenityDistanceToCollege': distance,
+                    'amenityRelevance': relevance
+                })
+
+            results.append({
+                'CollegeName': college['nameCollege'],
+                'collegeTotalScore': collegeScore,
+                'amenities': collegeAmenities
+            })
+        return jsonify(results)  # Return your results in JSON format
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        logging.error("Error in get_college_score: %s", e, exc_info=True)
+
+
+
+
+
 
 
 if __name__ == "__main__":
