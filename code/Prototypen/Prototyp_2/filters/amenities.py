@@ -20,13 +20,14 @@ def some_route():
     # Logic related to amenities goes here...
     return jsonify({"message": "This is an example from amenities.py"})
 
-@bp.route("/get_amenitites_nearby", methods=['POST'])
+
+@bp.route("/get_amenitites_nearby", methods=["POST"])
 def get_nearby_amenities():
-    latitude = request.form.get('latitude', type=float)
-    longitude = request.form.get('longitude', type=float)
-    distance_km = request.form.get('distance_km', default=0.5, type=float)
-    category = request.form.get('category')
-    limit = request.form.get('limit', default=10000, type=int)
+    latitude = request.form.get("latitude", type=float)
+    longitude = request.form.get("longitude", type=float)
+    distance_km = request.form.get("distance_km", default=0.5, type=float)
+    category = request.form.get("category")
+    limit = request.form.get("limit", default=10000, type=int)
     """
     Function to get nearby amenities based on a center point and a specified distance.
     Uses centerSphere calculations to determine the area of interest and performs a MongoDB query.
@@ -44,20 +45,19 @@ def get_nearby_amenities():
     center_point = [longitude, latitude]
     radius_radians = distance_km / 6371  # Earth's radius in kilometers
     query = {
-        "_id": 0,"name": 1,"location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
-#        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
-#        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
+        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
     }
-
+    projection = {
+        "_id": 0
+        # "name": 1
+    }
     # Execute the query in the database
     # 'find()' returns a cursor that iterates through the found documents
-    results = collection.find(query).limit(limit)
+    results = collection.find(query, projection).limit(limit)
     # Food and Beverage Services
 
-
-
-    for document in results:
-        print(document)
+    # for document in results:
+    #   print(document)
 
     food_beverage_services = [
         "bar",
@@ -100,28 +100,41 @@ def get_nearby_amenities():
     ]
     # return the category
 
+    # Initialize an empty list to store the filtered documents
+    new_docs = []
+
     if category == "fbs":
-        return jsonify(
-            [doc for doc in results if doc.get("amenity") in food_beverage_services]
-        )
+        new_docs = [
+            doc for doc in results if doc.get("amenity") in food_beverage_services
+        ]
 
     elif category == "ecv":
-        return jsonify(
-            [doc for doc in results if doc.get("amenity") in entertainment_cultural]
-        )
+        new_docs = [
+            doc for doc in results if doc.get("amenity") in entertainment_cultural
+        ]
+
     elif category == "pcs":
-        return jsonify(
-            [doc for doc in results if doc.get("amenity") in public_civic_services]
-        )
+        new_docs = [
+            doc for doc in results if doc.get("amenity") in public_civic_services
+        ]
+
     elif category == "ths":
-        return jsonify(
-            [doc for doc in results if doc.get("amenity") in transportation_health]
-        )
+        new_docs = [
+            doc for doc in results if doc.get("amenity") in transportation_health
+        ]
+
     elif category is None:
         # Handle the None case as needed
-        return jsonify(list(results))
+        new_docs = list(results)
     else:
-        return jsonify(list(results))
+        new_docs = list(results)
+
+    # Print each document in new_docs
+    for doc in new_docs:
+        print(doc)
+
+    # Return the JSON response
+    return jsonify(new_docs)
 
 
 @bp.route("/get_amenitites_nearby_scatter")
