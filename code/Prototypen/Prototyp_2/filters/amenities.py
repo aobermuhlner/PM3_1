@@ -20,35 +20,45 @@ def some_route():
     # Logic related to amenities goes here...
     return jsonify({"message": "This is an example from amenities.py"})
 
-
-@bp.route("/get_amenitites_nearby")
-def get_nearby_amenities(
-    latitude, longitude, distance_km=0.5, category=None, limit=10000
-):
+@bp.route("/get_amenitites_nearby", methods=['POST'])
+def get_nearby_amenities():
+    latitude = request.form.get('latitude', type=float)
+    longitude = request.form.get('longitude', type=float)
+    distance_km = request.form.get('distance_km', default=0.5, type=float)
+    category = request.form.get('category')
+    limit = request.form.get('limit', default=10000, type=int)
     """
     Function to get nearby amenities based on a center point and a specified distance.
     Uses centerSphere calculations to determine the area of interest and performs a MongoDB query.
     """
-
     try:
         # Connect to MongoDB
         collection = get_amenities_collection()
     except Exception as e:
         # Print any error encountered during the connection attempt
         # print("Fehler beim Abrufen der Datenbankliste:", e)
+        print(f"An error occurred: {e}")
         logging.error("Error in get_nearby_amenities: %s", e, exc_info=True)
 
         # Define the center point (longitude, latitude) and radius in radians
     center_point = [longitude, latitude]
     radius_radians = distance_km / 6371  # Earth's radius in kilometers
     query = {
-        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
+        "_id": 0,"name": 1,"location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
+#        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
+#        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
     }
 
     # Execute the query in the database
     # 'find()' returns a cursor that iterates through the found documents
     results = collection.find(query).limit(limit)
     # Food and Beverage Services
+
+
+
+    for document in results:
+        print(document)
+
     food_beverage_services = [
         "bar",
         "cafe",
