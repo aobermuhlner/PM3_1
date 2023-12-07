@@ -129,11 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var healthSafetySection = createAmenitiesSection('Health & Safety', healthSafetyAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(healthSafetySection);
 
-    //Checks if distance is changed of radius
-    /*
-    document.getElementById('distanceSlider').addEventListener('input', function() {
-        document.getElementById('distanceValue').textContent = this.value ;
-    }); */
+    // Event listener for the "Show Amenities" button
+    document.getElementById('showAmenitiesBtn').addEventListener('click', function() {
+        showSelectedCollegesAmenities();
+    });
 
 });
 
@@ -166,44 +165,45 @@ function getNearbyAmenities() {
     }
 }
  */
+function showSelectedCollegesAmenities() {
+    const selectedCollegesDiv = document.getElementById('selectedColleges');
+    const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
+    const distanceKm = document.getElementById('distanceSlider').value;
+
+    items.forEach(item => {
+        const latitude = item.getAttribute('data-lat');
+        const longitude = item.getAttribute('data-lon');
+
+        if (latitude && longitude) {
+            fetchNearbyAmenities(latitude, longitude, distanceKm);
+        }
+    });
+}
 
 function fetchNearbyAmenities(latitude, longitude, distanceKm) {
-    fetch(`/get_amenitites_nearby?latitude=${latitude}&longitude=${longitude}&distance_km=${distanceKm}`, {
-        method: 'GET'
+    console.log(latitude, longitude, distanceKm);
+
+    // Prepare form data
+    const formData = new FormData();
+    formData.append('latitude', latitude);
+    formData.append('longitude', longitude);
+    formData.append('distance_km', distanceKm);
+
+    // Fetch request with form data
+    fetch('/amenities/get_amenitites_nearby', {
+        method: 'POST',
+        body: formData
     })
     .then(response => response.json())
-    .then(data => {
-        console.log(data); // Handle the response data
-        // Additional code to handle the data (e.g., placing markers on the map)
+    .then(amenities => {
+        console.log(amenities);
+        amenities.forEach(amenity => {
+            if (amenity.lat && amenity.lon) {
+                // Create a marker for each amenity and add it to the map
+                const amenityMarker = L.marker([amenity.lat, amenity.lon]).bindPopup(amenity.name);
+                amenityMarker.addTo(map); // Assuming 'map' is your Leaflet map instance
+            }
+        });
     })
     .catch(error => console.error('Error fetching amenities:', error));
 }
-
-
-
-function getNearbyAmenities() {
-    const selectedCollegesDiv = document.getElementById('selectedColleges');
-    const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
-
-    if (items.length > 0) {
-        items.forEach(item => {
-            // Assuming each item has data-lat and data-lon attributes
-            const latitude = item.getAttribute('data-lat');
-            const longitude = item.getAttribute('data-lon');
-            const distanceKm = document.getElementById('distanceSlider').value;
-
-            if (latitude && longitude) {
-                fetch(`/colleges/get_amenitites_nearby?latitude=${latitude}&longitude=${longitude}&distance_km=${distanceKm}`, {
-                    method: 'GET'
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data); // Handle the response data
-                    // Additional code to handle the data (e.g., placing markers on the map)
-                })
-                .catch(error => console.error('Error fetching amenities:', error));
-            }
-        });
-    }
-}
-

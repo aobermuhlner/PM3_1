@@ -21,14 +21,18 @@ def some_route():
     return jsonify({"message": "This is an example from amenities.py"})
 
 
-@bp.route("/get_amenitites_nearby")
-def get_nearby_amenities(
-    latitude, longitude, distance_km=0.5, category=None, limit=10000
-):
+@bp.route("/get_amenitites_nearby", methods=['POST'])
+def get_nearby_amenities():
+    latitude = request.form.get('latitude', type=float)
+    longitude = request.form.get('longitude', type=float)
+    distance_km = request.form.get('distance_km', default=0.5, type=float)
+    category = request.form.get('category')
+    limit = request.form.get('limit', default=10000, type=int)
     """
     Function to get nearby amenities based on a center point and a specified distance.
     Uses centerSphere calculations to determine the area of interest and performs a MongoDB query.
     """
+  #  print(latitude, longitude,distance_km,category,limit)
 
     try:
         # Connect to MongoDB
@@ -36,19 +40,25 @@ def get_nearby_amenities(
     except Exception as e:
         # Print any error encountered during the connection attempt
         # print("Fehler beim Abrufen der Datenbankliste:", e)
+        print(f"An error occurred: {e}")
         logging.error("Error in get_nearby_amenities: %s", e, exc_info=True)
 
         # Define the center point (longitude, latitude) and radius in radians
     center_point = [longitude, latitude]
     radius_radians = distance_km / 6371  # Earth's radius in kilometers
     query = {
-        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
+        "_id": 0,"name": 1,"location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
     }
 
     # Execute the query in the database
     # 'find()' returns a cursor that iterates through the found documents
     results = collection.find(query).limit(limit)
     # Food and Beverage Services
+
+
+    for document in results:
+        print(document)
+
     food_beverage_services = [
         "bar",
         "cafe",
@@ -114,7 +124,7 @@ def get_nearby_amenities(
         return jsonify(list(results))
 
 
-@bp.route("/get_amenitites_nearby_scatter")
+@bp.route("/get_amenitites_nearby_scatter", methods=['GET'])
 def get_amenities_scatterplot(
     inputlatitude, inputlongitude, distance_km=0.5, limit=10000, category=None
 ):
@@ -243,9 +253,9 @@ def get_amenities_barchart(
 
 if __name__ == "__main__":
     # Coordinates of the center and distance are set again
-    latitude = 47.49652862548828
-    longitude = 8.719242095947266
-    distance_km = 0.5  # Convert 500 meters to kilometers for geopy library
+    latitude = 47.3776969909668
+    longitude = 8.534499168395996
+    distance_km = 3  # Convert 500 meters to kilometers for geopy library
     liste = get_nearby_amenities(latitude, longitude, 0.1)
     for doc in liste:
         # Print each document found in the defined area
@@ -253,6 +263,7 @@ if __name__ == "__main__":
     # Print the number of documents found
     print(len(liste))
     print(len(liste))
+
     print(get_amenities_barchart(latitude, longitude, 0.5, category=""))
     print(get_amenities_scatterplot(latitude, longitude, 0.5, category=""))
     print(get_amenities_barchart(latitude, longitude, 0.1, category="", sortbycat=True))

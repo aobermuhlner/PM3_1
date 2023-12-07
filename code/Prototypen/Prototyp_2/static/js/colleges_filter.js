@@ -3,7 +3,6 @@
    Global Variables
 ------------------------------------- */
 let collegeMarkersMap = {}; // Global map to store markers by college name
-const selectedCollegesDiv = document.getElementById('selectedColleges');
 
 /* -------------------------------------
    College Filters and Map Update Functions
@@ -88,13 +87,13 @@ function displaySelectedColleges(colleges) {
             // Remove the corresponding marker from the map
             if (collegeMarkersMap[college.label]) {
                 removeCollegeMarker(college.label);
-                if (collegeMarkersMap[college.label]) {
+    /*            if (collegeMarkersMap[college.label]) {
                     console.log("Removing marker for:", college.label);
                     removeCollegeMarker(college.label);
                     delete collegeMarkersMap[college.label]; // Remove the reference
                 } else {
                     console.log("Marker not found for:", college.label);
-                }
+                }*/$
             }
         };
 
@@ -220,11 +219,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener for the filter button
     document.getElementById('filterCollegesBtn').addEventListener('click', handleFilterColleges);
 
-    // Set up a MutationObserver for the selectedCollegesDiv
-  //  const selectedCollegesDiv = document.getElementById('selectedColleges');
-    const observer = new MutationObserver(handleMutation);
-    console.log(selectedCollegesDiv)
-    observer.observe(selectedCollegesDiv, { childList: true });
 });
 
 /* -------------------------------------
@@ -259,13 +253,6 @@ function handleFilterColleges() {
     fetchFilteredColleges(selectedCategories, selectedCities);
 }
 
-function handleMutation(mutations) {
-    mutations.forEach(function(mutation) {
-        if (mutation.type === 'childList') {
-            onSelectedCollegesChanged();
-        }
-    });
-}
 
 /* -------------------------------------
    Network Request Functions
@@ -286,24 +273,7 @@ function fetchFilteredColleges(selectedCategories, selectedCities) {
     });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////city filter
-
-
-
-
-
-
+/* --- updates the Map with new changed colleges --- */
 function updateMapWithColleges(colleges) {
     // Clear existing markers
     clearMap();
@@ -331,9 +301,9 @@ function updateMapWithColleges(colleges) {
     });
 }
 
-
-
-// This function
+/* -------------------------------------
+   College Selection and Mutation Handling
+------------------------------------- */
 function onSelectedCollegesChanged() {
     console.log("onSelectedCollegesChanged")
     const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
