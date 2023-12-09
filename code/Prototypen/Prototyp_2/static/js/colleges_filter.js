@@ -93,7 +93,7 @@ function displaySelectedColleges(colleges) {
                     delete collegeMarkersMap[college.label]; // Remove the reference
                 } else {
                     console.log("Marker not found for:", college.label);
-                }*/$
+                }*/
             }
         };
 

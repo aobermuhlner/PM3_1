@@ -168,42 +168,55 @@ function getNearbyAmenities() {
 function showSelectedCollegesAmenities() {
     const selectedCollegesDiv = document.getElementById('selectedColleges');
     const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
-    const distanceKm = document.getElementById('distanceSlider').value;
+    const distanceKm = document.getElementById('distanceSlider').value / 10;
+    const amenityPromises = [];
 
     items.forEach(item => {
         const latitude = item.getAttribute('data-lat');
         const longitude = item.getAttribute('data-lon');
 
         if (latitude && longitude) {
-            fetchNearbyAmenities(latitude, longitude, distanceKm);
+            amenityPromises.push(fetchNearbyAmenities(latitude, longitude, distanceKm));
         }
+        updateMapWithColleges(items)
+        displaySelectedColleges(items)
+    });
+
+    Promise.all(amenityPromises).then(results => {
+        const allAmenities = results.flat(); // Flatten the array of arrays
+        addUniqueAmenitiesToMap(allAmenities);
     });
 }
 
 function fetchNearbyAmenities(latitude, longitude, distanceKm) {
-    console.log(latitude, longitude, distanceKm);
+    return new Promise((resolve, reject) => {
+        // Prepare form data
+        const formData = new FormData();
+        formData.append('latitude', latitude);
+        formData.append('longitude', longitude);
+        formData.append('distance_km', distanceKm);
 
-    // Prepare form data
-    const formData = new FormData();
-    formData.append('latitude', latitude);
-    formData.append('longitude', longitude);
-    formData.append('distance_km', distanceKm);
+        // Fetch request with form data
+        fetch('/amenities/get_amenitites_nearby', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(resolve)
+        .catch(reject);
+    });
+}
 
-    // Fetch request with form data
-    fetch('/amenities/get_amenitites_nearby', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(amenities => {
-        console.log(amenities);
-        amenities.forEach(amenity => {
+function addUniqueAmenitiesToMap(amenities) {
+    const uniqueAmenities = new Set();
+    amenities.forEach(amenity => {
+        const amenityKey = `${amenity.lat}-${amenity.lon}`; // Unique key for each amenity
+        if (!uniqueAmenities.has(amenityKey)) {
+            uniqueAmenities.add(amenityKey);
             if (amenity.lat && amenity.lon) {
-                // Create a marker for each amenity and add it to the map
                 const amenityMarker = L.marker([amenity.lat, amenity.lon]).bindPopup(amenity.name);
                 amenityMarker.addTo(map); // Assuming 'map' is your Leaflet map instance
             }
-        });
-    })
-    .catch(error => console.error('Error fetching amenities:', error));
+        }
+    });
 }
