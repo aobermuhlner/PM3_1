@@ -266,6 +266,7 @@ function fetchFilteredColleges(selectedCategories, selectedCities) {
     .then(response => response.json())
     .then(colleges => {
         displaySelectedColleges(colleges);
+        console.log(colleges)
         updateMapWithColleges(colleges);
     })
     .catch(error => {
