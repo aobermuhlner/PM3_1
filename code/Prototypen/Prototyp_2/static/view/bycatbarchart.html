@@ -11,43 +11,74 @@
         <canvas id="amenitiesChart"></canvas>
     </div>
 
-   <script>
-    // Auslesen aller URL-Parameter
-    const urlParams = new URLSearchParams(window.location.search);
+    <script>
+        // Function to fetch amenities data and create a bar chart
+        function fetchAmenitiesAndCreateBarChart(latitude, longitude, distanceKm, category, limit, sortbycat) {
+            // Prepare form data
+            const formData = new FormData();
+            formData.append('latitude', latitude);
+            formData.append('longitude', longitude);
+            formData.append('distance_km', distanceKm);
+            formData.append('category', category);
+            formData.append('limit', limit);
+            formData.append('sortbycat', sortbycat);
 
-    // Funktion zum Erstellen der Anfrage-URL
-    function createRequestURL() {
-        // Basis-URL Ihrer Flask-Route
-        let requestURL = '/colleges/get_amenitites_nearby_barrchart?';
-
-        // Hinzufügen aller URL-Parameter zur Anfrage-URL
-        urlParams.forEach((value, key) => {
-            requestURL += `${key}=${value}&`; // Fügt jeden Parameter und Wert zur URL hinzu
-        });
-
-        // Entfernen des letzten '&' aus der URL
-        requestURL = requestURL.slice(0, -1);
-
-        return requestURL;
-    }
-
-    // Funktion zum Erstellen des Charts
-    function generateChart() {
-        const requestURL = createRequestURL(); // Erstellen der Anfrage-URL
-
-        // Machen Sie die Anfrage
-        fetch(requestURL)
+            // Fetch request with form data
+            fetch('/get_amenitites_nearby_barrchart', {
+                method: 'POST',
+                body: formData
+            })
             .then(response => response.json())
             .then(data => {
-                // Rest des Chart-Erstellungsprozesses...
+                createBarChart(data);
             })
-            .catch(error => console.error('Error:', error));
-    }
+            .catch(error => console.error('Error fetching amenities:', error));
+        }
 
-    // Aufrufen der Funktion beim Laden der Seite
-    generateChart();
-</script>
+        // Function to create a bar chart using Chart.js
+        function createBarChart(data) {
+            // Extract labels and data for the bar chart
+            const labels = data.map(item => item[0]);
+            const chartData = data.map(item => item[1]);
 
+            // Get the canvas context
+            const ctx = document.getElementById('amenitiesChart').getContext('2d');
+            
+            // Create a bar chart
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: '# of Amenities',
+                        data: chartData,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Extract URL parameters and call the function on page load
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const latitude = urlParams.get('latitude');
+            const longitude = urlParams.get('longitude');
+            const distanceKm = urlParams.get('distance_km');
+            const category = urlParams.get('category');
+            const limit = urlParams.get('limit');
+            const sortbycat = urlParams.get('sortbycat');
+
+            fetchAmenitiesAndCreateBarChart(latitude, longitude, distanceKm, category, limit, sortbycat);
+        }
+    </script>
 </body>
 </html>
-

@@ -101,6 +101,8 @@
     <div class="card" id="distance_scatter">
         <h3>Amenities- Distance from selected building</h3>
         <!-- Form or details will be filled by JavaScript -->
+                <iframe id="scatterplot" width="100%" height="400"></iframe>
+
     </div>
 
     <div class="card" id="map">
@@ -112,28 +114,48 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  
-      // Funktion zum Extrahieren von URL-Parametern aus dem übergeordneten Fenster
+    // Function to extract URL parameters from the parent window
     function getParamsFromParent() {
         const parentParams = new URLSearchParams(window.parent.location.search);
         return {
             latitude: parentParams.get('latitude'),
             longitude: parentParams.get('longitude'),
             distanceKm: parentParams.get('distance_km'),
+            category: parentParams.get('category'),
             limit: parentParams.get('limit'),
             sortByCat: parentParams.get('sortbycat') === 'true'
         };
     }
 
-    // Funktion zum Aktualisieren des iframe src
-    function updateIframeSrc() {
+    // Function to update src for barchartcategory iframe
+    function updateBarchartCategoryIframe() {
         const params = getParamsFromParent();
-        var iframeUrl = `bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&limit=${params.limit}&sortbycat=${params.sortByCat}`;
+        let iframeUrl = `bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&category=${params.category}&limit=${params.limit}&sortbycat=${params.sortByCat}`;
         document.getElementById('barchartcategory').src = iframeUrl;
     }
 
-    // Aufrufen der Funktion beim Laden der Seite
-    window.onload = updateIframeSrc;
+    // Function to update src for barchartselectedcategory iframe
+    function updateBarchartSelectedCategoryIframe() {
+        const params = getParamsFromParent();
+        let iframeUrl = `selectedcatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&category=${params.category}&limit=${params.limit}&sortbycat=false`;
+        document.getElementById('barchartselectedcategory').src = iframeUrl;
+    }
+
+    // Function to update src for scatterplot iframe
+    function updateScatterplotIframe() {
+        const params = getParamsFromParent();
+        // Modify the URL and parameters as needed for the scatterplot
+        let iframeUrl = `scatterplot_category_adjusted.html?latitude=${params.latitude}&longitude=${params.longitude}`; // Add more parameters if needed
+        document.getElementById('scatterplot').src = iframeUrl;
+    }
+
+    // Call these functions when the page loads
+    window.onload = function() {
+        updateBarchartCategoryIframe();
+        updateBarchartSelectedCategoryIframe();
+        updateScatterplotIframe();
+        // ... any other iframes
+    };
 </script>
 
 </body>
