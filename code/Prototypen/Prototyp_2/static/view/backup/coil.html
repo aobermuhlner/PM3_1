@@ -97,8 +97,53 @@
   
 </div>
 
+<script>
+        console.log('Script top level execution.');
 
-    <script src="/static/js/coil.js"></script>
+    // Function to extract URL parameters from the parent window
+    function getParamsFromParent() {
+        const parentParams = new URLSearchParams(window.parent.location.search);
+        return {
+            latitude:  47.49652862548828,//parentParams.get('latitude'),
+            longitude:  8.719242095947266,//parentParams.get('longitude'),
+            distanceKm: 0.5 ,//parentParams.get('distance_km'),
+            category: parentParams.get('category'),
+            limit: parentParams.get('limit'),
+            sortByCat: parentParams.get('sortbycat') === 'true'
+        };
+    }
+
+    // Function to update src for barchartcategory iframe
+    function updateBarchartCategoryIframe() {
+        const params = getParamsFromParent();
+        let iframeUrl = `bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&category=${params.category}&limit=${params.limit}&sortbycat=${params.sortByCat}`;
+        document.getElementById('barchartcategory').src = iframeUrl;
+    }
+
+    // Function to update src for barchartselectedcategory iframe
+    function updateBarchartSelectedCategoryIframe() {
+        const params = getParamsFromParent();
+        let iframeUrl = `bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&category=${params.category}&limit=${params.limit}&sortbycat=false`;
+        document.getElementById('barchartselectedcategory').src = iframeUrl;
+    }
+
+    // Function to update src for scatterplot iframe
+    function updateScatterplotIframe() {
+        const params = getParamsFromParent();
+        // Modify the URL and parameters as needed for the scatterplot
+        let iframeUrl = `scatterplot_category_adjusted.html?latitude=${params.latitude}&longitude=${params.longitude}`; // Add more parameters if needed
+        document.getElementById('scatterplot').src = iframeUrl;
+    }
+
+    // Call these functions when the page loads
+window.addEventListener('load', function() {
+    console.log('Load event detected');
+    updateBarchartCategoryIframe();
+    updateBarchartSelectedCategoryIframe();
+    updateScatterplotIframe();
+});
+
+</script>
 
 </body>
 </html>
