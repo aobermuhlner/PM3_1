@@ -25,115 +25,46 @@ def get_nearby_amenities():
     latitude = request.form.get("latitude", type=float)
     longitude = request.form.get("longitude", type=float)
     distance_km = request.form.get("distance_km", default=0.5, type=float)
-    category = request.form.get("category")
     limit = request.form.get("limit", default=10000, type=int)
-    """
-    Function to get nearby amenities based on a center point and a specified distance.
-    Uses centerSphere calculations to determine the area of interest and performs a MongoDB query.
-    """
+
     try:
-        # Connect to MongoDB
         collection = get_amenities_collection()
     except Exception as e:
-        # Print any error encountered during the connection attempt
-        # print("Fehler beim Abrufen der Datenbankliste:", e)
         print(f"An error occurred: {e}")
         logging.error("Error in get_nearby_amenities: %s", e, exc_info=True)
+        return jsonify({"error": str(e)})
 
-        # Define the center point (longitude, latitude) and radius in radians
     center_point = [longitude, latitude]
-    radius_radians = distance_km / 6371  # Earth's radius in kilometers
-    query = {
-        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
-    }
-    projection = {
-        "_id": 0
-        # "name": 1
-    }
-    # Execute the query in the database
-    # 'find()' returns a cursor that iterates through the found documents
+    radius_radians = distance_km / 6371
+    query = {"location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}}
+    projection = {"_id": 0}
+
     results = collection.find(query, projection).limit(limit)
-    # Food and Beverage Services
 
-    # for document in results:
-    #   print(document)
+    # Define amenity categories
+    categories = {
+        "fbs": ["bar", "cafe", "fast_food", "food_court", "restaurant", "pub"],
+        "ecv": ["arts_centre", "casino", "cinema", "events_venue", "music_venue", "nightclub", "theatre"],
+        "pcs": ["library", "atm", "bank", "police", "post_box", "post_office"],
+        "ths": ["bus_station", "bicycle_parking", "bicycle_repair_station", "doctors", "hospital", "pharmacy"]
+    }
 
-    food_beverage_services = [
-        "bar",
-        "cafe",
-        "fast_food",
-        "food_court",
-        "restaurant",
-        "pub",
-    ]
-
-    # Entertainment and Cultural Venues
-    entertainment_cultural = [
-        "arts_centre",
-        "casino",
-        "cinema",
-        "events_venue",
-        "music_venue",
-        "nightclub",
-        "theatre",
-    ]
-
-    # Public and Civic Services
-    public_civic_services = [
-        "library",
-        "atm",
-        "bank",
-        "police",
-        "post_box",
-        "post_office",
-    ]
-
-    # Transportation and Health Services
-    transportation_health = [
-        "bus_station",
-        "bicycle_parking",
-        "bicycle_repair_station",
-        "doctors",
-        "hospital",
-        "pharmacy",
-    ]
-    # return the category
-
-    # Initialize an empty list to store the filtered documents
     new_docs = []
 
-    if category == "fbs":
-        new_docs = [
-            doc for doc in results if doc.get("amenity") in food_beverage_services
-        ]
+    for doc in results:
+        # Assign category based on amenity type
+        for category, amenities in categories.items():
+            if doc.get("amenity") in amenities:
+                doc['category'] = category
+                break
+        else:
+            doc['category'] = 'other'  # Default category
 
-    elif category == "ecv":
-        new_docs = [
-            doc for doc in results if doc.get("amenity") in entertainment_cultural
-        ]
+        new_docs.append(doc)
 
-    elif category == "pcs":
-        new_docs = [
-            doc for doc in results if doc.get("amenity") in public_civic_services
-        ]
-
-    elif category == "ths":
-        new_docs = [
-            doc for doc in results if doc.get("amenity") in transportation_health
-        ]
-
-    elif category is None:
-        # Handle the None case as needed
-        new_docs = list(results)
-    else:
-        new_docs = list(results)
-
-    # Print each document in new_docs
-    for doc in new_docs:
-        print(doc)
-
-    # Return the JSON response
     return jsonify(new_docs)
+
+
 
 
 @bp.route("/get_amenitites_nearby_scatter")

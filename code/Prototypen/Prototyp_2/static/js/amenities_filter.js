@@ -170,23 +170,31 @@ function showSelectedCollegesAmenities() {
     const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
     const distanceKm = document.getElementById('distanceSlider').value / 10;
     const amenityPromises = [];
+    const colleges = [];
 
+    // Collect college data and fetch amenities
     items.forEach(item => {
-        const latitude = item.getAttribute('data-lat');
-        const longitude = item.getAttribute('data-lon');
+        const lat = item.getAttribute('data-lat');
+        const lon = item.getAttribute('data-lon');
+        const label = item.textContent;
 
-        if (latitude && longitude) {
-            amenityPromises.push(fetchNearbyAmenities(latitude, longitude, distanceKm));
+        if (lat && lon) {
+            colleges.push({ label, lat, lon });
+            amenityPromises.push(fetchNearbyAmenities(lat, lon, distanceKm));
         }
-        updateMapWithColleges(items)
-        displaySelectedColleges(items)
     });
 
+    // Clear map and display colleges
+    clearMap();
+    updateMapWithColleges(colleges);
+
+    // Fetch and display amenities
     Promise.all(amenityPromises).then(results => {
-        const allAmenities = results.flat(); // Flatten the array of arrays
-        addUniqueAmenitiesToMap(allAmenities);
+        const allAmenities = results.flat(); // Flatten the array of results
+        addUniqueAmenitiesToMap(allAmenities); // Function to add unique amenities to map
     });
 }
+
 
 function fetchNearbyAmenities(latitude, longitude, distanceKm) {
     return new Promise((resolve, reject) => {
@@ -209,12 +217,15 @@ function fetchNearbyAmenities(latitude, longitude, distanceKm) {
 
 function addUniqueAmenitiesToMap(amenities) {
     const uniqueAmenities = new Set();
+    console.log(amenities)
     amenities.forEach(amenity => {
         const amenityKey = `${amenity.lat}-${amenity.lon}`; // Unique key for each amenity
         if (!uniqueAmenities.has(amenityKey)) {
             uniqueAmenities.add(amenityKey);
             if (amenity.lat && amenity.lon) {
-                const amenityMarker = L.marker([amenity.lat, amenity.lon]).bindPopup(amenity.name);
+                // Determine the correct icon for the amenity category
+                const icon = amenityIcons[amenity.category]; // Use a default icon if category is not found
+                const amenityMarker = L.marker([amenity.lat, amenity.lon], {icon: icon}).bindPopup(amenity.name);
                 amenityMarker.addTo(map); // Assuming 'map' is your Leaflet map instance
             }
         }

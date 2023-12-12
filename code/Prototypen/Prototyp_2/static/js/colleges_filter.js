@@ -266,7 +266,6 @@ function fetchFilteredColleges(selectedCategories, selectedCities) {
     .then(response => response.json())
     .then(colleges => {
         displaySelectedColleges(colleges);
-        console.log(colleges)
         updateMapWithColleges(colleges);
     })
     .catch(error => {
@@ -288,16 +287,9 @@ function updateMapWithColleges(colleges) {
     // Add new markers
     colleges.forEach(college => {
         if (college.lat && college.lon) {
-            // Create a new marker
-            const marker = L.marker([college.lat, college.lon]).bindPopup(college.label);
+            const marker = L.marker([college.lat, college.lon], {icon: universityIcon}).bindPopup(college.label);
             marker.addTo(map);
-
-            // Store marker along with lat and lon in collegeMarkersMap
-            collegeMarkersMap[college.label] = {
-                lat: college.lat,
-                lon: college.lon,
-                marker: marker
-            };
+            collegeMarkersMap[college.label] = { lat: college.lat, lon: college.lon, marker: marker };
         }
     });
 }
