@@ -85,7 +85,30 @@ def get_nearby_amenities():
     Function to get nearby amenities based on a center point and a specified distance.
     Uses centerSphere calculations to determine the area of interest and performs a MongoDB query.
     """
-    new_docs = fetch_nearby_amenities(latitude, longitude, distance_km, category, limit)
+    docs = fetch_nearby_amenities(latitude, longitude, distance_km, category, limit)
+
+    # Define amenity categories
+    categories = {
+        "fbs": ["bar", "cafe", "fast_food", "food_court", "restaurant", "pub"],
+        "ecv": ["arts_centre", "casino", "cinema", "events_venue", "music_venue", "nightclub", "theatre"],
+        "pcs": ["library", "atm", "bank", "police", "post_box", "post_office"],
+        "ths": ["bus_station", "bicycle_parking", "bicycle_repair_station", "doctors", "hospital", "pharmacy"]
+    }
+
+    new_docs = []
+
+    for doc in docs:
+        # Assign category based on amenity type
+        for category, amenities in categories.items():
+            if doc.get("amenity") in amenities:
+                doc['category'] = category
+                break
+        else:
+            doc['category'] = 'other'  # Default category
+
+        new_docs.append(doc)
+
+    return jsonify(new_docs)
 
     # Return the JSON response
     return jsonify(new_docs)

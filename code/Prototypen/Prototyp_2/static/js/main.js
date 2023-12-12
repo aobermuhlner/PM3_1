@@ -36,13 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
         var script = document.createElement('script');
         script.src = '/static/js/amenities_filter.js';
         document.body.appendChild(script);
-    });
-    loadHTML('/static/view/colleges_filter.html', 'colleges-filter-container', function() {
-        var script = document.createElement('script');
-        script.src = '/static/js/colleges_filter.js';
-        document.body.appendChild(script);
-    });
-    */
+    });*/
+    loadHTML('/static/view/coil.html', 'coil-container', function() {});
+
     loadHTML('/static/view/map.html', 'map-container', function() {
         var script = document.createElement('script');
         script.src = '/static/js/map.js';
