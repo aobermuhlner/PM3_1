@@ -6,70 +6,109 @@
 </head>
 <body>
 
-<canvas id="myChart" width="400" height="400"></canvas>
+<div class="chart-container">
+    <canvas id="scatterChart"></canvas>
+</div>
+
 
 <script>
-    const data = {
-     0: ['Zimmer 31', 340.4209897951989, 1],
-    1: ['Another Name', 472.8106930402172, 2],
-    };
+    // Function to fetch amenities data and create a scatter plot
+    function fetchAmenitiesAndCreateScatterPlot(latitude, longitude, distanceKm, category, limit) {
+        // Prepare form data
+        const formData = new FormData();
+        formData.append('latitude', latitude);
+        formData.append('longitude', longitude);
+        formData.append('distance_km', distanceKm);
+        formData.append('category', category);
+        formData.append('limit', limit);
 
-    const scatterData = Object.keys(data).map(key => ({
-    x: data[key][1], // distance is now the second element in the array
-    y: data[key][2], // y-axis value is the third element in the array
-    name: data[key][0] // name is the first element in the array
-}));
+        // Fetch request with form data
+        fetch('/get_amenitites_nearby_scatter', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            createScatterPlot(data);
+        })
+        .catch(error => console.error('Error fetching scatterplot data:', error));
+    }
 
+    // Function to create a scatter plot using Chart.js
+    function createScatterPlot(data) {
+        // Transform the data to fit Chart.js scatter plot structure
+        const scatterData = Object.values(data).map(item => ({
+            x: item[1], // distance
+            y: item[2] || 0, // y-axis value (category or default to 0)
+            name: item[0] // name of the amenity
+        }));
 
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'scatter',
-        data: {
-            datasets: [{
-                label: 'Amenities distance to university in meters',
-                data: scatterData,
-                backgroundColor: 'rgba(0, 123, 255, 0.5)',
-                pointRadius: 50,
-                pointHoverRadius: 25
-
-            }]
-        },
-     options: {
-    scales: {
-        y: { beginAtZero: true ,
-                min: 0,
-                max: 5,
-                ticks:{
-                    stepSize: 1
-                }},
-        x: {
-             beginAtZero: true,
-            min: 0, // minimum value for x-axis
-            max: 500, // maximum value for x-axis
-            ticks: {
-                stepSize: 100 // x-axis interval
+        // Get the canvas context
+        const ctx = document.getElementById('scatterChart').getContext('2d');
+        
+        // Create a scatter plot
+        const myScatter = new Chart(ctx, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Amenities distance to university in meters',
+                    data: scatterData,
+                    backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                    pointRadius: 5,
+                    pointHoverRadius: 10
+                }]
             },
-             title: {
-        display: true,
-        text: 'Distance from selected building in meters'
-      }
-        }
-    },
-    plugins: {
-        tooltip: {
-            callbacks: {
-                label: function(context) {
-                    let xValue = context.raw.x.toFixed(2);
-                    let name = context.raw.name;
-                    return name + ': ' + xValue + ' meters';
+            options: {
+                scales: {
+                    y: { 
+                        beginAtZero: true,
+                        min: 0,
+                        max: 5,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    },
+                    x: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 500,
+                        ticks: {
+                            stepSize: 100
+                        },
+                        title: {
+                            display: true,
+                            text: 'Distance from selected building in meters'
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let xValue = context.raw.x.toFixed(2);
+                                let name = context.raw.name;
+                                return name + ': ' + xValue + ' meters';
+                            }
+                        }
+                    }
                 }
             }
-        }
+        });
     }
-}
 
-    });
+    // Extract URL parameters and call the function on page load
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const latitude = urlParams.get('latitude');
+        const longitude = urlParams.get('longitude');
+        const distanceKm = urlParams.get('distance_km');
+        const category = urlParams.get('category');
+        const limit = urlParams.get('limit');
+
+        fetchAmenitiesAndCreateScatterPlot(latitude, longitude, distanceKm, category, limit);
+    }
 </script>
+
 
 </body>
 </html>

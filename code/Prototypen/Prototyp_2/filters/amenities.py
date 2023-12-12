@@ -20,66 +20,91 @@ def some_route():
     # Logic related to amenities goes here...
     return jsonify({"message": "This is an example from amenities.py"})
 
-@bp.route("/get_amenitites_nearby", methods=['POST'])
+
+def fetch_nearby_amenities(latitude, longitude, distance_km, category, limit):
+    """
+    Core functionality to fetch nearby amenities.
+    """
+    try:
+        # Connect to MongoDB
+        collection = get_amenities_collection()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        logging.error("Error in fetch_nearby_amenities: %s", e, exc_info=True)
+        return []
+
+    # Define the center point (longitude, latitude) and radius in radians
+    center_point = [longitude, latitude]
+    radius_radians = distance_km / 6371  # Earth's radius in kilometers
+
+    query = {
+        "location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}
+    }
+
+    projection = {"_id": 0}  # Modify as needed
+    results = collection.find(query, projection).limit(limit)
+
+    # Filtering logic based on 'category'
+    if category in ["fbs", "ecv", "pcs", "ths"]:
+        categories = {
+            "fbs": ["bar", "cafe", "fast_food", "food_court", "restaurant", "pub"],
+            "ecv": [
+                "arts_centre",
+                "casino",
+                "cinema",
+                "events_venue",
+                "music_venue",
+                "nightclub",
+                "theatre",
+            ],
+            "pcs": ["library", "atm", "bank", "police", "post_box", "post_office"],
+            "ths": [
+                "bus_station",
+                "bicycle_parking",
+                "bicycle_repair_station",
+                "doctors",
+                "hospital",
+                "pharmacy",
+            ],
+        }
+        results = [doc for doc in results if doc.get("amenity") in categories[category]]
+    else:
+        results = list(results)
+
+    return results
+
+
+@bp.route("/get_amenitites_nearby", methods=["POST"])
 def get_nearby_amenities():
     latitude = request.form.get("latitude", type=float)
     longitude = request.form.get("longitude", type=float)
     distance_km = request.form.get("distance_km", default=0.5, type=float)
+    category = request.form.get("category")
     limit = request.form.get("limit", default=10000, type=int)
+    """
+    Function to get nearby amenities based on a center point and a specified distance.
+    Uses centerSphere calculations to determine the area of interest and performs a MongoDB query.
+    """
+    new_docs = fetch_nearby_amenities(latitude, longitude, distance_km, category, limit)
 
-    try:
-        collection = get_amenities_collection()
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        logging.error("Error in get_nearby_amenities: %s", e, exc_info=True)
-        return jsonify({"error": str(e)})
-
-    center_point = [longitude, latitude]
-    radius_radians = distance_km / 6371
-    query = {"location": {"$geoWithin": {"$centerSphere": [center_point, radius_radians]}}}
-    projection = {"_id": 0}
-
-    results = collection.find(query, projection).limit(limit)
-
-    # Define amenity categories
-    categories = {
-        "fbs": ["bar", "cafe", "fast_food", "food_court", "restaurant", "pub"],
-        "ecv": ["arts_centre", "casino", "cinema", "events_venue", "music_venue", "nightclub", "theatre"],
-        "pcs": ["library", "atm", "bank", "police", "post_box", "post_office"],
-        "ths": ["bus_station", "bicycle_parking", "bicycle_repair_station", "doctors", "hospital", "pharmacy"]
-    }
-
-    new_docs = []
-
-    for doc in results:
-        # Assign category based on amenity type
-        for category, amenities in categories.items():
-            if doc.get("amenity") in amenities:
-                doc['category'] = category
-                break
-        else:
-            doc['category'] = 'other'  # Default category
-
-        new_docs.append(doc)
-
+    # Return the JSON response
     return jsonify(new_docs)
 
 
+@bp.route("/get_amenitites_nearby_scatter", methods=["POST"])
+def get_amenities_scatterplot():
+    # Extract parameters from request.form
+    latitude = request.form.get("latitude", type=float)
+    longitude = request.form.get("longitude", type=float)
+    distance_km = request.form.get("distance_km", default=0.5, type=float)
+    category = request.form.get("category")
+    limit = request.form.get("limit", default=10000, type=int)
 
-
-@bp.route("/get_amenitites_nearby_scatter")
-def get_amenities_scatterplot(
-    inputlatitude, inputlongitude, distance_km=0.5, limit=10000, category=None
-):
-    # Fetches nearby amenities based on provided latitude, longitude, distance, and category.
-    # The function 'get_nearby_amenities' is assumed to return a list of amenities
-    # within the specified distance from the input coordinates.
-    data = get_nearby_amenities(
-        inputlatitude, inputlongitude, distance_km, category=category
-    )
+    # Call the helper function
+    data = fetch_nearby_amenities(latitude, longitude, distance_km, category, limit)
 
     # Your input coordinates as a tuple.
-    input_coordinates = (inputlatitude, inputlongitude)
+    input_coordinates = (latitude, longitude)
     # Initialize a dictonary to store distances from the input coordinates to each amenity.
     distances = {}
     dictid = 0
@@ -119,12 +144,20 @@ def get_amenities_scatterplot(
     return jsonify(distances)
 
 
-@bp.route("/get_amenitites_nearby_barrchart")
-def get_amenities_barchart(
-    latitude, longitude, distance_km=0.5, limit=10000, category=None, sortbycat=False
-):
+@bp.route("/get_amenitites_nearby_barrchart", methods=["POST"])
+def get_amenities_barchart():
+    # Extract parameters from request.form
+    latitude = request.form.get("latitude", type=float)
+    longitude = request.form.get("longitude", type=float)
+    distance_km = request.form.get("distance_km", default=0.5, type=float)
+    category = request.form.get("category")
+    limit = request.form.get("limit", default=10000, type=int)
+    sortbycat = request.form.get("sortbycat", default=False, type=bool)
+
+    # Call the helper function
+    data = fetch_nearby_amenities(latitude, longitude, distance_km, category, limit)
+
     # Get nearby amenities based on the provided latitude, longitude, and other parameters.
-    data = get_nearby_amenities(latitude, longitude, distance_km, category=category)
 
     # Initialize a dictionary to store counts of each amenity.
     amenity_counts = {}
@@ -206,62 +239,6 @@ def get_amenities_barchart(
     # If not sorting by category, return the list of amenities as is.
     else:
         return jsonify(amenity_list)
-
-
-## Calcualte College Score Functions
-
-def distanceAmenityToCollege(amenity, college):
-    # Assuming 'amenity' and 'college' are dictionaries with 'lat' and 'lon' keys
-    distance = ((amenity['lat'] - college['lat'])**2 + (amenity['lon'] - college['lon'])**2)**0.5
-    return distance
-
-@bp.route("/get_college_score", methods=['POST'])
-def calculate_college_score():
-    try:
-        # Retrieve data from form
-        amenities = request.form.get('amenities')  # Expected to be JSON string
-        amenityRelevance = request.form.get('amenityRelevance')  # Expected to be JSON string
-        colleges = request.form.get('colleges')  # Expected to be JSON string
-
-        # Convert JSON strings to Python objects
-   #     amenities = json.loads(amenities) if amenities else []
-  #      colleges = json.loads(colleges) if colleges else []
-  #      amenityRelevance = json.loads(amenityRelevance) if amenityRelevance else []
-        results = []
-
-        # Convert amenityRelevance to a dictionary for easier lookup
-        relevance_dict = {item['amenity']: item['relevance'] for item in amenityRelevance}
-
-        for college in colleges:
-            collegeScore = 0
-            collegeAmenities = []
-
-            for amenity in amenities:
-                distance = distanceAmenityToCollege(amenity, college)
-                relevance = relevance_dict.get(amenity['amenity'], 0)
-                score = relevance / distance if distance != 0 else 0
-                collegeScore += score
-
-                collegeAmenities.append({
-                    'amenityName': amenity['amenity'],
-                    'amenityDistanceToCollege': distance,
-                    'amenityRelevance': relevance
-                })
-
-            results.append({
-                'CollegeName': college['nameCollege'],
-                'collegeTotalScore': collegeScore,
-                'amenities': collegeAmenities
-            })
-        return jsonify(results)  # Return your results in JSON format
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        logging.error("Error in get_college_score: %s", e, exc_info=True)
-
-
-
-
-
 
 
 if __name__ == "__main__":
