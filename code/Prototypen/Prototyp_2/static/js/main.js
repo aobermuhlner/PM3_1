@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
         script.src = '/static/js/amenities_filter.js';
         document.body.appendChild(script);
     });*/
-    loadHTML('/static/view/coil.html', 'coil-container', function() {});
+    loadHTML('/static/view/coil.html', 'coil-container', function() {console.log('coil.html has been loaded into coil-container');});
+  
 
     loadHTML('/static/view/map.html', 'map-container', function() {
         var script = document.createElement('script');
