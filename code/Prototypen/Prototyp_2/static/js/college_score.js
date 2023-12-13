@@ -5,7 +5,7 @@ function getSelectedColleges() {
     const collegeBoxes = selectedCollegesDiv.getElementsByClassName('college-name-box');
     return Array.from(collegeBoxes).map(box => {
         return {
-            nameCollege: box.textContent.trim(),
+            nameCollege: box.textContent.trim().slice(0, -1),
             lat: parseFloat(box.getAttribute('data-lat')),
             lon: parseFloat(box.getAttribute('data-lon'))
         };
@@ -25,17 +25,21 @@ function getAmenityRelevance() {
 
 function fetchCollegeScore() {
     // Assuming fetchNearbyAmenities function is already defined and returns an array of amenities
-    const amenities = fetchNearbyAmenities(/* Parameters as needed */);
     const amenityRelevance = getAmenityRelevance();
     const colleges = getSelectedColleges();
+    const distanceKm = document.getElementById('distanceSlider').value;
 
-    fetch('/get_college_score', {
+    console.log("fetchCollegeScore function executed");
+    console.log(amenityRelevance)
+    console.log(colleges)
+
+    fetch('/colleges/get_college_score', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            amenities: JSON.stringify(amenities),
-            amenityRelevance: JSON.stringify(amenityRelevance),
-            colleges: JSON.stringify(colleges)
+            amenityRelevance: amenityRelevance,
+            colleges: colleges,
+            distance: distanceKm/10
         })
     })
     .then(response => response.json())

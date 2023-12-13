@@ -21,7 +21,7 @@ def some_route():
     return jsonify({"message": "This is an example from amenities.py"})
 
 
-def fetch_nearby_amenities(latitude, longitude, distance_km, category, limit):
+def fetch_nearby_amenities(latitude, longitude, distance_km, category=None, limit=100000):
     """
     Core functionality to fetch nearby amenities.
     """

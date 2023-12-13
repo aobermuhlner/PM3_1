@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>University Life Quality</title>
+    <title>Colleges Evaluator</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
@@ -27,66 +27,73 @@
     <script src="/static/js/amenities_filter.js"></script>
     <script src="/static/js/colleges_filter.js"></script>
     <script src="/static/js/college_score.js"></script>
+    <script src="/static/js/style.js"></script>
 </head>
 
-<body>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="title-with-bg">University Life Quality Evaluator</div>
-    </div>
-    <div class="container-fluid2">
-        <div class="row my-3">
-            <!-- COLLEGES FILTER -->
-            <div id="colleges-filter-container" class="col-3 border">
-                <h1>Colleges</h1>
-                    <div class="college-filter">
-                        <!-- City FILTER -->
-                        <select id="cityFilter">
-                            <option value="">Select City</option>
-                        </select>
-                        <div id="selectedCities"></div>
-
-                        <!-- College Category -->
-                        <select id="categoryFilter">
-                            <option value="">Select Category</option>
-                            <option value="FH">University </option>
-                            <option value="UH">University of Applied Sciences</option>
-                            <option value="PH">College of Education</option>
-                        </select>
-
-                        <div id="selectedCollegeCategories"></div>
-                        <hr class="hr" />
-                        <button id="filterCollegesBtn" class="btn btn-dark">Filter Colleges</button>
-                        <div id="selectedColleges"></div>
-                    </div>
-            </div>
-
-            <!-- MAP -->
-            <div id="map-container" class="col-6"></div>
-
-            <!-- AMENITY FILTER -->
-            <div id="amenity-container" class="col-3 border">
-                <h2>Amenities</h2>
-                <!-- Range distance -->
-                <div class="form-group">
-                    <label for="customRange1">Distance to College (in kilometers):</label>
-                    <input type="range" class="form-control-range" id="distanceSlider" min="1" max="5" value="3">
-                </div>
-                <button id="showAmenitiesBtn" class="btn btn-dark">Show Amenities</button>
-                <hr class="hr" />
-                <!-- Amenities  -->
-                <div id="dynamicAmenitiesContainer"></div>
-                <button id="calculateCollegeScore" class="btn btn-dark">Calculate College Score</button>
-            </div>
-
-
-        </div>
-        <div id="coil-container"></div>
-    </div>
+<div class="sample-header">
+  <div class="sample-header-section">
+    <h1>College Life Quality Evaluator</h1>
+  </div>
 </div>
+<body>
+    <div class="sample-section-wrap">
+      <div class="sample-section">
+        <div class="container-fluid">
+            <div class="container-fluid2">
+                <div class="row my-3">
+                    <!-- COLLEGES FILTER -->
+                    <div id="colleges-filter-container" class="col-3 border">
+                        <h2>Colleges</h2>
+                            <div class="college-filter">
+                                <!-- City FILTER -->
+                                <select id="cityFilter">
+                                    <option value="">Select City</option>
+                                </select>
+                                <div id="selectedCities"></div>
+
+                                <!-- College Category -->
+                                <select id="categoryFilter">
+                                    <option value="">Select Category</option>
+                                    <option value="UH">University </option>
+                                    <option value="FH">University of Applied Sciences</option>
+                                    <option value="PH">College of Education</option>
+                                </select>
+
+                                <div id="selectedCollegeCategories"></div>
+                                <hr class="hr" />
+                                <button id="filterCollegesBtn" class="btn btn-dark">Filter Colleges</button>
+                                <div id="selectedColleges"></div>
+                            </div>
+                    </div>
+
+                    <!-- MAP -->
+                    <div id="map-container" class="col-6"></div>
+
+                    <!-- AMENITY FILTER -->
+                    <div id="amenity-container" class="col-3 border">
+                        <h2>Amenities</h2>
+                        <!-- Range distance -->
+                        <div class="form-group">
+                            <label for="customRange1">Distance to College (in kilometers):</label>
+                            <input type="range" class="form-control-range" id="distanceSlider" min="1" max="5" value="3">
+                        </div>
+                        <button id="showAmenitiesBtn" class="btn btn-dark">Show Amenities</button>
+                        <hr class="hr" />
+                        <!-- Amenities  -->
+                        <div id="dynamicAmenitiesContainer"></div>
+                        <button id="calculateCollegeScore" class="btn btn-dark">Calculate College Score</button>
+                    </div>
 
 
+                </div>
+
+                <div id="coil-container"></div>
+            </div>
+        </div>
+
+      </div>
+    </div>
 
 </body>
 </html>

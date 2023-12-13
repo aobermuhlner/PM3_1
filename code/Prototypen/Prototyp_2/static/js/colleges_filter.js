@@ -219,6 +219,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener for the filter button
     document.getElementById('filterCollegesBtn').addEventListener('click', handleFilterColleges);
 
+    // Event Listen to calculate College Scores when Button pressed
+    var calculateCollegeScoreBtn = document.getElementById('calculateCollegeScore');
+    if (calculateCollegeScoreBtn) {
+        calculateCollegeScoreBtn.addEventListener('click', function() {
+            fetchCollegeScore();  // Call the function when the button is clicked
+        });
+    }
+
 });
 
 /* -------------------------------------
@@ -292,20 +300,4 @@ function updateMapWithColleges(colleges) {
             collegeMarkersMap[college.label] = { lat: college.lat, lon: college.lon, marker: marker };
         }
     });
-}
-
-/* -------------------------------------
-   College Selection and Mutation Handling
-------------------------------------- */
-function onSelectedCollegesChanged() {
-    console.log("onSelectedCollegesChanged")
-    const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
-    if (items.length > 0) {
-        items.forEach(item => {
-            const latitude = item.getAttribute('data-lat');
-            const longitude = item.getAttribute('data-lon');
-            // You might want to aggregate these coordinates or choose one
-            getNearbyAmenities(latitude, longitude);
-        });
-    }
 }

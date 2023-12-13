@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function createCustomIcon(iconUrl) {
     return L.icon({
         iconUrl: iconUrl,
-        iconSize: [25, 41], // Size of the icon
+        iconSize: [50, 50], // Size of the icon
         iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
         popupAnchor: [1, -34] // Point from which the popup should open relative to the iconAnchor
     });
@@ -76,7 +76,7 @@ const amenityIcons = {
 
 const universityIcon = L.icon({
         iconUrl: '../static/images/university.png', // Replace with the path to your university icon
-        iconSize: [50, 50], // Size of the icon, adjust as needed
-        iconAnchor: [12, 12], // Point of the icon which will correspond to marker's location
+        iconSize: [60, 60], // Size of the icon, adjust as needed
+        iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
         popupAnchor: [0, -12] // Point from which the popup should open relative to the iconAnchor
     });
