@@ -90,9 +90,24 @@ def get_nearby_amenities():
     # Define amenity categories
     categories = {
         "fbs": ["bar", "cafe", "fast_food", "food_court", "restaurant", "pub"],
-        "ecv": ["arts_centre", "casino", "cinema", "events_venue", "music_venue", "nightclub", "theatre"],
+        "ecv": [
+            "arts_centre",
+            "casino",
+            "cinema",
+            "events_venue",
+            "music_venue",
+            "nightclub",
+            "theatre",
+        ],
         "pcs": ["library", "atm", "bank", "police", "post_box", "post_office"],
-        "ths": ["bus_station", "bicycle_parking", "bicycle_repair_station", "doctors", "hospital", "pharmacy"]
+        "ths": [
+            "bus_station",
+            "bicycle_parking",
+            "bicycle_repair_station",
+            "doctors",
+            "hospital",
+            "pharmacy",
+        ],
     }
 
     new_docs = []
@@ -101,10 +116,10 @@ def get_nearby_amenities():
         # Assign category based on amenity type
         for category, amenities in categories.items():
             if doc.get("amenity") in amenities:
-                doc['category'] = category
+                doc["category"] = category
                 break
         else:
-            doc['category'] = 'other'  # Default category
+            doc["category"] = "other"  # Default category
 
         new_docs.append(doc)
 
@@ -120,12 +135,16 @@ def get_amenities_scatterplot():
     latitude = request.form.get("latitude", type=float)
     longitude = request.form.get("longitude", type=float)
     distance_km = request.form.get("distance_km", default=0.5, type=float)
-    category = request.form.get("category")
+    category = request.form.get("category", type=str)
     limit = request.form.get("limit", default=10000, type=int)
 
+    # valid_categories = ["fbs", "ecv", "pcs", "ths", "all"] outcommented because we might want to add that feature easly later
+    # if category not in valid_categories:
+    #    yaxis = None
     # Call the helper function
     data = fetch_nearby_amenities(latitude, longitude, distance_km, category, limit)
-
+    for doc in data:
+        print(doc)
     # Your input coordinates as a tuple.
     input_coordinates = (latitude, longitude)
     # Initialize a dictonary to store distances from the input coordinates to each amenity.
@@ -138,32 +157,61 @@ def get_amenities_scatterplot():
 
         # extract name
         name = item.get("name", item.get("amenity", "default"))
-
+        print(name)
         # Calculate the geodesic distance (in meters) from the input coordinates to the amenity's coordinates.
         # 'geodesic' function computes the shortest distance over the earth's surface.
         # The '.meters' attribute converts the distance to meters.
         distance = geodesic(input_coordinates, object_coordinates).meters
-        if category == "fbs":
-            yaxis = 1
-            distances[dictid] = (name, distance, yaxis)
+        print(distance)
+        print(item.get("amenity"))
+        # if category in valid_categories:
+        fbs = ["bar", "cafe", "fast_food", "food_court", "restaurant", "pub"]
+        ecv = [
+            "arts_centre",
+            "casino",
+            "cinema",
+            "events_venue",
+            "music_venue",
+            "nightclub",
+            "theatre",
+        ]
+        pcs = ["library", "atm", "bank", "police", "post_box", "post_office"]
+        ths = [
+            "bus_station",
+            "bicycle_parking",
+            "bicycle_repair_station",
+            "doctors",
+            "hospital",
+            "pharmacy",
+        ]
 
-        elif category == "ecv":
+        if item.get("amenity") in fbs:
+            groupcat = "fbs"
+        elif item.get("amenity") in ecv:
+            groupcat = "ecv"
+
+        elif item.get("amenity") in pcs:
+            groupcat = "pcs"
+
+        elif item.get("amenity") in ths:
+            groupcat = "ths"
+
+        if groupcat == "fbs":
+            yaxis = 1
+        elif groupcat == "ecv":
             yaxis = 2
-            distances[dictid] = (name, distance, yaxis)
-        elif category == "pcs":
+        elif groupcat == "pcs":
             yaxis = 3
-            distances[dictid] = (name, distance, yaxis)
-        elif category == "ths":
+        elif groupcat == "ths":
             yaxis = 4
-            distances[dictid] = (name, distance, yaxis)
-        elif category is None:
-            # Handle the None case as needed
-            # Append the calculated distance to the distances dict.
-            distances[dictid] = (name, distance)
+        distances[dictid] = (name, distance, yaxis)
+        print("Added to distances:", distances[dictid])
+
         dictid += 1
-    # Return the list of distances.
-    # This list can be used to plot a scatterplot, where each point represents an amenity,
-    # and its distance from the input coordinates.
+        # Return the list of distances.
+        # This list can be used to plot a scatterplot, where each point represents an amenity,
+        # and its distance from the input coordinates.
+
     return jsonify(distances)
 
 
