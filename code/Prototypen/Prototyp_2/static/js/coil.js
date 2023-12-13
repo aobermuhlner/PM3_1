@@ -18,14 +18,14 @@ function getParamsFromParent() {
 // Function to update src for barchartcategory iframe
 function updateBarchartCategoryIframe() {
     const params = getParamsFromParent();
-    let iframeUrl = `bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&category=${params.category}&limit=${params.limit}&sortbycat=${params.sortByCat}`;
+    let iframeUrl = `/static/view/bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&category=${params.category}&limit=${params.limit}&sortbycat=${params.sortByCat}`;
     document.getElementById('barchartcategory').src = iframeUrl;
 }
 
 // Function to update src for barchartselectedcategory iframe
 function updateBarchartSelectedCategoryIframe() {
     const params = getParamsFromParent();
-    let iframeUrl = `bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&category=${params.category}&limit=${params.limit}&sortbycat=false`;
+    let iframeUrl = `/static/view/bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&category=${params.category}&limit=${params.limit}&sortbycat=false`;
     document.getElementById('barchartselectedcategory').src = iframeUrl;
 }
 
@@ -33,7 +33,7 @@ function updateBarchartSelectedCategoryIframe() {
 function updateScatterplotIframe() {
     const params = getParamsFromParent();
     // Modify the URL and parameters as needed for the scatterplot
-    let iframeUrl = `scatterplot_category_adjusted.html?latitude=${params.latitude}&longitude=${params.longitude}`; // Add more parameters if needed
+    let iframeUrl = `/static/view/scatterplot_category_adjusted.html?latitude=${params.latitude}&longitude=${params.longitude}`; // Add more parameters if needed
     document.getElementById('scatterplot').src = iframeUrl;
 }
 
