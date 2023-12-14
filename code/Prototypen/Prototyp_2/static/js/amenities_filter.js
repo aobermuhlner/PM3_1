@@ -137,34 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-/*
-function getNearbyAmenities() {
-    const selectedCollegesDiv = document.getElementById('selectedColleges');
-    const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
-
-    if (items.length > 0) {
-        items.forEach(item => {
-            const collegeName = item.textContent.trim();
-
-            fetch('/colleges/get_colleges_by_names', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ college_names: [collegeName] }) // Fetching data for one college at a time
-            })
-            .then(response => response.json())
-            .then(collegeData => {
-                const college = collegeData[0]; // Assuming the first element is the relevant college data
-                if (college && college.lat && college.lon) {
-                    const distanceKm = document.getElementById('distanceSlider').value;
-                    fetchNearbyAmenities(college.lat, college.lon, distanceKm);
-                }
-            })
-            .catch(error => console.error("Error fetching college data:", error));
-        });
-    }
-}
- */
 function showSelectedCollegesAmenities() {
     const selectedCollegesDiv = document.getElementById('selectedColleges');
     const items = selectedCollegesDiv.querySelectorAll('.college-name-box');
@@ -217,7 +189,6 @@ function fetchNearbyAmenities(latitude, longitude, distanceKm) {
 
 function addUniqueAmenitiesToMap(amenities) {
     const uniqueAmenities = new Set();
-    console.log(amenities)
     amenities.forEach(amenity => {
         const amenityKey = `${amenity.lat}-${amenity.lon}`; // Unique key for each amenity
         if (!uniqueAmenities.has(amenityKey)) {
@@ -225,7 +196,11 @@ function addUniqueAmenitiesToMap(amenities) {
             if (amenity.lat && amenity.lon) {
                 // Determine the correct icon for the amenity category
                 const icon = amenityIcons[amenity.category]; // Use a default icon if category is not found
-                const amenityMarker = L.marker([amenity.lat, amenity.lon], {icon: icon}).bindPopup(amenity.name);
+                const newLabel = (amenity.amenity).replace(/-_/g, ' ').replace(/\b(\w)/g, function(match, firstLetter) {
+                    return firstLetter.toUpperCase();
+                });
+                const labelText = "(" + newLabel + ") - " + amenity.name
+                const amenityMarker = L.marker([amenity.lat, amenity.lon], {icon: icon}).bindPopup(labelText);
                 amenityMarker.addTo(map); // Assuming 'map' is your Leaflet map instance
             }
         }

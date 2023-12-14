@@ -118,15 +118,15 @@ def calculate_college_score():
                 relevance = relevance_dict.get(amenity['amenity'], 0)
                 score = relevance / distanceAmenity if distanceAmenity != 0 else 0
                 collegeScore += score
-
+                print(amenity)
                 collegeAmenities.append({
                     'amenityName': amenity['amenity'],
+            #        'category': amenity['category'],
+             #       'city': amenity['addr:city'],
                     'amenityDistanceToCollege': distanceAmenity,
-                    'amenityRelevance': relevance
+                    'amenityRelevance': relevance,
+                    'amenityScore': score
                 })
-            print(college['nameCollege'])
-            print(collegeScore)
-            print(collegeAmenities)
             results.append({
                 'CollegeName': college['nameCollege'],
                 'collegeTotalScore': collegeScore,

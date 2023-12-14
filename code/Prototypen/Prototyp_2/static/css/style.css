@@ -219,6 +219,19 @@ h1 {
     outline-color: black;
 }
 
+
+h3 {
+    font-family: 'Montserrat', sans-serif; /* A modern and clean font */
+    font-size: 3em; /* Adjust size as needed */
+    font-weight: 600; /* Medium weight - not too bold, not too light */
+    color: #9DCBC7; /* Dark gray - change as needed */
+    text-align: center; /* Center-align the title */
+    margin-bottom: 20px; /* Adds some space below the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    outline-color: black;
+}
+
 h1:hover {
     color: white; /* Change color on hover - choose a color that matches your site's theme */
 }
@@ -238,3 +251,55 @@ h2 {
     padding: 40px;
 }
 
+/* Styling for the Leaderboard */
+.leaderboard-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.leaderboard {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 400px; /* Adjust based on your preference */
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #77B2B5, #FFFDE9);
+}
+
+.leaderboard div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.leaderboard div:hover {
+    background-color: #9FC9C4;
+}
+
+.college-details {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.leaderboard-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* border-bottom: 1px solid #eee; */ /* Removed border */
+}
+
+.rank {
+    font-weight: bold;
+}
+
+.college-name {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.score {
+    text-align: right;
+}
