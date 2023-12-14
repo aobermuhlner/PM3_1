@@ -52,15 +52,24 @@
                     datasets: [{
                         label: '# of Amenities',
                         data: chartData,
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(144, 238, 144, 0.2)',
+                        borderColor: 'rgba(0, 100, 0, 1)',
                         borderWidth: 1
                     }]
                 },
                 options: {
+                     plugins: {
+        legend: {
+            display: false // Legende wird nicht angezeigt
+        }
+    },
                     scales: {
+                        
                         y: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                             ticks: {
+                            stepSize: 1
+                        }
                         }
                     }
                 }
