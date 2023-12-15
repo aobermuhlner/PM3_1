@@ -19,6 +19,8 @@ function getParamsFromParent() {
 function updateBarchartCategoryIframe() {
     const params = getParamsFromParent();
     let iframeUrl = `/static/view/bycatbarchart.html?latitude=${params.latitude}&longitude=${params.longitude}&distance_km=${params.distanceKm}&category=${params.category}&limit=${params.limit}&sortbycat=True`;
+        console.log(iframeUrl);
+
     document.getElementById('barchartcategory').src = iframeUrl;
 }
 
