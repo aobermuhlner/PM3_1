@@ -98,6 +98,8 @@ function selectCollegeEntry(element, collegeData) {
     // Prepare to extract data from the row
     console.log("Selected College:", collegeData);
     element.classList.add('selected');
+    console.log(collegeData.CollegeName)
+    console.log(collegeData.amenities)
 
     // Call functions to update the plots
     updateBarchartCategoryIframe(collegeData);
