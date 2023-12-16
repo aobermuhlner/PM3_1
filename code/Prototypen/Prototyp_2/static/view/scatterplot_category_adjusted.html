@@ -75,10 +75,12 @@
                              callback: function(value, index, values) {
                             // Hier kannst du die Y-Werte (Kategorien) nach Bedarf umwandeln
                             // Zum Beispiel, wenn die Y-Werte Zahlen sind, kannst du sie in Kategorien übersetzen
-                            if (value === 1) return 'Kategorie A';
-                            if (value === 2) return 'Kategorie B';
-                            if (value === 3) return 'Kategorie C';
-                            // Und so weiter...
+                            if (value === 0) return '';
+                            if (value === 1) return 'Food and Beverage Services';
+                            if (value === 2) return 'Entertainment and Cultural Venues';
+                            if (value === 3) return 'Public and Civic Services';
+                            if (value === 4) return 'Transportation and Health Services';
+                            if (value === 5) return '';
                             return value; // Standardfall, wenn keine Übersetzung erfolgt
                         }
                         }
@@ -86,7 +88,7 @@
                     x: {
                         beginAtZero: true,
                         min: 0,
-                        max: 501,
+                        max: 500,
                         ticks: {
                             stepSize: 100
                         },

@@ -100,14 +100,14 @@ function selectCollegeEntry(element, collegeData) {
     console.log("Selected College:", collegeData);
     element.classList.add('selected');
 
-
     // Call functions to update the plots
     updateBarchartCategoryIframe(collegeData);
+    console.log("got you")
     updateBarchartSelectedCategoryIframe(collegeData, 'fbs');
     updateBarchartSelectedCategoryIframe(collegeData, 'ecv');
     updateBarchartSelectedCategoryIframe(collegeData, 'pcs');
     updateBarchartSelectedCategoryIframe(collegeData, 'ths');
-  //  updateScatterplotIframe(collegeData);
+    updateScatterplotIframe(collegeData);
 }
 
 // Event listener for DOMContentLoaded

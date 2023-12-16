@@ -7,7 +7,7 @@ function updateBarchartCategoryIframe(params) {
     const category = parentParams.get('category')
     const limit = parentParams.get('limit')
 
-    let iframeUrl = `/static/view/bycatbarchart.html?latitude=${params.lat}&longitude=${params.longitude}&distance_km=${distanceKm}&category=${category}&limit=${limit}&sortbycat=True`;
+    let iframeUrl = `/static/view/bycatbarchart.html?latitude=${params.lat}&longitude=${params.lon}&distance_km=${distanceKm}&category=${category}&limit=${limit}&sortbycat=True`;
         console.log(iframeUrl);
 
     document.getElementById('barchartcategory').src = iframeUrl;

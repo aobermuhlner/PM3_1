@@ -22,7 +22,7 @@
             formData.append('category', category);
             formData.append('limit', limit);
             formData.append('sortbycat', sortbycat);
-
+            console.log(latitude,longitude,distanceKm, category,sortbycat)
             // Fetch request with form data
             fetch('/amenities/get_amenitites_nearby_barrchart', {
                 method: 'POST',

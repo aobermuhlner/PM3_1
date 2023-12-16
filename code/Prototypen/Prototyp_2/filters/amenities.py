@@ -326,12 +326,12 @@ if __name__ == "__main__":
     longitude = 8.719242095947266
     distance_km = 0.5  # Convert 500 meters to kilometers for geopy library
     liste = get_nearby_amenities(latitude, longitude, 0.1)
-    for doc in liste:
-        # Print each document found in the defined area
-        print(doc)
+    # for doc in liste:
+    # Print each document found in the defined area
+    #   print(doc)
     # Print the number of documents found
-    print(len(liste))
-    print(len(liste))
-    print(get_amenities_barchart(latitude, longitude, 0.5, category=""))
-    print(get_amenities_scatterplot(latitude, longitude, 0.5, category=""))
-    print(get_amenities_barchart(latitude, longitude, 0.1, category="", sortbycat=True))
+    # print(len(liste))
+    # print(len(liste))
+    # print(get_amenities_barchart(latitude, longitude, 0.5, category=""))
+    # print(get_amenities_scatterplot(latitude, longitude, 0.5, category=""))
+    # print(get_amenities_barchart(latitude, longitude, 0.1, category="", sortbycat=True))
