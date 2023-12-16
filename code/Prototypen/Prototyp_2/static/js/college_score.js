@@ -102,13 +102,12 @@ function selectCollegeEntry(element, collegeData) {
 
 
     // Call functions to update the plots
-    updateBarchartSelectedCategoryIframeecv(collegeData);
     updateBarchartCategoryIframe(collegeData);
-    updateBarchartSelectedCategoryIframe(collegeData);
-    updateScatterplotIframe(collegeData);
-    updateBarchartSelectedCategoryIframepcs(collegeData);
-    updateBarchartSelectedCategoryIframeths(collegeData);
-    updateScatterplotIframe(collegeData);
+    updateBarchartSelectedCategoryIframe(collegeData, 'fbs');
+    updateBarchartSelectedCategoryIframe(collegeData, 'ecv');
+    updateBarchartSelectedCategoryIframe(collegeData, 'pcs');
+    updateBarchartSelectedCategoryIframe(collegeData, 'ths');
+  //  updateScatterplotIframe(collegeData);
 }
 
 // Event listener for DOMContentLoaded
