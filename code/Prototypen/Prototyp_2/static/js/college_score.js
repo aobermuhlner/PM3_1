@@ -58,13 +58,57 @@ function updateLeaderboard(data) {
     data.forEach((college, index) => {
         const collegeDiv = document.createElement('div');
         collegeDiv.classList.add('leaderboard-entry');
+
+        const collegeDetailsDiv = document.createElement('div');
+        collegeDetailsDiv.classList.add('college-details', 'hidden');
+        collegeDetailsDiv.innerHTML = `
+            <div>Name: ${college.CollegeName}</div>
+            <div>Score: ${college.collegeTotalScore.toFixed(2)}</div>
+            <div>Latitude: ${college.lat}</div>
+            <div>Longitude: ${college.lon}</div>
+        `;
+
         collegeDiv.innerHTML = `
             <div class="rank">${index + 1}</div>
             <div class="college-name">${college.CollegeName}</div>
             <div class="score">Score: ${college.collegeTotalScore.toFixed(2)}</div>
         `;
+        collegeDiv.appendChild(collegeDetailsDiv);
+
+        collegeDiv.addEventListener('click', () => {
+            collegeDetailsDiv.classList.toggle('hidden');
+        });
+
         leaderboardDiv.appendChild(collegeDiv);
     });
+
+    // Select the first entry by default if it exists
+    if (leaderboardDiv.firstChild) {
+        selectCollegeEntry(leaderboardDiv.firstChild, data[0]);
+    }
+}
+
+function selectCollegeEntry(element, collegeData) {
+    // Remove 'selected' class from all entries
+    document.querySelectorAll('.leaderboard-entry').forEach(entry => {
+        entry.classList.remove('selected');
+    });
+
+    // Add 'selected' class to the clicked element
+    element.classList.add('selected');
+
+    // Prepare to extract data from the row
+    console.log("Selected College:", collegeData);
+    element.classList.add('selected');
+
+    ///////////////
+    const distanceKm = document.getElementById('distanceSlider').value / 10;
+    //////////////////
+
+    // Call functions to update the plots
+    updateBarchartCategoryIframe(collegeData);
+    updateBarchartSelectedCategoryIframe(collegeData);
+    updateScatterplotIframe
 }
 
 // Event listener for DOMContentLoaded

@@ -121,8 +121,6 @@ def calculate_college_score():
                 print(amenity)
                 collegeAmenities.append({
                     'amenityName': amenity['amenity'],
-            #        'category': amenity['category'],
-             #       'city': amenity['addr:city'],
                     'amenityDistanceToCollege': distanceAmenity,
                     'amenityRelevance': relevance,
                     'amenityScore': score
@@ -130,7 +128,9 @@ def calculate_college_score():
             results.append({
                 'CollegeName': college['nameCollege'],
                 'collegeTotalScore': collegeScore,
-                'amenities': collegeAmenities
+                'amenities': collegeAmenities,
+                'lat': college['lat'],
+                'lon': college['lon']
             })
         print(results)
 

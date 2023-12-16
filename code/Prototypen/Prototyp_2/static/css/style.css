@@ -263,7 +263,7 @@ h2 {
     padding: 0;
     margin: 0;
     overflow-y: auto;
-    max-height: 400px; /* Adjust based on your preference */
+    max-height: 650px; /* Adjust based on your preference */
     border-radius: 5px;
     background-image: linear-gradient(to bottom, #77B2B5, #FFFDE9);
 }
@@ -276,13 +276,17 @@ h2 {
 .leaderboard div:hover {
     background-color: #9FC9C4;
 }
+.hidden {
+    display: none;
+}
 
 .college-details {
-    max-width: 600px;
-    margin: 20px auto;
+    background-color: #f1f1f1;
     padding: 10px;
-    border-radius: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
 }
+
 
 .leaderboard-entry {
     display: flex;
@@ -302,4 +306,7 @@ h2 {
 
 .score {
     text-align: right;
+}
+.leaderboard-entry.selected {
+    border: 2px solid orange;
 }
