@@ -106,10 +106,35 @@ function aggregateAmenityScores(data) {
     //for (let amenity in scoreSum) {
       //  scoreSum[amenity] = Math.round(scoreSum[amenity] * 10) / 10;
     //}
+    mapScoresToRange(scoreSum, 5);
     console.log(scoreSum)
     //return JSON.stringify(scoreSum, null, 2); // Convert the result to JSON format
 }
+function mapScoresToRange(data, newMax) {
+    let maxVal = 0;
 
+    // Finden Sie den maximalen Wert, der größer als 0 ist
+    for (let key in data) {
+        if (data[key] > maxVal && data[key] > 0) {
+            maxVal = data[key];
+        }
+    }
+
+    // Berechnen Sie den Umrechnungsfaktor
+    const factor = newMax / maxVal;
+
+    // Wenden Sie die Umrechnung auf jeden Wert an und runden Sie auf das nächstgelegene 0,5
+    for (let key in data) {
+        if (data[key] > 0) {
+            let mappedValue = data[key] * factor;
+            data[key] = Math.round(mappedValue * 2) / 2;
+        }
+    }
+
+    console.log("gerundete daten")
+    console.log(data)
+    //return data;
+}
 
 function selectCollegeEntry(element, collegeData) {
     // Remove 'selected' class from all entries
