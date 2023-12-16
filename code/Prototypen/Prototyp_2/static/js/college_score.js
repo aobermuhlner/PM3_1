@@ -73,11 +73,13 @@ function updateLeaderboard(data) {
             <div class="score">Score: ${college.collegeTotalScore.toFixed(2)}</div>
         `;
         collegeDiv.appendChild(collegeDetailsDiv);
-
+/*
         collegeDiv.addEventListener('click', () => {
             collegeDetailsDiv.classList.toggle('hidden');
-        });
+        });*/
 
+        leaderboardDiv.appendChild(collegeDiv);
+        collegeDiv.addEventListener('click', () => selectCollegeEntry(collegeDiv, college));
         leaderboardDiv.appendChild(collegeDiv);
     });
 
@@ -92,9 +94,6 @@ function selectCollegeEntry(element, collegeData) {
     document.querySelectorAll('.leaderboard-entry').forEach(entry => {
         entry.classList.remove('selected');
     });
-
-    // Add 'selected' class to the clicked element
-    element.classList.add('selected');
 
     // Prepare to extract data from the row
     console.log("Selected College:", collegeData);
