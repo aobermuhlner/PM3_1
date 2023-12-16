@@ -53,12 +53,18 @@
                 datasets: [{
                     label: 'Amenities distance to university in meters',
                     data: scatterData,
-                    backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                     backgroundColor: 'rgba(0, 100, 0, 1)',
                     pointRadius: 5,
                     pointHoverRadius: 10
                 }]
             },
             options: {
+                           plugins: {
+        legend: {
+            display: false // nott showing legend
+        }
+        
+    },
                 scales: {
                     y: { 
                         beginAtZero: true,
@@ -71,13 +77,16 @@
                     x: {
                         beginAtZero: true,
                         min: 0,
-                        max: 500,
+                        max: 501,
                         ticks: {
                             stepSize: 100
                         },
                         title: {
                             display: true,
                             text: 'Distance from selected building in meters'
+                        },
+                        label: String {
+                            tostring
                         }
                     }
                 },

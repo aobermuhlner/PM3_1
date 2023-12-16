@@ -21,7 +21,9 @@ def some_route():
     return jsonify({"message": "This is an example from amenities.py"})
 
 
-def fetch_nearby_amenities(latitude, longitude, distance_km, category=None, limit=100000):
+def fetch_nearby_amenities(
+    latitude, longitude, distance_km, category=None, limit=100000
+):
     """
     Core functionality to fetch nearby amenities.
     """
@@ -143,8 +145,8 @@ def get_amenities_scatterplot():
     #    yaxis = None
     # Call the helper function
     data = fetch_nearby_amenities(latitude, longitude, distance_km, category, limit)
-    for doc in data:
-        print(doc)
+    # for doc in data:
+    #    print(doc)
     # Your input coordinates as a tuple.
     input_coordinates = (latitude, longitude)
     # Initialize a dictonary to store distances from the input coordinates to each amenity.
@@ -157,13 +159,13 @@ def get_amenities_scatterplot():
 
         # extract name
         name = item.get("name", item.get("amenity", "default"))
-        print(name)
+        # print(name)
         # Calculate the geodesic distance (in meters) from the input coordinates to the amenity's coordinates.
         # 'geodesic' function computes the shortest distance over the earth's surface.
         # The '.meters' attribute converts the distance to meters.
         distance = geodesic(input_coordinates, object_coordinates).meters
-        print(distance)
-        print(item.get("amenity"))
+        # print(distance)
+        # print(item.get("amenity"))
         # if category in valid_categories:
         fbs = ["bar", "cafe", "fast_food", "food_court", "restaurant", "pub"]
         ecv = [
@@ -205,7 +207,7 @@ def get_amenities_scatterplot():
         elif groupcat == "ths":
             yaxis = 4
         distances[dictid] = (name, distance, yaxis)
-        print("Added to distances:", distances[dictid])
+        # print("Added to distances:", distances[dictid])
 
         dictid += 1
         # Return the list of distances.
@@ -223,8 +225,14 @@ def get_amenities_barchart():
     distance_km = request.form.get("distance_km", default=0.5, type=float)
     category = request.form.get("category")
     limit = request.form.get("limit", default=10000, type=int)
-    sortbycat = request.form.get("sortbycat", default=False, type=bool)
 
+    # Correctly handle the 'sortbycat' boolean parameter
+    sortbycat_str = request.form.get("sortbycat", default="false").lower()
+    sortbycat = (
+        sortbycat_str == "true"
+    )  # This will be True only if sortbycat_str is 'true'
+    # This will be True only if sortbycat_str is 'true'
+    print(category, latitude, distance_km, limit, sortbycat)
     # Call the helper function
     data = fetch_nearby_amenities(latitude, longitude, distance_km, category, limit)
 
