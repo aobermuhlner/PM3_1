@@ -40,7 +40,6 @@ function fetchCollegeScore() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data)
         updateLeaderboard(data); // Call function to update leaderboard
     })
     .catch(error => console.error('Error:', error));
@@ -101,14 +100,15 @@ function selectCollegeEntry(element, collegeData) {
     console.log("Selected College:", collegeData);
     element.classList.add('selected');
 
-    ///////////////
-    const distanceKm = document.getElementById('distanceSlider').value / 10;
-    //////////////////
 
     // Call functions to update the plots
+    updateBarchartSelectedCategoryIframeecv(collegeData);
     updateBarchartCategoryIframe(collegeData);
     updateBarchartSelectedCategoryIframe(collegeData);
-    updateScatterplotIframe
+    updateScatterplotIframe(collegeData);
+    updateBarchartSelectedCategoryIframepcs(collegeData);
+    updateBarchartSelectedCategoryIframeths(collegeData);
+    updateScatterplotIframe(collegeData);
 }
 
 // Event listener for DOMContentLoaded
