@@ -88,6 +88,28 @@ function updateLeaderboard(data) {
         selectCollegeEntry(leaderboardDiv.firstChild, data[0]);
     }
 }
+// function to get amenity score
+function aggregateAmenityScores(data) {
+    const scoreSum = {};
+
+    data.forEach(item => {
+        // If the amenityName is not in scoreSum, initialize it
+        if (!scoreSum[item.amenityName]) {
+            scoreSum[item.amenityName] = 0;
+        }
+
+        // Add the score to the amenityName
+        scoreSum[item.amenityName] += item.amenityScore;
+    });
+
+    // Round the sum to the nearest 0.1 for each amenity
+    //for (let amenity in scoreSum) {
+      //  scoreSum[amenity] = Math.round(scoreSum[amenity] * 10) / 10;
+    //}
+    console.log(scoreSum)
+    //return JSON.stringify(scoreSum, null, 2); // Convert the result to JSON format
+}
+
 
 function selectCollegeEntry(element, collegeData) {
     // Remove 'selected' class from all entries
@@ -100,7 +122,7 @@ function selectCollegeEntry(element, collegeData) {
     element.classList.add('selected');
     console.log(collegeData.CollegeName)
     console.log(collegeData.amenities)
-
+    aggregateAmenityScores(collegeData.amenities);
     // Call functions to update the plots
     updateBarchartCategoryIframe(collegeData);
     console.log("got you")

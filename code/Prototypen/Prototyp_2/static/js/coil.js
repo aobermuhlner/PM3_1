@@ -25,8 +25,8 @@ function updateBarchartSelectedCategoryIframe(params, category) {
 
 // Function to update src for scatterplot iframe
 function updateScatterplotIframe(params) {
-
+    const distanceKm = document.getElementById('distanceSlider').value / 10;
     // Modify the URL and parameters as needed for the scatterplot
-    let iframeUrl = `/static/view/scatterplot_category_adjusted.html?latitude=${params.lat}&longitude=${params.lon}`; // Add more parameters if needed
+    let iframeUrl = `/static/view/scatterplot_category_adjusted.html?latitude=${params.lat}&longitude=${params.lon}&distance_km=${distanceKm}`; // Add more parameters if needed
     document.getElementById('scatterplot').src = iframeUrl;
 }
