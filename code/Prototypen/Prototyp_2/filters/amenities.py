@@ -232,7 +232,7 @@ def get_amenities_barchart():
         sortbycat_str == "true"
     )  # This will be True only if sortbycat_str is 'true'
     # This will be True only if sortbycat_str is 'true'
-    print(category, latitude, distance_km, limit, sortbycat)
+    # print(category, latitude, distance_km, limit, sortbycat)
     # Call the helper function
     data = fetch_nearby_amenities(latitude, longitude, distance_km, category, limit)
 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relevance Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="relevancechart"></canvas>
+    <script>
+        // Function to create a bar chart using Chart.js
+        function createBarChart(data) {
+             // Convert the object into an array of objects
+             console.log(data,"relevancedata")
+    const dataArray = Object.keys(data).map(key => {
+        return {
+            amenityName: key,
+            amenityScore: data[key]
+        };
+    });
+
+    // Now you can use map on dataArray
+    const labels = dataArray.map(item => item.amenityName);
+    const chartData = dataArray.map(item => item.amenityScore);
+            const ctx = document.getElementById('relevancechart').getContext('2d');
+            console.log(chartData)
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: '# of Amenities',
+                        data: chartData,
+                        backgroundColor: 'rgba(144, 238, 144, 0.2)',
+                        borderColor: 'rgba(0, 100, 0, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false // Not showing legend
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            },
+                             title: {
+                            display: true,
+                            text: 'Rating'
+                        }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Event listener for receiving message
+        window.addEventListener('message', function(event) {
+            
+
+            createBarChart(event.data);
+        });
+    </script>
+</body>
+</html>

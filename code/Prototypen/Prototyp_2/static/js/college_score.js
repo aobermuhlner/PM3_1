@@ -1,4 +1,9 @@
-
+// Global scope
+const iframe = document.getElementById('relevancechart');
+iframe.onload = () => {
+    // This is a good place to send any initial data if necessary
+    // For example, you might want to send a default state or initial setup data
+};
 
 function getSelectedColleges() {
     const selectedCollegesDiv = document.getElementById('selectedColleges');
@@ -91,6 +96,7 @@ function updateLeaderboard(data) {
 // function to get amenity score
 function aggregateAmenityScores(data) {
     const scoreSum = {};
+  
 
     data.forEach(item => {
         // If the amenityName is not in scoreSum, initialize it
@@ -102,13 +108,9 @@ function aggregateAmenityScores(data) {
         scoreSum[item.amenityName] += item.amenityScore;
     });
 
-    // Round the sum to the nearest 0.1 for each amenity
-    //for (let amenity in scoreSum) {
-      //  scoreSum[amenity] = Math.round(scoreSum[amenity] * 10) / 10;
-    //}
+
     mapScoresToRange(scoreSum, 5);
     console.log(scoreSum)
-    //return JSON.stringify(scoreSum, null, 2); // Convert the result to JSON format
 }
 function mapScoresToRange(data, newMax) {
     let maxVal = 0;
@@ -134,6 +136,9 @@ function mapScoresToRange(data, newMax) {
     console.log("gerundete daten")
     console.log(data)
     //return data;
+        // Send the data to the iframe
+    const iframe = document.getElementById('relevancechart');
+    iframe.contentWindow.postMessage(data, '*');
 }
 
 function selectCollegeEntry(element, collegeData) {
