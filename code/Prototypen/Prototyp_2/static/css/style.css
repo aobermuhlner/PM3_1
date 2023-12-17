@@ -310,3 +310,14 @@ h2 {
 .leaderboard-entry.selected {
     border: 2px solid orange;
 }
+.flex-container {
+    display: flex; /* This turns the container into a flex container */
+    justify-content: center; /* This defines how items are aligned along the main axis (horizontally in this case) */
+    align-items: stretch; /* This defines how items are aligned along the cross axis (vertically in this case) */
+}
+
+.flex-container > div {
+        flex: 1 1 40%; /* Adjust this percentage so both divs can fit side by side */
+
+    margin: 10px; /* Optional: Adds some space between the divs */
+}

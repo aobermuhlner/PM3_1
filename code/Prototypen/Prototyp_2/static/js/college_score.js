@@ -52,9 +52,12 @@ function fetchCollegeScore() {
 
 // Leaderbaord setup
 // Update leaderboard with college data
+window.lastUsedContainerId = 'coil-container-second'; // Track the last used container
+
 function updateLeaderboard(data) {
     const leaderboardDiv = document.getElementById('leaderboard');
     leaderboardDiv.innerHTML = ''; // Clear existing content
+
     // Sort colleges by their total score in descending order
     data.sort((a, b) => b.collegeTotalScore - a.collegeTotalScore);
 
@@ -78,40 +81,58 @@ function updateLeaderboard(data) {
             <div class="score">Score: ${college.collegeTotalScore.toFixed(2)}</div>
         `;
         collegeDiv.appendChild(collegeDetailsDiv);
-/*
-        collegeDiv.addEventListener('click', () => {
-            collegeDetailsDiv.classList.toggle('hidden');
-        });*/
 
         leaderboardDiv.appendChild(collegeDiv);
-        collegeDiv.addEventListener('click', () => selectCollegeEntry(collegeDiv, college));
-        leaderboardDiv.appendChild(collegeDiv);
+
+        collegeDiv.addEventListener('click', () => {
+            // Determine which container to use next
+            let containerId = window.lastUsedContainerId === 'coil-container' ? 'coil-container-second' : 'coil-container';
+            selectCollegeEntry(collegeDiv, college, containerId);
+            // Update the last used container
+            window.lastUsedContainerId = containerId;
+        });
     });
 
-    // Select the first entry by default if it exists
-    if (leaderboardDiv.firstChild) {
-        selectCollegeEntry(leaderboardDiv.firstChild, data[0]);
+    // Select the first entry by default for the first container, if it exists
+    if (data[0]) {
+        const firstEntry = leaderboardDiv.children[0]; // Get the first entry
+        selectCollegeEntry(firstEntry, data[0], 'coil-container');
+    }
+
+    // Select the second entry by default for the second container, if it exists
+    if (data[1]) {
+        const secondEntry = leaderboardDiv.children[1]; // Get the second entry
+        selectCollegeEntry(secondEntry, data[1], 'coil-container-second');
     }
 }
 // function to get amenity score
-function aggregateAmenityScores(data) {
+function aggregateAmenityScores(data, containerId) {
     const scoreSum = {};
-  
 
     data.forEach(item => {
-        // If the amenityName is not in scoreSum, initialize it
+        // Initialize the score if the amenityName is not already in scoreSum
         if (!scoreSum[item.amenityName]) {
             scoreSum[item.amenityName] = 0;
         }
-
         // Add the score to the amenityName
         scoreSum[item.amenityName] += item.amenityScore;
     });
 
+    // Map the scores to a specified range
+    const aggdata = mapScoresToRange(scoreSum, 5);
+    console.log("Original Data:", scoreSum);
+    console.log("Aggregated Data:", aggdata);
 
-    mapScoresToRange(scoreSum, 5);
-    console.log(scoreSum)
+    // Select the container based on the passed containerId
+    const container = document.getElementById(containerId);
+    // Find the iframe within this container and send the data
+    const iframe = container.querySelector('#relevancechart');
+    if (iframe) {
+        iframe.contentWindow.postMessage(aggdata, '*');
+    }
 }
+
+
 function mapScoresToRange(data, newMax) {
     let maxVal = 0;
 
@@ -133,15 +154,25 @@ function mapScoresToRange(data, newMax) {
         }
     }
 
-    console.log("gerundete daten")
-    console.log(data)
-    //return data;
+    
+    return data;
         // Send the data to the iframe
-    const iframe = document.getElementById('relevancechart');
-    iframe.contentWindow.postMessage(data, '*');
+    
 }
 
-function selectCollegeEntry(element, collegeData) {
+function updateNameinHTML(name, containerId) {
+    // Select the container based on the passed containerId
+    const container = document.getElementById(containerId);
+
+    // Find the element within this container and update its text content
+    const nameElement = container.querySelector('#namestring');
+    if (nameElement) {
+        nameElement.textContent = name;
+    }
+}
+
+
+function selectCollegeEntry(element, collegeData, containerid) {
     // Remove 'selected' class from all entries
     document.querySelectorAll('.leaderboard-entry').forEach(entry => {
         entry.classList.remove('selected');
@@ -152,15 +183,16 @@ function selectCollegeEntry(element, collegeData) {
     element.classList.add('selected');
     console.log(collegeData.CollegeName)
     console.log(collegeData.amenities)
-    aggregateAmenityScores(collegeData.amenities);
+    updateNameinHTML(collegeData.CollegeName,containerid);
+    aggregateAmenityScores(collegeData.amenities,containerid);
     // Call functions to update the plots
-    updateBarchartCategoryIframe(collegeData);
+    updateBarchartCategoryIframe(collegeData, containerid);
     console.log("got you")
-    updateBarchartSelectedCategoryIframe(collegeData, 'fbs');
-    updateBarchartSelectedCategoryIframe(collegeData, 'ecv');
-    updateBarchartSelectedCategoryIframe(collegeData, 'pcs');
-    updateBarchartSelectedCategoryIframe(collegeData, 'ths');
-    updateScatterplotIframe(collegeData);
+    updateBarchartSelectedCategoryIframe(collegeData, 'fbs',containerid);
+    updateBarchartSelectedCategoryIframe(collegeData, 'ecv',containerid);
+    updateBarchartSelectedCategoryIframe(collegeData, 'pcs',containerid);
+    updateBarchartSelectedCategoryIframe(collegeData, 'ths', containerid);
+    updateScatterplotIframe(collegeData, containerid);
 }
 
 // Event listener for DOMContentLoaded
