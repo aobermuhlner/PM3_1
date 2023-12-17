@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Scatter Plot </title>
+    <title>Scatter Plot</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -10,11 +10,9 @@
     <canvas id="scatterChart"></canvas>
 </div>
 
-
 <script>
     // Function to fetch amenities data and create a scatter plot
     function fetchAmenitiesAndCreateScatterPlot(latitude, longitude, distanceKm, category, limit) {
-        // Prepare form data
         const formData = new FormData();
         formData.append('latitude', latitude);
         formData.append('longitude', longitude);
@@ -22,7 +20,6 @@
         formData.append('category', category);
         formData.append('limit', limit);
 
-        // Fetch request with form data
         fetch('/amenities/get_amenitites_nearby_scatter', {
             method: 'POST',
             body: formData
@@ -34,55 +31,55 @@
         .catch(error => console.error('Error fetching scatterplot data:', error));
     }
 
+    // Function to adjust point radius based on overlap
+    function adjustPointRadius(data) {
+        const pointCounts = {};
+        data.forEach(item => {
+            const key = `${item.x.toFixed(2)}_${item.y.toFixed(2)}`;
+            pointCounts[key] = (pointCounts[key] || 0) + 1;
+        });
+
+        return data.map(item => {
+            const key = `${item.x.toFixed(2)}_${item.y.toFixed(2)}`;
+            return { ...item, pointRadius: 5 + (pointCounts[key] - 1) * 6 }; // the last number is the overlap increment
+        });
+    }
+
     // Function to create a scatter plot using Chart.js
     function createScatterPlot(data) {
-        // Transform the data to fit Chart.js scatter plot structure
         const scatterData = Object.values(data).map(item => ({
-            x: item[1], // distance
-            y: item[2] || 0, // y-axis value (category or default to 0)
-            name: item[0] // name of the amenity
+            x: item[1],
+            y: item[2] || 0,
+            name: item[0]
         }));
 
-        // Get the canvas context
+        const adjustedData = adjustPointRadius(scatterData);
+
         const ctx = document.getElementById('scatterChart').getContext('2d');
-        
-        // Create a scatter plot
-        const myScatter = new Chart(ctx, {
+
+        new Chart(ctx, {
             type: 'scatter',
             data: {
                 datasets: [{
                     label: 'Amenities distance to university in meters',
-                    data: scatterData,
-                     backgroundColor: 'rgba(0, 100, 0, 1)',
-                    pointRadius: 5,
+                    data: adjustedData,
+                    backgroundColor: 'rgba(0, 100, 0, 1)',
+                    pointRadius: context => context.raw.pointRadius,
                     pointHoverRadius: 10
                 }]
             },
             options: {
-                           plugins: {
-        legend: {
-            display: false // nott showing legend
-        }
-        
-    },
                 scales: {
-                    y: { 
+                    y: {
                         beginAtZero: true,
                         min: 0,
                         max: 5,
                         ticks: {
                             stepSize: 1,
-                             callback: function(value, index, values) {
-                            // Hier kannst du die Y-Werte (Kategorien) nach Bedarf umwandeln
-                            // Zum Beispiel, wenn die Y-Werte Zahlen sind, kannst du sie in Kategorien übersetzen
-                            if (value === 0) return '';
-                            if (value === 1) return 'Food and Beverage Services';
-                            if (value === 2) return 'Entertainment and Cultural Venues';
-                            if (value === 3) return 'Public and Civic Services';
-                            if (value === 4) return 'Transportation and Health Services';
-                            if (value === 5) return '';
-                            return value; // Standardfall, wenn keine Übersetzung erfolgt
-                        }
+                            callback: function(value) {
+                                const categories = ['', 'Food and Beverage Services', 'Entertainment and Cultural Venues', 'Public and Civic Services', 'Transportation and Health Services', ''];
+                                return categories[value] || value;
+                            }
                         }
                     },
                     x: {
@@ -113,20 +110,11 @@
         });
     }
 
-    // Extract URL parameters and call the function on page load
     window.onload = function() {
         const urlParams = new URLSearchParams(window.location.search);
-        const latitude = urlParams.get('latitude');
-        const longitude = urlParams.get('longitude');
-        const distanceKm = urlParams.get('distance_km');
-        const category = urlParams.get('category');
-        const limit = urlParams.get('limit');
-
-        fetchAmenitiesAndCreateScatterPlot(latitude, longitude, distanceKm, category, limit);
+        fetchAmenitiesAndCreateScatterPlot(urlParams.get('latitude'), urlParams.get('longitude'), urlParams.get('distance_km'), urlParams.get('category'), urlParams.get('limit'));
     }
 </script>
 
-
 </body>
 </html>
-
