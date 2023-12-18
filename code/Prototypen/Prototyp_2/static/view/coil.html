@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
         }
+
         .container {
             width: 80%;
             margin: 0 auto;
@@ -18,21 +19,25 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .chart-container {
             position: relative;
-            height:40vh; 
-            width:80vw;
+            height: 40vh;
+            width: 80vw;
             margin-top: 20px;
         }
+
         .input-group {
             margin-bottom: 20px;
         }
+
         .form-control {
             margin: 10px 0;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
+
         .btn {
             padding: 10px 20px;
             background-color: #007bff;
@@ -41,15 +46,18 @@
             color: white;
             cursor: pointer;
         }
+
         .btn:hover {
             background-color: #0056b3;
         }
+
         hr {
             margin-top: 20px;
             margin-bottom: 20px;
             border: 0;
             border-top: 2px solid #eee;
         }
+
         .card {
             background: #f9f9f9;
             border: 1px solid #ddd;
@@ -66,90 +74,66 @@
         <h3 id="namestring"></h3>
 
 
-
-        <h3>Amenities nearby- sorted by category</h3>
+        <h4>Amenities nearby- sorted by category</h4>
         <!-- integrating iframe -->
 
         <iframe id="barchartcategory" width="100%" height="400"></iframe>
 
 
-
-
     </div>
-     <div class="card" id="nearest-sorted-categoryfbs">
-        <h3>Amenities nearby- Food and Beverage Services</h3>
+    <div class="card" id="nearest-sorted-categoryfbs">
+        <h4>Amenities nearby- Food and Beverage Services</h4>
         <!-- integrating iframe -->
 
         <iframe id="barchartselectedcategoryfbs" width="100%" height="400"></iframe>
 
 
-
-
     </div>
-   
-     <div class="card" id="nearest-sorted-categoryecv">
-        <h3>Amenities nearby- Entertainment and Cultural Venues</h3>
+
+    <div class="card" id="nearest-sorted-categoryecv">
+        <h4>Amenities nearby- Entertainment and Cultural Venues</h4>
         <!-- integrating iframe -->
 
         <iframe id="barchartselectedcategoryecv" width="100%" height="400"></iframe>
 
 
-
-
     </div>
-     <div class="card" id="nearest-sorted-categorypcs">
-        <h3>Amenities nearby- Public and Civic Services</h3>
+    <div class="card" id="nearest-sorted-categorypcs">
+        <h4>Amenities nearby- Public and Civic Services</h4>
         <!-- integrating iframe -->
 
         <iframe id="barchartselectedcategorypcs" width="100%" height="400"></iframe>
 
 
-
-
     </div>
-     <div class="card" id="nearest-sorted-categoryths">
-        <h3>Amenities nearby- Transportation and Health Services</h3>
+    <div class="card" id="nearest-sorted-categoryths">
+        <h4>Amenities nearby- Transportation and Health Services</h4>
         <!-- integrating iframe -->
 
         <iframe id="barchartselectedcategoryths" width="100%" height="400"></iframe>
 
 
-
-
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="card" id="distance_scatter">
-        <h3>Amenities- Distance from selected building</h3>
+        <h4>Amenities- Distance from selected building</h4>
         <!-- Form or details will be filled by JavaScript -->
-                <iframe id="scatterplot" width="100%" height="550"></iframe>
+        <iframe id="scatterplot" width="100%" height="550"></iframe>
 
     </div>
 
     <div class="card" id="relevance_chart">
-        <h3>Relevance Chart</h3>
+        <h4>Relevance Chart</h4>
         <!-- Embedded map or link to map will be filled by JavaScript -->
-                        <iframe id="relevancechart"src="/static/view/relevancechart.html" width="100%" height="550"></iframe>
+        <iframe id="relevancechart" src="/static/view/relevancechart.html" width="100%" height="550"></iframe>
 
     </div>
-  
+
 </div>
 
 
-    <script src="/static/js/coil.js"></script>
+<script src="/static/js/coil.js"></script>
 
 </body>
 </html>
