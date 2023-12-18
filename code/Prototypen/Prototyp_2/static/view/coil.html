@@ -16,9 +16,7 @@
             width: 80%;
             margin: 0 auto;
             background: transparent;
-
-            padding: None;
-            box-shadow:None;
+            box-shadow: None;
         }
 
         .chart-container {
@@ -62,35 +60,33 @@
         .card {
             background: transparent;
             border: None;
-            padding: None;
-            border-radius: None;
             margin-bottom: 20px;
         }
-        
+
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="card" id="nearest-sorted-category">
-        <h4 id="namestring"></h4>
+        <h5 id="namestring"></h5>
 
 
-        <h4>Amenities nearby- sorted by category</h4>
+        <h5>Amenities nearby- sorted by category</h5>
         <!-- integrating iframe -->
 
         <iframe id="barchartcategory" width="100%" height="400"></iframe>
 
 
     </div>
-      <div class="card" id="relevance_chart">
-        <h4>Relevance Chart</h4>
+    <div class="card" id="relevance_chart">
+        <h5>Relevance Chart</h5>
         <!-- Embedded map or link to map will be filled by JavaScript -->
         <iframe id="relevancechart" src="/static/view/relevancechart.html" width="100%" height="550"></iframe>
 
     </div>
     <div class="card" id="nearest-sorted-categoryfbs">
-        <h4>Amenities nearby- Food and Beverage Services</h4>
+        <h5>Amenities nearby- Food and Beverage Services</h5>
         <!-- integrating iframe -->
 
         <iframe id="barchartselectedcategoryfbs" width="100%" height="400"></iframe>
@@ -99,7 +95,7 @@
     </div>
 
     <div class="card" id="nearest-sorted-categoryecv">
-        <h4>Amenities nearby- Entertainment and Cultural Venues</h4>
+        <h5>Amenities nearby- Entertainment and Cultural Venues</h5>
         <!-- integrating iframe -->
 
         <iframe id="barchartselectedcategoryecv" width="100%" height="400"></iframe>
@@ -107,7 +103,7 @@
 
     </div>
     <div class="card" id="nearest-sorted-categorypcs">
-        <h4>Amenities nearby- Public and Civic Services</h4>
+        <h5>Amenities nearby- Public and Civic Services</h5>
         <!-- integrating iframe -->
 
         <iframe id="barchartselectedcategorypcs" width="100%" height="400"></iframe>
@@ -115,7 +111,7 @@
 
     </div>
     <div class="card" id="nearest-sorted-categoryths">
-        <h4>Amenities nearby- Transportation and Health Services</h4>
+        <h5>Amenities nearby- Transportation and Health Services</h5>
         <!-- integrating iframe -->
 
         <iframe id="barchartselectedcategoryths" width="100%" height="400"></iframe>
@@ -125,13 +121,12 @@
 
 
     <div class="card" id="distance_scatter">
-        <h4>Amenities- Distance from selected building</h4>
+        <h5>Amenities- Distance from selected building</h5>
         <!-- Form or details will be filled by JavaScript -->
         <iframe id="scatterplot" width="100%" height="550"></iframe>
 
     </div>
 
-  
 
 </div>
 

@@ -155,7 +155,7 @@ input[type=range].form-control-range {
     height: 15px; /* Specified height */
     background: #FFF1B8; /* Grey background */
     outline: black; /* Remove outline */
-    opacity: 0.7; /* Set transparency (cross-browser) */
+    opacity: 0.7;   /* Set transparency (cross-browser) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
     margin-bottom: 20px; /* Increase bottom margin */
@@ -232,6 +232,10 @@ h3 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     transition: color 0.3s ease; /* Smooth transition for hover effect */
     outline-color: black;
+}
+
+h5 {
+    text-align: center; /* Center-align the title */
 }
 
 h1:hover {

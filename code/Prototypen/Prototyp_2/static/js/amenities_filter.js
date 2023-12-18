@@ -56,10 +56,10 @@ function createAmenitiesSection(sectionName, amenities) {
         inputElement.type = 'range';
         inputElement.className = 'form-control-range';
         inputElement.id = id;
-        inputElement.setAttribute('min', '1');
-        inputElement.setAttribute('max', '5');
+        inputElement.setAttribute('min', '0');
+        inputElement.setAttribute('max', '4');
         inputElement.setAttribute('step', '1');
-        inputElement.value = '3';
+        inputElement.value = '2';
 
         // Set the data-tooltip attribute for custom tooltip
         inputElement.setAttribute('data-tooltip', 'Left: Not Interested | Center: Moderately Interested | Right: Very Interested');

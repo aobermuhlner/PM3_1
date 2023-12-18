@@ -8,23 +8,29 @@
 <body>
     <canvas id="relevancechart"></canvas>
     <script>
+        let myChart = null; // Global variable to keep track of the chart instance
+
         // Function to create a bar chart using Chart.js
         function createBarChart(data) {
-             // Convert the object into an array of objects
-             console.log(data,"relevancedata")
-    const dataArray = Object.keys(data).map(key => {
-        return {
-            amenityName: key,
-            amenityScore: data[key]
-        };
-    });
+            // Convert the object into an array of objects
+            console.log(data, "relevancedata");
+            const dataArray = Object.keys(data).map(key => {
+                return {
+                    amenityName: key,
+                    amenityScore: data[key]
+                };
+            });
 
-    // Now you can use map on dataArray
-    const labels = dataArray.map(item => item.amenityName);
-    const chartData = dataArray.map(item => item.amenityScore);
+            const labels = dataArray.map(item => item.amenityName);
+            const chartData = dataArray.map(item => item.amenityScore);
             const ctx = document.getElementById('relevancechart').getContext('2d');
-            console.log(chartData)
-            new Chart(ctx, {
+
+            // Destroy the previous chart instance if it exists
+            if (myChart) {
+                myChart.destroy();
+            }
+
+            myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: labels,
@@ -48,10 +54,10 @@
                             ticks: {
                                 stepSize: 1
                             },
-                             title: {
-                            display: true,
-                            text: 'Rating weight in %'
-                        }
+                            title: {
+                                display: true,
+                                text: 'Rating weight in %'
+                            }
                         }
                     }
                 }
@@ -60,8 +66,6 @@
 
         // Event listener for receiving message
         window.addEventListener('message', function(event) {
-            
-
             createBarChart(event.data);
         });
     </script>

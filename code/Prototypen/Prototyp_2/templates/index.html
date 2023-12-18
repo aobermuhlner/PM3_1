@@ -6,7 +6,8 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -34,14 +35,14 @@
 
 
 <div class="sample-header">
-  <div class="sample-header-section">
-    <h1>College Life Quality Evaluator</h1>
-  </div>
+    <div class="sample-header-section">
+        <h1>College Life Quality Evaluator</h1>
+    </div>
 </div>
 
 <body>
-    <div class="sample-section-wrap">
-        <div class="sample-section">
+<div class="sample-section-wrap">
+    <div class="sample-section">
         <div class="container-fluid">
             <div class="container-fluid2">
                 <div class="row my-3">
@@ -50,31 +51,31 @@
                         <div class="heading-container">
                             <h2>Colleges</h2>
                             <button id="infoButton"
-                                data-tooltip="This section allows you to filter colleges based on criteria such as College Type and City. After selecting your preferred criteria, press the 'Filter Colleges' button to display all colleges that meet the requirements below the button. To remove a college from the list, click the red close button on the right side of the college entry. Once you are satisfied with your selected colleges, you can proceed to the Amenities Filter section."
-                                data-tooltip-location="bottom">
-                                    Info
+                                    data-tooltip="This section allows you to filter colleges based on criteria such as College Type and City. After selecting your preferred criteria, press the 'Filter Colleges' button to display all colleges that meet the requirements below the button. To remove a college from the list, click the red close button on the right side of the college entry. Once you are satisfied with your selected colleges, you can proceed to the Amenities Filter section."
+                                    data-tooltip-location="bottom">
+                                Info
                             </button>
                         </div>
-                            <div class="college-filter">
-                                <!-- City FILTER -->
-                                <select id="cityFilter">
-                                    <option value="">Select City</option>
-                                </select>
-                                <div id="selectedCities"></div>
+                        <div class="college-filter">
+                            <!-- City FILTER -->
+                            <select id="cityFilter">
+                                <option value="">Select City</option>
+                            </select>
+                            <div id="selectedCities"></div>
 
-                                <!-- College Category -->
-                                <select id="categoryFilter">
-                                    <option value="">Select Category</option>
-                                    <option value="UH">University </option>
-                                    <option value="FH">University of Applied Sciences</option>
-                                    <option value="PH">College of Education</option>
-                                </select>
+                            <!-- College Category -->
+                            <select id="categoryFilter">
+                                <option value="">Select Category</option>
+                                <option value="UH">University</option>
+                                <option value="FH">University of Applied Sciences</option>
+                                <option value="PH">College of Education</option>
+                            </select>
 
-                                <div id="selectedCollegeCategories"></div>
-                                <hr class="hr" />
-                                <button id="filterCollegesBtn" class="btn btn-dark">Filter Colleges</button>
-                                <div id="selectedColleges"></div>
-                            </div>
+                            <div id="selectedCollegeCategories"></div>
+                            <hr class="hr"/>
+                            <button id="filterCollegesBtn" class="btn btn-dark">Filter Colleges</button>
+                            <div id="selectedColleges"></div>
+                        </div>
                     </div>
 
                     <!-- MAP -->
@@ -85,26 +86,28 @@
                         <div class="heading-container">
                             <h2>Amenities</h2>
                             <button id="infoButton"
-                                data-tooltip="In the Amenity filter section, you can first decide what distance from the college is relevant for your college life quality calculation. You can change the distance using the first slider, choosing a value between 0.1km and 0.5km. When you are happy with your choice of distance, press the 'Show Amenities' Button, so that all the amenities around the selected colleges will be displayed. In the section underneath, you can set up the relevance of all the amenities that can be observed. Move the slider to the very left if you don't care about a given amenity, to the middle if you are moderately interested, or to the very right if you think it is an important amenity for you. Once you are done setting up your amenity list, you can press the 'Calculate College Score' button to determine which college offers the highest life quality, according to your own priorities."
-                                data-tooltip-location="bottom">
-                                    Info
+                                    data-tooltip="In the Amenity filter section, you can first decide what distance from the college is relevant for your college life quality calculation. You can change the distance using the first slider, choosing a value between 0.1km and 0.5km. When you are happy with your choice of distance, press the 'Show Amenities' Button, so that all the amenities around the selected colleges will be displayed. In the section underneath, you can set up the relevance of all the amenities that can be observed. Move the slider to the very left if you don't care about a given amenity, to the middle if you are moderately interested, or to the very right if you think it is an important amenity for you. Once you are done setting up your amenity list, you can press the 'Calculate College Score' button to determine which college offers the highest life quality, according to your own priorities."
+                                    data-tooltip-location="bottom">
+                                Info
                             </button>
                         </div>
                         <!-- Range distance -->
                         <div class="form-group"><label for="distanceSlider">Distance to College (in kilometers):</label>
-                        <input type="range" class="form-control-range" id="distanceSlider" min="1" max="5" value="3" data-tooltip="3 km">
+                            <input type="range" class="form-control-range" id="distanceSlider" min="1" max="5" value="3"
+                                   data-tooltip="3 km">
 
-                        <button id="showAmenitiesBtn" class="btn btn-dark">Show Amenities</button>
-                        <hr class="hr" />
-                        <!-- Amenities  -->
-                        <h2>Amenity Relevance</h2>
-                        <div id="dynamicAmenitiesContainer"></div>
-                        <button id="calculateCollegeScore" class="btn btn-dark">Calculate College Score</button>
+                            <button id="showAmenitiesBtn" class="btn btn-dark">Show Amenities</button>
+                            <hr class="hr"/>
+                            <!-- Amenities  -->
+                            <h2>Amenity Relevance</h2>
+                            <div id="dynamicAmenitiesContainer"></div>
+                            <button id="calculateCollegeScore" class="btn btn-dark">Calculate College Score</button>
+                        </div>
+
+
                     </div>
-
-
                 </div>
-                <hr class="hr" />
+                <hr class="hr"/>
                 <h1>College Leaderboard</h1>
                 <div class="leaderboard-container">
                     <h3>Top Colleges</h3>
@@ -113,28 +116,37 @@
                     </div>
                 </div>
 
-                <hr class="hr" />
+                <hr class="hr"/>
                 <div class="flex-container">
                     <div id="coil-container"></div>
-                 <!--    <div id="coil-container-second"></div>-->
-                </div>
+                    <div id="coil-container-second"></div>
+                    <!--    <div id="coil-container-second"></div>-->
+                </div>>
 
 
             </div>
-        </div>
 
-      </div>
+        </div>
     </div>
 
 </div>
 <script>
-    window.onload = function() {
+    function cloneElement() {
         var original = document.getElementById('coil-container');
         if (original) {
             var clone = original.cloneNode(true); // true for a deep clone
             clone.id = 'coil-container-second'; // Optionally change the ID
+            clone.id = 'coil-container-second'; // Change the ID to make it unique
             original.parentNode.insertBefore(clone, original.nextSibling);
+            console.log("executed clone");
+        } else {
+            console.log("original not found, waiting 10ms");
+            setTimeout(cloneElement, 10); // Try again in 10ms
         }
+    }
+
+    window.onload = function () {
+        cloneElement();
     }
 </script>
 </body>
