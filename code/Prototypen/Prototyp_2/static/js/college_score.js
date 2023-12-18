@@ -1,9 +1,11 @@
 // Global scope
 const iframe = document.getElementById('relevancechart');
+/*
 iframe.onload = () => {
     // This is a good place to send any initial data if necessary
     // For example, you might want to send a default state or initial setup data
 };
+*/
 
 function getSelectedColleges() {
     const selectedCollegesDiv = document.getElementById('selectedColleges');

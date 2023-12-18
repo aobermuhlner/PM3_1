@@ -60,20 +60,15 @@ function createAmenitiesSection(sectionName, amenities) {
         inputElement.setAttribute('max', '5');
         inputElement.setAttribute('step', '1');
         inputElement.value = '3';
+
+        // Set the data-tooltip attribute for custom tooltip
+        inputElement.setAttribute('data-tooltip', 'Left: Not Interested | Center: Moderately Interested | Right: Very Interested');
+
         formGroup.appendChild(inputElement);
-
-        // Tooltip title
-        var tooltipTitle = "Left: Not Interested | Center: Moderately Interested | Right: Very Interested";;
-
-        // Initialize Bootstrap tooltip
-        $(inputElement).tooltip({
-            title: tooltipTitle,
-            placement: 'top',
-            trigger: 'hover'
-        });
 
         return formGroup;
     }
+
 
     // Loop through each amenity and append a range input to the collapse container
     amenities.forEach(amenity => {
@@ -106,33 +101,36 @@ function toggleCollapse(sectionId, icon) {
 document.addEventListener('DOMContentLoaded', function() {
     // Food & Drink
     var foodDrinkAmenities = ['bar', 'cafe', 'fast_food', 'food_court', 'restaurant', 'pub'];
-    var foodDrinkSection = createAmenitiesSection('Food & Drinks', foodDrinkAmenities);
+    var foodDrinkSection = createAmenitiesSection('Food and Beverage Services', foodDrinkAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(foodDrinkSection);
 
     // Entertainment & Culture
     var entertainmentCultureAmenities = ['arts_centre', 'casino', 'cinema', 'events_venue', 'music_venue', 'nightclub', 'theatre', 'library'];
-    var entertainmentCultureSection = createAmenitiesSection('Entertainment & Culture', entertainmentCultureAmenities);
+    var entertainmentCultureSection = createAmenitiesSection('Entertainment, Culture and Venues', entertainmentCultureAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(entertainmentCultureSection);
 
     // Financial Services and Postal & Communication
     var financialPostalAmenities = ['atm', 'bank', 'post_box', 'post_office'];
-    var financialPostalSection = createAmenitiesSection('Financial & Postal Services', financialPostalAmenities);
+    var financialPostalSection = createAmenitiesSection('Public and Civil Services', financialPostalAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(financialPostalSection);
 
     // Transportation
-    var transportationAmenities = ['bus_station', 'bicycle_parking', 'bicycle_repair_station'];
-    var transportationSection = createAmenitiesSection('Transportation', transportationAmenities);
+    var transportationAmenities = ['bus_station', 'bicycle_parking', 'bicycle_repair_station', 'doctors', 'hospital', 'pharmacy', 'police'];
+    var transportationSection = createAmenitiesSection('Transportation and Health Services', transportationAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(transportationSection);
-
-    // Health & Safety
-    var healthSafetyAmenities = ['doctors', 'hospital', 'pharmacy', 'police'];
-    var healthSafetySection = createAmenitiesSection('Health & Safety', healthSafetyAmenities);
-    document.getElementById('dynamicAmenitiesContainer').appendChild(healthSafetySection);
 
     // Event listener for the "Show Amenities" button
     document.getElementById('showAmenitiesBtn').addEventListener('click', function() {
         showSelectedCollegesAmenities();
     });
+
+    function updateTooltip() {
+        distanceSlider.setAttribute('data-tooltip', distanceSlider.value/10 + ' km');
+    }
+    // Initialize the tooltip with the current value
+    updateTooltip();
+    // Event listener for changes in the range slider
+    distanceSlider.addEventListener('input', updateTooltip);
 
 });
 
