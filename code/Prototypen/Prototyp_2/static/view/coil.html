@@ -17,8 +17,8 @@
             margin: 0 auto;
             background: transparent;
 
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: None;
+            box-shadow:None;
         }
 
         .chart-container {
@@ -60,12 +60,13 @@
         }
 
         .card {
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 4px;
+            background: transparent;
+            border: None;
+            padding: None;
+            border-radius: None;
             margin-bottom: 20px;
         }
+        
     </style>
 </head>
 <body>
@@ -80,6 +81,12 @@
 
         <iframe id="barchartcategory" width="100%" height="400"></iframe>
 
+
+    </div>
+      <div class="card" id="relevance_chart">
+        <h4>Relevance Chart</h4>
+        <!-- Embedded map or link to map will be filled by JavaScript -->
+        <iframe id="relevancechart" src="/static/view/relevancechart.html" width="100%" height="550"></iframe>
 
     </div>
     <div class="card" id="nearest-sorted-categoryfbs">
@@ -124,12 +131,7 @@
 
     </div>
 
-    <div class="card" id="relevance_chart">
-        <h4>Relevance Chart</h4>
-        <!-- Embedded map or link to map will be filled by JavaScript -->
-        <iframe id="relevancechart" src="/static/view/relevancechart.html" width="100%" height="550"></iframe>
-
-    </div>
+  
 
 </div>
 
