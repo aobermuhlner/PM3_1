@@ -55,9 +55,9 @@
 
         const adjustedData = adjustPointRadius(scatterData);
 
-        const ctx = document.getElementById('scatterChart').getContext('2d');
+        const ctxscatter= document.getElementById('scatterChart').getContext('2d');
 
-        new Chart(ctx, {
+        new Chart(ctxscatter, {
             type: 'scatter',
             data: {
                 datasets: [{

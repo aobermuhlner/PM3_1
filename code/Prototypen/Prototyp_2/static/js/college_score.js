@@ -1,9 +1,13 @@
 // Global scope
 const iframe = document.getElementById('relevancechart');
-iframe.onload = () => {
+/*iframe.onload = () => {
     // This is a good place to send any initial data if necessary
     // For example, you might want to send a default state or initial setup data
-};
+    updateNameinHTML("welcome", 'coil-container-second')
+    updateNameinHTML("welcome", 'coil-container')
+    console.log("wrote welcome")
+
+};*/
 
 function getSelectedColleges() {
     const selectedCollegesDiv = document.getElementById('selectedColleges');

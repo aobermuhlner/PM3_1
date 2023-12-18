@@ -319,5 +319,5 @@ h2 {
 .flex-container > div {
         flex: 1 1 40%; /* Adjust this percentage so both divs can fit side by side */
 
-    margin: 10px; /* Optional: Adds some space between the divs */
+    margin: 5px; /* Optional: Adds some space between the divs */
 }

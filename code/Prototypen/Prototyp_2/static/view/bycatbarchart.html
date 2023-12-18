@@ -42,10 +42,10 @@
             const chartData = data.map(item => item[1]);
 
             // Get the canvas context
-            const ctx = document.getElementById('amenitiesChart').getContext('2d');
+            const ctxbar = document.getElementById('amenitiesChart').getContext('2d');
             
             // Create a bar chart
-            const myChart = new Chart(ctx, {
+            const myChart = new Chart(ctxbar, {
                 type: 'bar',
                 data: {
                     labels: labels,

@@ -101,7 +101,6 @@
                 <hr class="hr" />
                 <div class="flex-container">
                     <div id="coil-container"></div>
-                 <!--    <div id="coil-container-second"></div>-->
                 </div>
 
 
@@ -110,14 +109,21 @@
 
       </div>
     </div>
-<script>
+<script >
+    function cloneElement() {
+    var original = document.getElementById('coil-container');
+    if (original) {
+        var clone = original.cloneNode(true); // true for a deep clone
+        clone.id = 'coil-container-second'; // Change the ID to make it unique
+        original.parentNode.insertBefore(clone, original.nextSibling);
+        console.log("executed clone");
+    } else {
+        console.log("original not found, waiting 10ms");
+        setTimeout(cloneElement, 10); // Try again in 10ms
+    }
+}
     window.onload = function() {
-        var original = document.getElementById('coil-container');
-        if (original) {
-            var clone = original.cloneNode(true); // true for a deep clone
-            clone.id = 'coil-container-second'; // Optionally change the ID
-            original.parentNode.insertBefore(clone, original.nextSibling);
-        }
+       cloneElement();
     }
 </script>
 
