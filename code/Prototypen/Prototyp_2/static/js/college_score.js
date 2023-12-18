@@ -1,11 +1,13 @@
 // Global scope
 const iframe = document.getElementById('relevancechart');
-/*
-iframe.onload = () => {
+/*iframe.onload = () => {
     // This is a good place to send any initial data if necessary
     // For example, you might want to send a default state or initial setup data
-};
-*/
+    updateNameinHTML("welcome", 'coil-container-second')
+    updateNameinHTML("welcome", 'coil-container')
+    console.log("wrote welcome")
+
+};*/
 
 function getSelectedColleges() {
     const selectedCollegesDiv = document.getElementById('selectedColleges');
@@ -121,10 +123,10 @@ function aggregateAmenityScores(data, containerId) {
     });
 
     // Map the scores to a specified range
-    const aggdata = mapScoresToRange(scoreSum, 5);
-    console.log("Original Data:", scoreSum);
-    console.log("Aggregated Data:", aggdata);
-
+    console.log("Original Data:",scoreSum)
+    //const aggdata = mapScoresToRange(scoreSum, 5);
+   // console.log("Aggregated Data:", aggdata);
+    aggdata = convertToPercentages(scoreSum)
     // Select the container based on the passed containerId
     const container = document.getElementById(containerId);
     // Find the iframe within this container and send the data
@@ -134,7 +136,7 @@ function aggregateAmenityScores(data, containerId) {
     }
 }
 
-
+/*
 function mapScoresToRange(data, newMax) {
     let maxVal = 0;
 
@@ -162,6 +164,70 @@ function mapScoresToRange(data, newMax) {
     
 }
 
+function convertToPercentages(data) {
+    // Calculate the total sum of all values
+    let total = 0;
+    for (let key in data) {
+        total += data[key];
+    }
+
+    // Convert each value to a percentage of the total
+    for (let key in data) {
+        data[key] = (data[key] / total) * 100;
+    }
+
+    return data;
+}
+*/
+function convertToPercentages(data) {
+    // Define categories
+    const categories = {
+        "Food and Beverage Services": ["bar", "cafe", "fast_food", "food_court", "restaurant", "pub"],
+        "Entertainment, Culture, and Venues": [
+            "arts_centre",
+            "casino",
+            "cinema",
+            "events_venue",
+            "music_venue",
+            "nightclub",
+            "theatre",
+        ],
+        "Public and Civic Services": ["library", "atm", "bank", "police", "post_box", "post_office"],
+        "Transportation and Health Services": [
+            "bus_station",
+            "bicycle_parking",
+            "bicycle_repair_station",
+            "doctors",
+            "hospital",
+            "pharmacy",
+        ],
+    };
+
+    // Initialize a new object to hold the aggregated category scores
+    let categoryScores = {
+        "Food and Beverage Services": 0,
+        "Entertainment, Culture, and Venues": 0,
+        "Public and Civic Services": 0,
+        "Transportation and Health Services": 0,
+    };
+
+    // Aggregate the scores by category
+    for (const category in categories) {
+        categories[category].forEach(amenity => {
+            if (data[amenity]) {
+                categoryScores[category] += data[amenity];
+            }
+        });
+    }
+
+    // Convert each category score to a percentage of the total
+    let total = Object.values(categoryScores).reduce((sum, value) => sum + value, 0);
+    for (const category in categoryScores) {
+        categoryScores[category] = (categoryScores[category] / total) * 100;
+    }
+
+    return categoryScores;
+}
 function updateNameinHTML(name, containerId) {
     // Select the container based on the passed containerId
     const container = document.getElementById(containerId);

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amenities Bar Chart</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js librarybackground: rgb(220, 240, 220) -->
 </head>
 <body>
-    <div style="width: 60%; margin: auto;">
+    <div style="width: 100%;height: 100%; margin: auto;border: None;padding: None;">
         <canvas id="amenitiesChart"></canvas>
     </div>
 
@@ -42,10 +42,10 @@
             const chartData = data.map(item => item[1]);
 
             // Get the canvas context
-            const ctx = document.getElementById('amenitiesChart').getContext('2d');
+            const ctxbar = document.getElementById('amenitiesChart').getContext('2d');
             
             // Create a bar chart
-            const myChart = new Chart(ctx, {
+            const myChart = new Chart(ctxbar, {
                 type: 'bar',
                 data: {
                     labels: labels,
