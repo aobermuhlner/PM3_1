@@ -164,26 +164,13 @@ function mapScoresToRange(data, newMax) {
     
 }
 
-function convertToPercentages(data) {
-    // Calculate the total sum of all values
-    let total = 0;
-    for (let key in data) {
-        total += data[key];
-    }
 
-    // Convert each value to a percentage of the total
-    for (let key in data) {
-        data[key] = (data[key] / total) * 100;
-    }
-
-    return data;
-}
 */
 function convertToPercentages(data) {
     // Define categories
     const categories = {
         "Food and Beverage Services": ["bar", "cafe", "fast_food", "food_court", "restaurant", "pub"],
-        "Entertainment, Culture, and Venues": [
+        "Entertainment and Cultural Venues": [
             "arts_centre",
             "casino",
             "cinema",
@@ -206,7 +193,7 @@ function convertToPercentages(data) {
     // Initialize a new object to hold the aggregated category scores
     let categoryScores = {
         "Food and Beverage Services": 0,
-        "Entertainment, Culture, and Venues": 0,
+        "Entertainment and Cultural Venues": 0,
         "Public and Civic Services": 0,
         "Transportation and Health Services": 0,
     };
