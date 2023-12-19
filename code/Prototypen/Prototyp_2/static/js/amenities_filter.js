@@ -105,12 +105,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('dynamicAmenitiesContainer').appendChild(foodDrinkSection);
 
     // Entertainment & Culture
-    var entertainmentCultureAmenities = ['arts_centre', 'casino', 'cinema', 'events_venue', 'music_venue', 'nightclub', 'theatre', 'library'];
+    var entertainmentCultureAmenities = ['arts_centre', 'casino', 'cinema', 'events_venue', 'music_venue', 'nightclub', 'theatre'];
     var entertainmentCultureSection = createAmenitiesSection('Entertainment, Culture and Venues', entertainmentCultureAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(entertainmentCultureSection);
 
     // Financial Services and Postal & Communication
-    var financialPostalAmenities = ['atm', 'bank', 'post_box', 'post_office'];
+    var financialPostalAmenities = ['atm', 'bank', 'post_box', 'post_office', 'library'];
     var financialPostalSection = createAmenitiesSection('Public and Civil Services', financialPostalAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(financialPostalSection);
 

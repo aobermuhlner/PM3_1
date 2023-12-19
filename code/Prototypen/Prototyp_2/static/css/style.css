@@ -159,6 +159,7 @@ input[type=range].form-control-range {
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
     margin-bottom: 20px; /* Increase bottom margin */
+    z-index: 1;
 }
 
 input[type=range].form-control-range::-webkit-slider-thumb {
@@ -168,6 +169,7 @@ input[type=range].form-control-range::-webkit-slider-thumb {
     background: #FF7F27; /* Change to your desired thumb color */
     border-radius: 50%;
     cursor: pointer;
+  z-index: 1;
 }
 
 
@@ -336,7 +338,7 @@ h2 {
 [data-tooltip] {
   --arrow-size: 5px;
   position: relative;
-  z-index: 10;
+  z-index: 1000;
 }
 
 /* Positioning and visibility settings of the tooltip */
@@ -350,6 +352,7 @@ h2 {
   pointer-events: none;
   transition: 0.2s;
   will-change: transform;
+  z-index: 1000;
 }
 
 /* The actual tooltip with a dynamic width */
@@ -368,6 +371,7 @@ h2 {
   text-align: center;
   white-space: pre-wrap;
   transform: translate(-50%, calc(0px - var(--arrow-size))) scale(0.5);
+  z-index: 1000;
 }
 
 
