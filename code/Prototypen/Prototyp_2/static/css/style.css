@@ -239,6 +239,13 @@ h3 {
 h5 {
     text-align: center; /* Center-align the title */
 }
+h6 {
+    text-align: center; /* Center-align the title */
+        font-size: 3em; /* Adjust size as needed */
+
+}
+
+
 
 h1:hover {
     color: white; /* Change color on hover - choose a color that matches your site's theme */

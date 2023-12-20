@@ -1,13 +1,6 @@
 // Global scope
 const iframe = document.getElementById('relevancechart');
-/*iframe.onload = () => {
-    // This is a good place to send any initial data if necessary
-    // For example, you might want to send a default state or initial setup data
-    updateNameinHTML("welcome", 'coil-container-second')
-    updateNameinHTML("welcome", 'coil-container')
-    console.log("wrote welcome")
 
-};*/
 
 function getSelectedColleges() {
     const selectedCollegesDiv = document.getElementById('selectedColleges');
@@ -136,36 +129,7 @@ function aggregateAmenityScores(data, containerId) {
     }
 }
 
-/*
-function mapScoresToRange(data, newMax) {
-    let maxVal = 0;
 
-    // Finden Sie den maximalen Wert, der größer als 0 ist
-    for (let key in data) {
-        if (data[key] > maxVal && data[key] > 0) {
-            maxVal = data[key];
-        }
-    }
-
-    // Berechnen Sie den Umrechnungsfaktor
-    const factor = newMax / maxVal;
-
-    // Wenden Sie die Umrechnung auf jeden Wert an und runden Sie auf das nächstgelegene 0,5
-    for (let key in data) {
-        if (data[key] > 0) {
-            let mappedValue = data[key] * factor;
-            data[key] = Math.round(mappedValue * 2) / 2;
-        }
-    }
-
-    
-    return data;
-        // Send the data to the iframe
-    
-}
-
-
-*/
 function convertToPercentages(data) {
     // Define categories
     const categories = {
