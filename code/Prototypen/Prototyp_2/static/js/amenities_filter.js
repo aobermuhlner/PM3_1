@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Entertainment & Culture
     var entertainmentCultureAmenities = ['arts_centre', 'casino', 'cinema', 'events_venue', 'music_venue', 'nightclub', 'theatre'];
-    var entertainmentCultureSection = createAmenitiesSection('Entertainment, Culture and Venues', entertainmentCultureAmenities);
+    var entertainmentCultureSection = createAmenitiesSection('Entertainment and Cultural Venues', entertainmentCultureAmenities);
     document.getElementById('dynamicAmenitiesContainer').appendChild(entertainmentCultureSection);
 
     // Financial Services and Postal & Communication

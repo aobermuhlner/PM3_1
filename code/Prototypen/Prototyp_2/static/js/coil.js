@@ -1,5 +1,4 @@
-// script.js
-console.log("started coiljs")
+
 // Function to update src for barchartcategory iframe
 function updateBarchartCategoryIframe(params, containerId) {
     const distanceKm = document.getElementById('distanceSlider').value / 10;

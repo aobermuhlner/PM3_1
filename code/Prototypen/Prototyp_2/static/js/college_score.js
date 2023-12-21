@@ -143,7 +143,7 @@ function convertToPercentages(data) {
             "nightclub",
             "theatre",
         ],
-        "Public and Civic Services": ["library", "atm", "bank", "police", "post_box", "post_office"],
+        "Public and Civil Services": ["library", "atm", "bank", "police", "post_box", "post_office"],
         "Transportation and Health Services": [
             "bus_station",
             "bicycle_parking",
@@ -158,7 +158,7 @@ function convertToPercentages(data) {
     let categoryScores = {
         "Food and Beverage Services": 0,
         "Entertainment and Cultural Venues": 0,
-        "Public and Civic Services": 0,
+        "Public and Civil Services": 0,
         "Transportation and Health Services": 0,
     };
 
@@ -198,15 +198,11 @@ function selectCollegeEntry(element, collegeData, containerid) {
     });
 
     // Prepare to extract data from the row
-    console.log("Selected College:", collegeData);
     element.classList.add('selected');
-    console.log(collegeData.CollegeName)
-    console.log(collegeData.amenities)
     updateNameinHTML(collegeData.CollegeName,containerid);
     aggregateAmenityScores(collegeData.amenities,containerid);
     // Call functions to update the plots
     updateBarchartCategoryIframe(collegeData, containerid);
-    console.log("got you")
     updateBarchartSelectedCategoryIframe(collegeData, 'fbs',containerid);
     updateBarchartSelectedCategoryIframe(collegeData, 'ecv',containerid);
     updateBarchartSelectedCategoryIframe(collegeData, 'pcs',containerid);
