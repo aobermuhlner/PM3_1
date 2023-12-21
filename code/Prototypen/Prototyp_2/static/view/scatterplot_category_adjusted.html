@@ -80,6 +80,7 @@
                         max: 5,
                         ticks: {
                             stepSize: 1,
+                            fontColor: 'black',
                             callback: function(value) {
                                 const categories = ['', 'Food and Beverage Services', 'Entertainment and Cultural Venues', 'Public and Civil Services', 'Transportation and Health Services', ''];
                                 return categories[value] || value;
@@ -91,10 +92,12 @@
                         min: 0,
                         max: 500,
                         ticks: {
-                            stepSize: 100
+                            stepSize: 100,
+                            fontColor: 'black',
                         },
                         title: {
                             display: true,
+                            fontColor: 'black',
                             text: 'Distance from selected building in meters'
                         }
                     }

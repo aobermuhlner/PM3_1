@@ -226,9 +226,9 @@ h1 {
 
 h3 {
     font-family: 'Montserrat', sans-serif; /* A modern and clean font */
-    font-size: 3em; /* Adjust size as needed */
+    font-size: 2.5em; /* Adjust size as needed */
     font-weight: 600; /* Medium weight - not too bold, not too light */
-    color: #9DCBC7; /* Dark gray - change as needed */
+    color: #306674; /* Dark gray - change as needed */
     text-align: center; /* Center-align the title */
     margin-bottom: 20px; /* Adds some space below the title */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -236,17 +236,27 @@ h3 {
     outline-color: black;
 }
 
-h5 {
-    text-align: center; /* Center-align the title */
-}
-h6 {
-    text-align: center; /* Center-align the title */
+h7 {
+    font-family: 'Montserrat', sans-serif; /* A modern and clean font */
     font-size: 2.5em; /* Adjust size as needed */
+    font-weight: 600; /* Medium weight - not too bold, not too light */
+    color: #F25151; /* Dark gray - change as needed */
+    text-align: center; /* Center-align the title */
+    margin-bottom: 20px; /* Adds some space below the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    outline-color: black;
 
 }
-h7 {
-    text-align: center; /* Center-align the title */
+h5 {
+    font-family: 'Montserrat', sans-serif; /* A modern and clean font */
     font-size: 2em; /* Adjust size as needed */
+    font-weight: 600; /* Medium weight - not too bold, not too light */
+    color: #F27070; /* Dark gray - change as needed */
+    text-align: center; /* Center-align the title */
+    margin-bottom: 20px; /* Adds some space below the title */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    outline-color: black;
 }
 
 
@@ -379,7 +389,7 @@ h2 {
   background-color: #3b4850; /* Solid background color */
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
   color: #fff;
-  text-align: center;
+  text-align: left;
   white-space: pre-wrap;
   transform: translate(-50%, calc(0px - var(--arrow-size))) scale(0.5);
   z-index: 1000;
