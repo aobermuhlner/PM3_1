@@ -9,17 +9,13 @@
 <canvas id="myChart" width="400" height="400"></canvas>
 
 <script>
-    const data = {
-        "name1": 572.8106930402172, // must be changed to data from mongodb
-        "name2": 469.1758209704607
-        // ... more data
-    };
 
     const scatterData = Object.keys(data).map(key => ({
         x: data[key],
         y: 1,
         name: key
     }));
+    const barColors = ['#FBD4BF', '#FFCFB7', '#F4B0A0', '#F3816F'];
 
     const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
@@ -28,7 +24,7 @@
             datasets: [{
                 label: 'Amenities distance to university in meters',
                 data: scatterData,
-                backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                backgroundColor: barColors,
                 pointRadius: 50,
                 pointHoverRadius: 25
 

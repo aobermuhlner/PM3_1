@@ -22,7 +22,8 @@
             formData.append('category', category);
             formData.append('limit', limit);
             formData.append('sortbycat', sortbycat);
-            console.log(latitude,longitude,distanceKm, category,sortbycat)
+
+            console.log(sortbycat)
             // Fetch request with form data
             fetch('/amenities/get_amenitites_nearby_barrchart', {
                 method: 'POST',
@@ -30,16 +31,20 @@
             })
             .then(response => response.json())
             .then(data => {
-                createBarChart(data);
+                createBarChart(data,sortbycat);
             })
             .catch(error => console.error('Error fetching amenities:', error));
         }
 
         // Function to create a bar chart using Chart.js
-        function createBarChart(data) {
+        function createBarChart(data, sortbycat) {
             // Extract labels and data for the bar chart
             const labels = data.map(item => item[0]);
             const chartData = data.map(item => item[1]);
+            var barColors = ['#FBD4BF', '#FFCFB7', '#F4B0A0', '#F3816F'];
+            if(!sortbycat)
+                barColors = ['#F4B0A0'];
+
 
             // Get the canvas context
             const ctxbar = document.getElementById('amenitiesChart').getContext('2d');
@@ -52,15 +57,15 @@
                     datasets: [{
                         label: '# of Amenities',
                         data: chartData,
-                        backgroundColor: 'rgba(144, 238, 144, 0.2)',
-                        borderColor: 'rgba(0, 100, 0, 1)',
+                        backgroundColor: barColors,
+                        borderColor: 'red',
                         borderWidth: 1
                     }]
                 },
                 options: {
                      plugins: {
         legend: {
-            display: false // nott showing legend
+            display: false // not showing legend
         }
     },
                     scales: {

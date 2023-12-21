@@ -24,6 +24,7 @@
             const labels = dataArray.map(item => item.amenityName);
             const chartData = dataArray.map(item => item.amenityScore);
             const ctx = document.getElementById('relevancechart').getContext('2d');
+            const barColors = ['#FBD4BF', '#FFCFB7', '#F4B0A0', '#F3816F'];
 
             // Destroy the previous chart instance if it exists
             if (myChart) {
@@ -37,8 +38,8 @@
                     datasets: [{
                         label: 'Category weight in %',
                         data: chartData,
-                        backgroundColor: 'rgba(144, 238, 144, 0.2)',
-                        borderColor: 'rgba(0, 100, 0, 1)',
+                        backgroundColor: barColors,
+                        borderColor: 'red',
                         borderWidth: 1
                     }]
                 },
