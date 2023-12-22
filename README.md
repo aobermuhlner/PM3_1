@@ -1,16 +1,35 @@
 # PM3_1
-Web Brwoser Application, Open Street
-
-Das ist die aktuelle Struktur des rojektes stand 12.12
+College life evaluator
+Projektstand Abgabe 22.12.23
 .
 ```
 .
 ├── app.py
 ├── daten
-│   ├── colleges.json
-│   ├── exampledata.json
+│   ├── colleges_updated_19_12.json
 │   ├── processed_data.json
-│   └── ZHAW.json
+│   └── scripts
+│       ├── crawldata
+│       │   ├── filtermapgeoadmin.py
+│       │   ├── gettingadresses.py
+│       │   ├── mapgeoadminapi.py
+│       │   ├── overpass
+│       │   │   ├── downloadandclean.py
+│       │   │   └── getdata.py
+│       │   └── PLZO_CSV_LV95.csv
+│       ├── db_upload_file.py
+│       ├── processdata
+│       │   ├── combiners
+│       │   │   └── combiner.py
+│       │   └── rework_colleges.ipynb
+│       └── validation
+│           ├── check_coordinates_location.py
+│           ├── countzips.py
+│           ├── swissBOUNDARIES3D_1_4_TLM_KANTONSGEBIET.cpg
+│           ├── swissBOUNDARIES3D_1_4_TLM_KANTONSGEBIET.dbf
+│           ├── swissBOUNDARIES3D_1_4_TLM_KANTONSGEBIET.prj
+│           ├── swissBOUNDARIES3D_1_4_TLM_KANTONSGEBIET.shp
+│           └── swissBOUNDARIES3D_1_4_TLM_KANTONSGEBIET.shx
 ├── filters
 │   ├── amenities.py
 │   ├── colleges.py
@@ -19,8 +38,6 @@ Das ist die aktuelle Struktur des rojektes stand 12.12
 │       ├── amenities.cpython-39.pyc
 │       └── colleges.cpython-39.pyc
 ├── mongodb_errors.log
-├── __pycache__
-│   └── app.cpython-39.pyc
 ├── services
 │   ├── __init__.py
 │   ├── mongodb_service.py
@@ -38,27 +55,29 @@ Das ist die aktuelle Struktur des rojektes stand 12.12
 │   │   ├── health_icon.png
 │   │   ├── icon.ico
 │   │   ├── icon.png
+│   │   ├── info.png
 │   │   ├── postal_icon.png
 │   │   ├── transport_icon.png
 │   │   ├── university_life.png
 │   │   └── university.png
 │   ├── js
 │   │   ├── amenities_filter.js
+│   │   ├── coil.js
 │   │   ├── college_score.js
 │   │   ├── colleges_filter.js
 │   │   ├── main.js
-│   │   └── map.js
+│   │   ├── map.js
+│   │   └── style.js
 │   └── view
 │       ├── amenities_filter.html
-│       ├── backup
-│       │   └── scatterplot_category_adjusted (Kopie).html
 │       ├── bycatbarchart.html
 │       ├── coil.html
 │       ├── colleges_filter.html
 │       ├── map.html
-│       ├── scatterplot_category_adjusted.html
-│       └── scatterplot.html
+│       ├── relevancechart.html
+│       └── scatterplot_category_adjusted.html
 └── templates
     └── index.html
+
 
 ```
